@@ -22,29 +22,29 @@
 window.WD_PROJECTS = [
   {
     slug: "lamare-pola-negri",
-    title: "Lamare Club Pola Negri",
+    title: "Lamare Pola Negri",
     categories: ["interiors", "yachts"],
     featured: true,
     year: "",
     client: "LAMARE Houseboats",
-    place: { en: "Houseboat, Lamare Club", it: "Houseboat, Lamare Club", pl: "Dom na wodzie, Lamare Club" },
+    place: { en: "Houseboat, Lamare", it: "Houseboat, Lamare", pl: "Dom na wodzie, Lamare" },
     scope: { en: "Interior design", it: "Progetto d'interni", pl: "Projekt wnętrza" },
     summary: {
-      en: "A houseboat interior for LAMARE Houseboats at Lamare Club Pola Negri.",
-      it: "Un interno di houseboat per LAMARE Houseboats al Lamare Club Pola Negri.",
-      pl: "Wnętrze domu na wodzie dla LAMARE Houseboats w Lamare Club Pola Negri."
+      en: "A houseboat interior for LAMARE Houseboats at Lamare Pola Negri.",
+      it: "Un interno di houseboat per LAMARE Houseboats al Lamare Pola Negri.",
+      pl: "Wnętrze domu na wodzie dla LAMARE Houseboats w Lamare Pola Negri."
     },
     text: {
       en: [
-        "A houseboat interior for LAMARE Houseboats, Lamare Club Pola Negri.",
+        "A houseboat interior for LAMARE Houseboats, Lamare Pola Negri.",
         "Oak laid in a chevron pattern, dark timber wall panels and full-height windows that bring the light and the movement of the water inside."
       ],
       it: [
-        "Un interno di houseboat per LAMARE Houseboats, Lamare Club Pola Negri.",
+        "Un interno di houseboat per LAMARE Houseboats, Lamare Pola Negri.",
         "Rovere posato a spina ungherese, pannelli a parete in legno scuro e finestre a tutta altezza che portano dentro la luce e il movimento dell'acqua."
       ],
       pl: [
-        "Wnętrze domu na wodzie dla LAMARE Houseboats, Lamare Club Pola Negri.",
+        "Wnętrze domu na wodzie dla LAMARE Houseboats, Lamare Pola Negri.",
         "Dąb ułożony w jodełkę francuską, ciemne drewniane panele ścienne i okna od podłogi do sufitu, które wpuszczają do środka światło i ruch wody."
       ]
     },
