@@ -14,7 +14,7 @@ window.WD_SITE = {
 
   contact: {
     name: "Bartek Witkowski",
-    email: "bartek@witkowskidesign.com",
+    email: "bartek.archi56@gmail.com",
     phone: "+48 530 340 988",
     // WhatsApp number: digits only, with country code, no spaces or "+"
     whatsapp: "48530340988",
@@ -47,7 +47,7 @@ window.WD_SITE = {
     owner: "Bartosz Witkowski",
     address: "",
     vat: "",          // VAT / NIP / Partita IVA
-    email: "bartek@witkowskidesign.com",
+    email: "bartek.archi56@gmail.com",
     country: ""
   }
 };
