@@ -100,6 +100,45 @@ window.WD_PROJECTS = [
   },
 
   {
+    slug: "metaphysical-vessel",
+    title: "Metaphysical Vessel",
+    categories: ["yachts", "visualisation"],
+    featured: true,
+    year: "",
+    client: "",
+    place: { en: "70 m yacht", it: "Yacht di 70 m", pl: "Jacht 70 m" },
+    scope: { en: "Yacht interior design, 3D visualisation", it: "Interni per yacht, visualizzazione 3D", pl: "Projekt wnętrz jachtu, wizualizacja 3D" },
+    summary: {
+      en: "Interior concept and 3D visualisation for a 70 metre yacht.",
+      it: "Concept degli interni e visualizzazione 3D per uno yacht di 70 metri.",
+      pl: "Koncepcja wnętrz i wizualizacja 3D jachtu o długości 70 metrów."
+    },
+    text: {
+      en: [
+        "Interior concept for a 70 metre yacht.",
+        "The main saloon runs the full beam between walls of glass: a long stone dining table at the centre, lounges on either side, and a sculpted spiral stair rising through an oval opening in the timber ceiling. Mirror-polished columns reflect the sea back into the room."
+      ],
+      it: [
+        "Concept degli interni per uno yacht di 70 metri.",
+        "Il salone principale occupa tutto il baglio tra pareti di vetro: un lungo tavolo da pranzo in pietra al centro, salotti ai lati e una scala elicoidale scultorea che sale attraverso un'apertura ovale nel soffitto in legno. Colonne a specchio riflettono il mare all'interno."
+      ],
+      pl: [
+        "Koncepcja wnętrz jachtu o długości 70 metrów.",
+        "Główny salon zajmuje całą szerokość jachtu między szklanymi ścianami: długi kamienny stół w centrum, strefy wypoczynku po obu stronach i rzeźbiarskie schody spiralne wznoszące się przez owalny otwór w drewnianym suficie. Lustrzane kolumny odbijają morze z powrotem do wnętrza."
+      ]
+    },
+    cover: {
+      file: "cover.jpg",
+      alt: {
+        en: "Main saloon of a 70 metre yacht with a long dining table, lounges, a spiral staircase and glass walls onto the sea, 3D render",
+        it: "Salone principale di uno yacht di 70 metri con lungo tavolo da pranzo, salotti, scala elicoidale e pareti di vetro sul mare, rendering 3D",
+        pl: "Główny salon jachtu 70 m z długim stołem, strefami wypoczynku, schodami spiralnymi i szklanymi ścianami z widokiem na morze, wizualizacja 3D"
+      }
+    },
+    images: []
+  },
+
+  {
     slug: "kitchen-apartment-bydgoszcz",
     title: { en: "Apartment kitchen, Bydgoszcz", it: "Cucina di un appartamento, Bydgoszcz", pl: "Kuchnia w mieszkaniu, Bydgoszcz" },
     categories: ["interiors", "visualisation"],
@@ -136,34 +175,6 @@ window.WD_PROJECTS = [
       }
     },
     images: []
-  },
-
-  {
-    slug: "motor-yacht-maestrale",
-    placeholder: true,
-    title: { en: "Motor yacht Maestrale", it: "Motor yacht Maestrale", pl: "Jacht motorowy Maestrale" },
-    categories: ["yachts", "interiors"],
-    featured: true,
-    year: "2025",
-    client: { en: "[Placeholder] Shipyard", it: "[Segnaposto] Cantiere", pl: "[Przykład] Stocznia" },
-    place: { en: "24 m motor yacht", it: "Motor yacht di 24 m", pl: "Jacht motorowy 24 m" },
-    scope: { en: "Saloon and owner's suite, materials, lighting", it: "Salone e suite armatoriale, materiali, illuminazione", pl: "Salon i apartament armatora, materiały, oświetlenie" },
-    summary: {
-      en: "[Placeholder text] A saloon in pale oak and linen, built around the view.",
-      it: "[Testo segnaposto] Un salone in rovere chiaro e lino, costruito attorno alla vista.",
-      pl: "[Tekst przykładowy] Salon z jasnego dębu i lnu, zbudowany wokół widoku."
-    },
-    text: {
-      en: ["[Placeholder text] Replace this with a short description of the project: the boat, the owner's wishes and how the interior answers them."],
-      it: ["[Testo segnaposto] Sostituisci questo testo con una breve descrizione del progetto: la barca, i desideri dell'armatore e come l'interno risponde."],
-      pl: ["[Tekst przykładowy] Zastąp ten tekst krótkim opisem projektu: jachtu, oczekiwań armatora i tego, jak wnętrze na nie odpowiada."]
-    },
-    cover: { file: "cover.jpg", alt: { en: "Placeholder image: yacht saloon facing the sea", it: "Immagine segnaposto: salone di yacht vista mare", pl: "Obraz przykładowy: salon jachtu z widokiem na morze" } },
-    images: [
-      { file: "01.jpg", wide: true, alt: { en: "Placeholder image: owner's suite", it: "Immagine segnaposto: suite armatoriale", pl: "Obraz przykładowy: apartament armatora" } },
-      { file: "02.jpg", alt: { en: "Placeholder image: stair detail", it: "Immagine segnaposto: dettaglio della scala", pl: "Obraz przykładowy: detal schodów" } },
-      { file: "03.jpg", alt: { en: "Placeholder image: porthole and berth", it: "Immagine segnaposto: oblò e letto", pl: "Obraz przykładowy: iluminator i koja" } }
-    ]
   },
 
 
