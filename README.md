@@ -94,7 +94,7 @@ project title is used.
 **Remove a placeholder project:** delete its `{ ... },` block from `content/projects.js` and its
 folder in `projects/`. Placeholder projects have `placeholder: true` and a "Placeholder" tag.
 
-**Lamare Club Pola Negri** (folder `projects/lamare-pola-negri/`) is a real project with its
+**Lamare Pola Negri** (folder `projects/lamare-pola-negri/`) is a real project with its
 cover photo. Add its gallery photos to that folder and list them in `images: [...]` in its entry.
 
 ---
