@@ -61,31 +61,42 @@ window.WD_PROJECTS = [
   },
 
   {
-    slug: "apartment-brera",
-    placeholder: true,
-    title: { en: "Apartment in Brera", it: "Appartamento a Brera", pl: "Apartament na Brerze" },
+    slug: "kitchen-sokole-kuznica",
+    title: { en: "Kitchen, Sokole Kuźnica", it: "Cucina, Sokole Kuźnica", pl: "Kuchnia, Sokole Kuźnica" },
     categories: ["interiors", "visualisation"],
     featured: true,
-    year: "2025",
-    client: { en: "[Placeholder] Private client", it: "[Segnaposto] Cliente privato", pl: "[Przykład] Klient prywatny" },
-    place: { en: "Milan, Italy", it: "Milano, Italia", pl: "Mediolan, Włochy" },
-    scope: { en: "Interior design, furniture, renders", it: "Progetto d'interni, arredi, rendering", pl: "Projekt wnętrza, meble, wizualizacje" },
+    year: "",
+    client: "",
+    place: { en: "Residential complex, Sokole Kuźnica", it: "Complesso residenziale, Sokole Kuźnica", pl: "Osiedle mieszkaniowe, Sokole Kuźnica" },
+    scope: { en: "Kitchen design, 3D visualisation", it: "Progetto della cucina, visualizzazione 3D", pl: "Projekt kuchni, wizualizacja 3D" },
     summary: {
-      en: "[Placeholder text] A 1900s apartment opened up around one long oak wall.",
-      it: "[Testo segnaposto] Un appartamento del Novecento aperto attorno a una lunga parete in rovere.",
-      pl: "[Tekst przykładowy] Kamienicowe mieszkanie otwarte wokół jednej długiej dębowej ściany."
+      en: "Kitchen design and 3D visualisation for a home in a residential complex in Sokole Kuźnica.",
+      it: "Progetto e visualizzazione 3D di una cucina per un'abitazione in un complesso residenziale a Sokole Kuźnica.",
+      pl: "Projekt i wizualizacja 3D kuchni dla mieszkania na osiedlu Sokole Kuźnica."
     },
     text: {
-      en: ["[Placeholder text] Replace this with a short description of the project: the brief, the main idea and one detail you are proud of. Two or three short paragraphs are enough."],
-      it: ["[Testo segnaposto] Sostituisci questo testo con una breve descrizione del progetto: la richiesta, l'idea principale e un dettaglio di cui sei orgoglioso. Bastano due o tre paragrafi brevi."],
-      pl: ["[Tekst przykładowy] Zastąp ten tekst krótkim opisem projektu: założeniami, główną ideą i jednym detalem, z którego jesteś dumny. Wystarczą dwa lub trzy krótkie akapity."]
+      en: [
+        "A kitchen for a home in a residential complex in Sokole Kuźnica.",
+        "A veined stone island with waterfall sides, dark wood joinery and copper fittings under a cluster of glass pendants. Tall steel-framed windows open the room to the garden."
+      ],
+      it: [
+        "Una cucina per un'abitazione in un complesso residenziale a Sokole Kuźnica.",
+        "Un'isola in pietra venata con fianchi a cascata, arredi in legno scuro e finiture in rame sotto un grappolo di sospensioni in vetro. Alte finestre con telaio in acciaio aprono la stanza sul giardino."
+      ],
+      pl: [
+        "Kuchnia dla mieszkania na osiedlu Sokole Kuźnica.",
+        "Wyspa z żyłkowanego kamienia z bokami w formie wodospadu, ciemna drewniana zabudowa i miedziane dodatki pod kompozycją szklanych lamp. Wysokie okna w stalowych ramach otwierają wnętrze na ogród."
+      ]
     },
-    cover: { file: "cover.jpg", alt: { en: "Placeholder image: living room with an arched opening", it: "Immagine segnaposto: soggiorno con apertura ad arco", pl: "Obraz przykładowy: salon z łukowym przejściem" } },
-    images: [
-      { file: "01.jpg", alt: { en: "Placeholder image: hallway in soft light", it: "Immagine segnaposto: corridoio in luce morbida", pl: "Obraz przykładowy: korytarz w miękkim świetle" } },
-      { file: "02.jpg", alt: { en: "Placeholder image: detail of a stone bench", it: "Immagine segnaposto: dettaglio di una panca in pietra", pl: "Obraz przykładowy: detal kamiennej ławy" } },
-      { file: "03.jpg", wide: true, alt: { en: "Placeholder image: open plan living area", it: "Immagine segnaposto: zona giorno open space", pl: "Obraz przykładowy: otwarta strefa dzienna" } }
-    ]
+    cover: {
+      file: "cover.jpg",
+      alt: {
+        en: "Kitchen with a veined stone island, dark wood cabinets, copper bar stools and glass pendant lights, 3D render",
+        it: "Cucina con isola in pietra venata, mobili in legno scuro, sgabelli in rame e lampade a sospensione in vetro, rendering 3D",
+        pl: "Kuchnia z wyspą z żyłkowanego kamienia, ciemną zabudową, miedzianymi hokerami i szklanymi lampami, wizualizacja 3D"
+      }
+    },
+    images: []
   },
 
   {
