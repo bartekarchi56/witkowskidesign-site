@@ -1,5 +1,6 @@
 # Publishes the site to GitHub Pages every time something changes on the main branch.
-# It first runs tools/build.js so every page and project has ready-made HTML.
+# It first shrinks big photos (tools/optimize-images.js) and runs tools/build.js
+# so every page and project has ready-made HTML.
 name: Publish site
 
 on:
@@ -27,9 +28,19 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Read Pages address
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Optimise images
+        run: |
+          npm install --prefix "$RUNNER_TEMP/img" --no-save --no-package-lock sharp@0.34
+          NODE_PATH="$RUNNER_TEMP/img/node_modules" node tools/optimize-images.js
       - name: Build pages
+        # base_path is "/Lamare" on github.io and "" once the custom domain is connected
+        env:
+          SITE_BASE: ${{ steps.pages.outputs.base_path }}
+          SITE_ORIGIN: ${{ steps.pages.outputs.origin }}
         run: node tools/build.js
-      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .

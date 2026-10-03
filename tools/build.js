@@ -23,7 +23,12 @@ for (const f of ["content/site.js", "content/text.js", "content/projects.js", "a
   vm.runInContext(fs.readFileSync(path.join(ROOT, f), "utf8"), ctx, { filename: f });
 }
 const { WD, WD_SITE: SITE, WD_TEXT: TEXT, WD_PROJECTS: PROJECTS } = ctx;
-const DOMAIN = SITE.domain.replace(/\/$/, "");
+// Where the site is published. On GitHub the workflow passes the real address, so the site works
+// both at https://<user>.github.io/<repo>/ (before the domain is connected) and at the domain.
+const BASE = (process.env.SITE_BASE || "").replace(/\/$/, "");           // "" or "/Lamare"
+const DOMAIN = (process.env.SITE_ORIGIN || SITE.domain).replace(/\/$/, ""); // https://witkowskidesign.com
+ctx.WD_ROOT = BASE + "/";
+const A = (p) => BASE + p; // asset path
 const PAGES = ["home", "work", "services", "about", "contact", "privacy"];
 const LOCALE = { en: "en_GB", it: "it_IT", pl: "pl_PL" };
 
@@ -40,8 +45,8 @@ function head(lang, page, slug, opts = {}) {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: SITE.studio,
-    url: DOMAIN + "/",
-    image: DOMAIN + "/assets/img/og-image.jpg",
+    url: DOMAIN + A("/"),
+    image: DOMAIN + A("/assets/img/og-image.jpg"),
     email: SITE.contact.email,
     telephone: SITE.contact.phone,
     founder: { "@type": "Person", name: SITE.legal.owner || "Bartosz Witkowski" },
@@ -67,15 +72,15 @@ function head(lang, page, slug, opts = {}) {
   <meta property="og:locale" content="${LOCALE[lang]}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#fcfcfb">
-  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-  <link rel="preload" href="/assets/fonts/cormorant-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="${A("/assets/img/favicon.svg")}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="${A("/assets/img/apple-touch-icon.png")}">
+  <link rel="preload" href="${A("/assets/fonts/cormorant-latin-wght-normal.woff2")}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="${A("/assets/css/style.css")}">
   <script>document.documentElement.classList.add("js")</script>
-  <script src="/content/site.js" defer></script>
-  <script src="/content/text.js" defer></script>
-  <script src="/content/projects.js" defer></script>
-  <script src="/assets/js/app.js" defer></script>${ld}
+  ${BASE ? `<script>window.WD_ROOT = ${JSON.stringify(BASE + "/")}</script>\n  ` : ""}<script src="${A("/content/site.js")}" defer></script>
+  <script src="${A("/content/text.js")}" defer></script>
+  <script src="${A("/content/projects.js")}" defer></script>
+  <script src="${A("/assets/js/app.js")}" defer></script>${ld}
 </head>`;
 }
 
@@ -96,7 +101,7 @@ function write(rel, html) {
 }
 
 const out = (lang, name, slug) => {
-  const u = WD.url(lang, name, slug);
+  const u = WD.url(lang, name, slug).slice(BASE.length); // file path inside the repository
   return (u.endsWith("/") ? u + "index.html" : u).replace(/^\//, "");
 };
 

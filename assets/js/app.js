@@ -49,6 +49,8 @@
     return base() + full;
   }
   function img(slug, file) { return base() + "projects/" + slug + "/" + file; }
+  // Paths written in content/site.js like "/assets/img/portrait.jpg" follow the site root too.
+  function asset(path) { return /^\//.test(path) ? base() + path.slice(1) : path; }
   function find(slug) {
     for (var i = 0; i < PROJECTS.length; i++) if (PROJECTS[i].slug === slug) return PROJECTS[i];
     return null;
@@ -58,17 +60,30 @@
   }
   function imgTag(src, alt, ratio, opts) {
     opts = opts || {};
-    var w = 1600, h = Math.round(w / (ratio || 1.5));
-    return '<img src="' + esc(src) + '" alt="' + esc(alt) + '" width="' + w + '" height="' + h + '"' +
+    // width/height only when the ratio is known; otherwise the browser uses the photo's own shape
+    var size = ratio ? ' width="1600" height="' + Math.round(1600 / ratio) + '"' : "";
+    return '<img src="' + esc(src) + '" alt="' + esc(alt) + '"' + size +
       (opts.eager ? ' fetchpriority="high"' : ' loading="lazy"') +
       (opts.focus ? ' style="object-position:' + esc(opts.focus) + '"' : "") + ' decoding="async">';
+  }
+  // A project image can be written as just a file name ("01.jpg") or as { file, alt, wide, focus, ratio }.
+  function pic(p, v, lang) {
+    if (!v) v = "cover.jpg";
+    if (typeof v === "string") v = { file: v };
+    return { src: img(p.slug, v.file), alt: loc(v.alt, lang) || loc(p.title, lang), ratio: v.ratio, wide: v.wide, focus: v.focus };
+  }
+  function picTag(p, v, lang, opts) {
+    var c = pic(p, v, lang);
+    opts = opts || {};
+    opts.focus = c.focus;
+    return imgTag(c.src, c.alt, c.ratio, opts);
   }
   function waLink() { return "https://wa.me/" + SITE.contact.whatsapp; }
   function telLink() { return "tel:" + SITE.contact.phone.replace(/[^\d+]/g, ""); }
   function logo() {
     if (SITE.logo) {
-      return '<img class="logo logo--dark" src="' + esc(SITE.logo) + '" alt="">' +
-        '<img class="logo logo--light" src="' + esc(SITE.logoLight || SITE.logo) + '" alt="">';
+      return '<img class="logo logo--dark" src="' + esc(asset(SITE.logo)) + '" alt="">' +
+        '<img class="logo logo--light" src="' + esc(asset(SITE.logoLight || SITE.logo)) + '" alt="">';
     }
     return LOGO_SVG;
   }
@@ -131,7 +146,7 @@
   function card(p, lang, extra) {
     var T = TEXT[lang];
     return '<a class="card reveal' + (extra ? " " + extra : "") + '" href="' + url(lang, "project", p.slug) + '">' +
-      '<span class="card__img">' + imgTag(img(p.slug, p.cover.file), loc(p.cover.alt, lang), p.cover.ratio, { focus: p.cover.focus }) + "</span>" +
+      '<span class="card__img">' + picTag(p, p.cover, lang) + "</span>" +
       caption(p, lang, T) + "</a>";
   }
   function row(p, lang) {
@@ -166,7 +181,7 @@
     if (!featured.length) featured = PROJECTS.slice(0, 1);
     var slides = featured.map(function (p, i) {
       return '<figure class="slide' + (i === 0 ? " is-active" : "") + '"' + (i ? ' aria-hidden="true"' : "") + ">" +
-        imgTag(img(p.slug, p.cover.file), loc(p.cover.alt, lang), p.cover.ratio, { eager: i === 0, focus: p.cover.focus }) + "</figure>";
+        picTag(p, p.cover, lang, { eager: i === 0 }) + "</figure>";
     }).join("");
     var caps = featured.map(function (p, i) {
       return '<a class="hero__cap' + (i === 0 ? " is-active" : "") + '" href="' + url(lang, "project", p.slug) + '"' + (i ? ' tabindex="-1" aria-hidden="true"' : "") + ">" +
@@ -221,10 +236,10 @@
     var text = loc(p.text, lang) || [];
     if (typeof text === "string") text = [text];
     var gallery = (p.images || []).map(function (im) {
-      return '<figure class="reveal' + (im.wide ? " wide" : "") + '">' + imgTag(img(p.slug, im.file), loc(im.alt, lang), im.ratio, { focus: im.focus }) + "</figure>";
+      return '<figure class="reveal' + (pic(p, im, lang).wide ? " wide" : "") + '">' + picTag(p, im, lang) + "</figure>";
     }).join("");
     return '<section class="hero hero--project">' +
-      '<div class="hero__slides"><figure class="slide is-active">' + imgTag(img(p.slug, p.cover.file), loc(p.cover.alt, lang), p.cover.ratio, { eager: true, focus: p.cover.focus }) + "</figure></div>" +
+      '<div class="hero__slides"><figure class="slide is-active">' + picTag(p, p.cover, lang, { eager: true }) + "</figure></div>" +
       '<div class="hero__bar"><div class="hero__caps"><div class="hero__cap is-active">' +
       '<h1 class="hero__title">' + esc(loc(p.title, lang)) + "</h1>" +
       '<span class="hero__meta">' + esc(loc(p.place, lang)) + "</span>" +
@@ -237,7 +252,7 @@
       "</section>" +
       '<section class="wrap gallery">' + gallery + "</section>" +
       (next && next !== p ? '<a class="next" href="' + url(lang, "project", next.slug) + '">' +
-        '<span class="next__img">' + imgTag(img(next.slug, next.cover.file), loc(next.cover.alt, lang), next.cover.ratio, { focus: next.cover.focus }) + "</span>" +
+        '<span class="next__img">' + picTag(next, next.cover, lang) + "</span>" +
         '<span class="next__text"><span class="eyebrow">' + P.next + '</span><span class="next__title">' + esc(loc(next.title, lang)) + "</span></span></a>" : "") +
       contactBlock(lang);
   };
@@ -266,7 +281,7 @@
     return pageTop(A.title) +
       '<section class="wrap about">' +
       (SITE.portrait
-        ? '<figure class="portrait reveal">' + imgTag(SITE.portrait, SITE.legal.owner || SITE.contact.name, 4 / 5) + "</figure>"
+        ? '<figure class="portrait reveal">' + imgTag(asset(SITE.portrait), SITE.legal.owner || SITE.contact.name, 4 / 5) + "</figure>"
         : '<div class="portrait portrait--empty reveal" role="img" aria-label="' + A.photoNote + '"><span>' + A.photoNote + "</span></div>") +
       '<div class="about__text reveal"><p class="statement statement--left">' + A.lead + "</p>" + A.bio.map(function (b) { return "<p>" + b + "</p>"; }).join("") + "</div>" +
       "</section>" +
@@ -325,13 +340,13 @@
   /* ------------------------------------------------------------ public API */
   function meta(lang, page, slug) {
     var T = TEXT[lang], m = T.meta[page] || T.meta.home;
-    var out = { title: m.title, description: m.description, image: "/assets/img/og-image.jpg" };
+    var out = { title: m.title, description: m.description, image: base() + "assets/img/og-image.jpg" };
     if (page === "project") {
       var p = find(slug);
       if (p) {
         out.title = loc(p.title, lang) + " · Witkowski Design";
         out.description = String(loc(p.summary, lang)).replace(/^\[[^\]]*\]\s*/, "");
-        out.image = img(p.slug, p.cover.file);
+        out.image = pic(p, p.cover, lang).src;
       }
     }
     return out;
@@ -355,8 +370,11 @@
     var slug = body.getAttribute("data-slug") || "";
     if (page === "notfound") {
       // Fallback for projects that have no generated page yet: /work/<slug>/ or /it/work/<slug>/
-      var m = location.pathname.match(/^\/(?:(it|pl)\/)?work\/([^\/]+)\/?$/);
-      var pm = location.pathname.match(/^\/(it|pl)(\/|$)/);
+      // path relative to the site root (the site may live in a sub-folder, e.g. on github.io)
+      var b = base().charAt(0) === "/" ? base() : "/";
+      var rel = location.pathname.indexOf(b) === 0 ? "/" + location.pathname.slice(b.length) : location.pathname;
+      var m = rel.match(/^\/(?:(it|pl)\/)?work\/([^\/]+)\/?$/);
+      var pm = rel.match(/^\/(it|pl)(\/|$)/);
       if (pm) lang = pm[1];
       if (m && find(m[2])) { page = "project"; slug = m[2]; }
       docEl.lang = lang;

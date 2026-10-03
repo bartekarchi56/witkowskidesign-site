@@ -23,61 +23,78 @@ make the change, then click **Commit changes**. The live site updates by itself 
 
 ## Add a project
 
-1. **Choose a short name** (the "slug"): lowercase, no spaces, dashes between words.
-   Example: `villa-garda`. It becomes the web address: `witkowskidesign.com/work/villa-garda/`.
+### 1. Prepare the photos
 
-2. **Upload the images** into a new folder `projects/villa-garda/`
-   (on GitHub: open the `projects` folder → **Add file** → **Upload files**; in the file name box
-   you can type `villa-garda/` to create the folder).
-   - `cover.jpg`: the main image (landscape works best, 3:2)
-   - `01.jpg`, `02.jpg`, ... : the gallery
-   - Export about **2400 px** on the long side for the cover (it fills the whole screen) and
-     **2000 px** for the gallery, JPEG quality **75 to 80**, ideally under 500 KB each.
-     The free tool [squoosh.app](https://squoosh.app) does this in the browser.
+- **Format:** JPG (best for photos and renders). PNG and WebP also work.
+- **Size:** any size is fine. Full-size camera photos or 6000 px renders can be uploaded as they
+  are: when the site publishes, every photo is turned the right way up, shrunk to 2400 px on its
+  longest side and compressed (your originals stay untouched in the repository).
+  The only limit is GitHub's: **25 MB per file** when uploading in the browser.
+- **Names:** lowercase, no spaces, and exactly as you will write them in the list
+  (`cover.jpg` and `Cover.JPG` are different files for the website).
+  - `cover.jpg` is the big main photo. It fills the whole screen on the home page and on the
+    project page, so a **landscape** photo works best.
+  - `01.jpg`, `02.jpg`, `03.jpg`, ... are the gallery, shown in that order.
 
-3. **Add an entry** in `content/projects.js`: copy one of the existing `{ ... },` blocks, paste it
-   at the top of the list (the order in the file is the order on the site) and edit it:
+### 2. Upload them
 
-   ```js
-   {
-     slug: "villa-garda",
-     title: "Villa on Lake Garda",                // one text for all languages...
-     categories: ["interiors", "visualisation"],  // interiors, yachts, products, visualisation, branding
-     featured: true,                              // show on the home page (first four featured)
-     year: "2026",
-     client: "Private",
-     place: { en: "Lake Garda, Italy", it: "Lago di Garda, Italia", pl: "Jezioro Garda, Włochy" }, // ...or one per language
-     scope: { en: "Interior design", it: "Progetto d'interni", pl: "Projekt wnętrza" },
-     summary: { en: "One sentence for the card and for Google.", it: "...", pl: "..." },
-     text: {
-       en: ["First paragraph.", "Second paragraph."],
-       it: ["Primo paragrafo.", "Secondo paragrafo."],
-       pl: ["Pierwszy akapit.", "Drugi akapit."]
-     },
-     cover: { file: "cover.jpg", ratio: 3 / 2, alt: { en: "Describe the image", it: "...", pl: "..." } },
-     images: [
-       { file: "01.jpg", ratio: 3 / 2, wide: true, alt: { en: "Describe the image", it: "...", pl: "..." } },
-       { file: "02.jpg", ratio: 4 / 5, alt: { en: "...", it: "...", pl: "..." } }
-     ]
-   },
-   ```
+1. On github.com open the repository and click the **projects** folder.
+2. Click **Add file** → **Upload files**.
+3. Drag the photos in. To put them in a new folder, first type the folder name and a slash in the
+   file name box at the top, for example `villa-garda/` (the "slug": lowercase, dashes between
+   words; it becomes the address `witkowskidesign.com/work/villa-garda/`).
+4. Click **Commit changes**.
 
-   - `ratio` is width ÷ height of the image (`3 / 2` landscape, `4 / 5` portrait, `1` square).
-   - Optional `focus: "50% 70%"` on the cover or an image chooses which part stays visible when
-     the photo is cropped (for example on a phone screen): left/right, then top/bottom.
-   - `wide: true` makes a gallery image span the full width.
-   - `alt` is a short description for people using screen readers, and for Google.
+To **replace** a grey placeholder, open its folder and upload a photo with exactly the same name
+(for example `cover.jpg`); GitHub replaces the old file.
 
-4. **Commit.** That is all. The project appears on the Projects page (in both the Images and
-   the List view, and in its category filter), gets its own page in all three languages and is
-   added to the sitemap. Projects with `featured: true` also appear in the full-screen slideshow
-   on the home page, in the order of the file.
+### 3. Add the project to the list
 
-**Remove a placeholder project:** delete its `{ ... },` block from `content/projects.js` and delete
-its folder in `projects/`. Placeholder projects are the ones with `placeholder: true`
-(they show a "Placeholder" tag on the site).
+Open `content/projects.js`, click the **pencil icon**, copy one of the `{ ... },` blocks, paste it
+where you want the project to appear (the order in the file is the order on the site) and edit it:
 
-**La Mare** is a real project with placeholder pictures. Upload the real renders into
+```js
+{
+  slug: "villa-garda",                          // the folder name from step 2
+  title: "Villa on Lake Garda",                 // one text for all languages...
+  categories: ["interiors", "visualisation"],   // interiors, yachts, products, visualisation, branding
+  featured: true,                               // also show it in the home page slideshow
+  year: "2026",
+  client: "Private",
+  place: { en: "Lake Garda, Italy", it: "Lago di Garda, Italia", pl: "Jezioro Garda, Włochy" }, // ...or one per language
+  scope: { en: "Interior design", it: "Progetto d'interni", pl: "Projekt wnętrza" },
+  summary: { en: "One sentence for Google and link previews.", it: "...", pl: "..." },
+  text: {
+    en: ["First paragraph.", "Second paragraph."],
+    it: ["Primo paragrafo.", "Secondo paragrafo."],
+    pl: ["Pierwszy akapit.", "Drugi akapit."]
+  },
+  cover: "cover.jpg",
+  images: ["01.jpg", "02.jpg", "03.jpg"]
+},
+```
+
+Click **Commit changes**. In a minute or two the project is on the Projects page (Images and List
+views, and its category filter), has its own page in all three languages, and is in the sitemap.
+
+**Optional extras for an image** (write it as `{ ... }` instead of just the name):
+
+```js
+images: [
+  { file: "01.jpg", wide: true },                     // spans the full width of the gallery
+  { file: "02.jpg", alt: { en: "Saloon at dusk", it: "Salone al tramonto", pl: "Salon o zmierzchu" } },
+  "03.jpg"
+],
+cover: { file: "cover.jpg", focus: "50% 70%" }        // which part stays visible when cropped (left/right, top/bottom)
+```
+
+`alt` is a short description of the photo for blind visitors and for Google; without it the
+project title is used.
+
+**Remove a placeholder project:** delete its `{ ... },` block from `content/projects.js` and its
+folder in `projects/`. Placeholder projects have `placeholder: true` and a "Placeholder" tag.
+
+**La Mare** is a real project with grey placeholder images. Upload the real renders into
 `projects/la-mare/` with the same names (`cover.jpg`, `01.jpg`, `02.jpg`, `03.jpg`), and fill in
 the `year` in its entry. Add or remove gallery images as you like.
 

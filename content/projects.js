@@ -4,16 +4,20 @@
   Every project on the site comes from this list. To add one:
 
   1. Make a folder:  projects/<slug>/       (slug = short name, lowercase, dashes, e.g. "villa-garda")
-  2. Put the images in it: cover.jpg plus any gallery images (01.jpg, 02.jpg, ...)
-     Export them about 2000 px on the long side, JPEG quality 75 to 80.
-  3. Copy one entry below, paste it at the top of the list and edit it.
+  2. Upload the photos into it: cover.jpg (the big main photo) plus the gallery (01.jpg, 02.jpg, ...).
+     Full-size photos are fine: the site shrinks and compresses them automatically when it publishes.
+  3. Copy one entry below, paste it where you want it in the list and edit it.
 
   Texts can be one string (used for all languages) or { en, it, pl }.
   Categories: "interiors", "yachts", "products", "visualisation", "branding"
-  featured: true  -> shown on the home page (the first four featured ones)
-  placeholder: true -> shows a "Placeholder" tag; delete that line for real projects
-  wide: true on an image -> it spans the full width in the gallery
-  ratio: width / height of the image, e.g. 3/2 or 4/5 (keeps the layout steady while loading)
+  featured: true     -> shown in the full-screen slideshow on the home page
+  placeholder: true  -> shows a "Placeholder" tag; delete that line for real projects
+
+  Images can be just file names:   images: ["01.jpg", "02.jpg", "03.jpg"]
+  or, to add a description (alt text), a full-width image or a crop point:
+    { file: "01.jpg", wide: true, focus: "50% 70%", alt: { en: "...", it: "...", pl: "..." } }
+  wide: true   -> the image spans the full width of the gallery
+  focus        -> which part of the photo stays visible when it is cropped (left/right, then top/bottom)
 */
 window.WD_PROJECTS = [
   {
@@ -48,11 +52,11 @@ window.WD_PROJECTS = [
         "Jasne drewno pokrywa zakrzywione ściany, koja leży nisko pod iluminatorami, a światło pośrednie biegnie wzdłuż zabudowy, dzięki czemu wnętrze czyta się jak jedna ciągła powierzchnia. Wizualizacje powstały po to, by armator mógł przejść przez kabinę, zanim zostanie wycięty pierwszy panel."
       ]
     },
-    cover: { file: "cover.jpg", ratio: 3 / 2, alt: { en: "La Mare: guest cabin with curved timber walls and portholes, 3D render", it: "La Mare: cabina ospiti con pareti curve in legno e oblò, rendering 3D", pl: "La Mare: kabina gościnna z zakrzywionymi drewnianymi ścianami i iluminatorami, wizualizacja 3D" } },
+    cover: { file: "cover.jpg", alt: { en: "La Mare: guest cabin with curved timber walls and portholes, 3D render", it: "La Mare: cabina ospiti con pareti curve in legno e oblò, rendering 3D", pl: "La Mare: kabina gościnna z zakrzywionymi drewnianymi ścianami i iluminatorami, wizualizacja 3D" } },
     images: [
-      { file: "01.jpg", ratio: 3 / 2, wide: true, alt: { en: "Berth under a row of portholes", it: "Letto sotto una fila di oblò", pl: "Koja pod rzędem iluminatorów" } },
-      { file: "02.jpg", ratio: 4 / 5, alt: { en: "Detail of curved timber panelling", it: "Dettaglio della boiserie curva in legno", pl: "Detal zakrzywionej boazerii" } },
-      { file: "03.jpg", ratio: 4 / 5, alt: { en: "Porthole and indirect light along the joinery", it: "Oblò e luce indiretta lungo gli arredi", pl: "Iluminator i światło pośrednie wzdłuż zabudowy" } }
+      { file: "01.jpg", wide: true, alt: { en: "Berth under a row of portholes", it: "Letto sotto una fila di oblò", pl: "Koja pod rzędem iluminatorów" } },
+      { file: "02.jpg", alt: { en: "Detail of curved timber panelling", it: "Dettaglio della boiserie curva in legno", pl: "Detal zakrzywionej boazerii" } },
+      { file: "03.jpg", alt: { en: "Porthole and indirect light along the joinery", it: "Oblò e luce indiretta lungo gli arredi", pl: "Iluminator i światło pośrednie wzdłuż zabudowy" } }
     ]
   },
 
@@ -76,11 +80,11 @@ window.WD_PROJECTS = [
       it: ["[Testo segnaposto] Sostituisci questo testo con una breve descrizione del progetto: la richiesta, l'idea principale e un dettaglio di cui sei orgoglioso. Bastano due o tre paragrafi brevi."],
       pl: ["[Tekst przykładowy] Zastąp ten tekst krótkim opisem projektu: założeniami, główną ideą i jednym detalem, z którego jesteś dumny. Wystarczą dwa lub trzy krótkie akapity."]
     },
-    cover: { file: "cover.jpg", ratio: 3 / 2, alt: { en: "Placeholder image: living room with an arched opening", it: "Immagine segnaposto: soggiorno con apertura ad arco", pl: "Obraz przykładowy: salon z łukowym przejściem" } },
+    cover: { file: "cover.jpg", alt: { en: "Placeholder image: living room with an arched opening", it: "Immagine segnaposto: soggiorno con apertura ad arco", pl: "Obraz przykładowy: salon z łukowym przejściem" } },
     images: [
-      { file: "01.jpg", ratio: 4 / 5, alt: { en: "Placeholder image: hallway in soft light", it: "Immagine segnaposto: corridoio in luce morbida", pl: "Obraz przykładowy: korytarz w miękkim świetle" } },
-      { file: "02.jpg", ratio: 4 / 5, alt: { en: "Placeholder image: detail of a stone bench", it: "Immagine segnaposto: dettaglio di una panca in pietra", pl: "Obraz przykładowy: detal kamiennej ławy" } },
-      { file: "03.jpg", ratio: 3 / 2, wide: true, alt: { en: "Placeholder image: open plan living area", it: "Immagine segnaposto: zona giorno open space", pl: "Obraz przykładowy: otwarta strefa dzienna" } }
+      { file: "01.jpg", alt: { en: "Placeholder image: hallway in soft light", it: "Immagine segnaposto: corridoio in luce morbida", pl: "Obraz przykładowy: korytarz w miękkim świetle" } },
+      { file: "02.jpg", alt: { en: "Placeholder image: detail of a stone bench", it: "Immagine segnaposto: dettaglio di una panca in pietra", pl: "Obraz przykładowy: detal kamiennej ławy" } },
+      { file: "03.jpg", wide: true, alt: { en: "Placeholder image: open plan living area", it: "Immagine segnaposto: zona giorno open space", pl: "Obraz przykładowy: otwarta strefa dzienna" } }
     ]
   },
 
@@ -104,11 +108,11 @@ window.WD_PROJECTS = [
       it: ["[Testo segnaposto] Sostituisci questo testo con una breve descrizione del progetto: la barca, i desideri dell'armatore e come l'interno risponde."],
       pl: ["[Tekst przykładowy] Zastąp ten tekst krótkim opisem projektu: jachtu, oczekiwań armatora i tego, jak wnętrze na nie odpowiada."]
     },
-    cover: { file: "cover.jpg", ratio: 3 / 2, alt: { en: "Placeholder image: yacht saloon facing the sea", it: "Immagine segnaposto: salone di yacht vista mare", pl: "Obraz przykładowy: salon jachtu z widokiem na morze" } },
+    cover: { file: "cover.jpg", alt: { en: "Placeholder image: yacht saloon facing the sea", it: "Immagine segnaposto: salone di yacht vista mare", pl: "Obraz przykładowy: salon jachtu z widokiem na morze" } },
     images: [
-      { file: "01.jpg", ratio: 3 / 2, wide: true, alt: { en: "Placeholder image: owner's suite", it: "Immagine segnaposto: suite armatoriale", pl: "Obraz przykładowy: apartament armatora" } },
-      { file: "02.jpg", ratio: 4 / 5, alt: { en: "Placeholder image: stair detail", it: "Immagine segnaposto: dettaglio della scala", pl: "Obraz przykładowy: detal schodów" } },
-      { file: "03.jpg", ratio: 4 / 5, alt: { en: "Placeholder image: porthole and berth", it: "Immagine segnaposto: oblò e letto", pl: "Obraz przykładowy: iluminator i koja" } }
+      { file: "01.jpg", wide: true, alt: { en: "Placeholder image: owner's suite", it: "Immagine segnaposto: suite armatoriale", pl: "Obraz przykładowy: apartament armatora" } },
+      { file: "02.jpg", alt: { en: "Placeholder image: stair detail", it: "Immagine segnaposto: dettaglio della scala", pl: "Obraz przykładowy: detal schodów" } },
+      { file: "03.jpg", alt: { en: "Placeholder image: porthole and berth", it: "Immagine segnaposto: oblò e letto", pl: "Obraz przykładowy: iluminator i koja" } }
     ]
   },
 
@@ -132,11 +136,11 @@ window.WD_PROJECTS = [
       it: ["[Testo segnaposto] Sostituisci questo testo con una breve descrizione del progetto."],
       pl: ["[Tekst przykładowy] Zastąp ten tekst krótkim opisem projektu."]
     },
-    cover: { file: "cover.jpg", ratio: 3 / 2, alt: { en: "Placeholder image: stairwell with daylight from above", it: "Immagine segnaposto: vano scala con luce dall'alto", pl: "Obraz przykładowy: klatka schodowa ze światłem z góry" } },
+    cover: { file: "cover.jpg", alt: { en: "Placeholder image: stairwell with daylight from above", it: "Immagine segnaposto: vano scala con luce dall'alto", pl: "Obraz przykładowy: klatka schodowa ze światłem z góry" } },
     images: [
-      { file: "01.jpg", ratio: 4 / 5, alt: { en: "Placeholder image: kitchen niche", it: "Immagine segnaposto: nicchia cucina", pl: "Obraz przykładowy: wnęka kuchenna" } },
-      { file: "02.jpg", ratio: 4 / 5, alt: { en: "Placeholder image: bedroom wall", it: "Immagine segnaposto: parete della camera", pl: "Obraz przykładowy: ściana sypialni" } },
-      { file: "03.jpg", ratio: 3 / 2, wide: true, alt: { en: "Placeholder image: dining room", it: "Immagine segnaposto: sala da pranzo", pl: "Obraz przykładowy: jadalnia" } }
+      { file: "01.jpg", alt: { en: "Placeholder image: kitchen niche", it: "Immagine segnaposto: nicchia cucina", pl: "Obraz przykładowy: wnęka kuchenna" } },
+      { file: "02.jpg", alt: { en: "Placeholder image: bedroom wall", it: "Immagine segnaposto: parete della camera", pl: "Obraz przykładowy: ściana sypialni" } },
+      { file: "03.jpg", wide: true, alt: { en: "Placeholder image: dining room", it: "Immagine segnaposto: sala da pranzo", pl: "Obraz przykładowy: jadalnia" } }
     ]
   },
 
@@ -159,10 +163,10 @@ window.WD_PROJECTS = [
       it: ["[Testo segnaposto] Sostituisci questo testo con una breve descrizione del progetto."],
       pl: ["[Tekst przykładowy] Zastąp ten tekst krótkim opisem projektu."]
     },
-    cover: { file: "cover.jpg", ratio: 3 / 2, alt: { en: "Placeholder image: sailing yacht cabin with portholes", it: "Immagine segnaposto: cabina di barca a vela con oblò", pl: "Obraz przykładowy: kabina jachtu żaglowego z iluminatorami" } },
+    cover: { file: "cover.jpg", alt: { en: "Placeholder image: sailing yacht cabin with portholes", it: "Immagine segnaposto: cabina di barca a vela con oblò", pl: "Obraz przykładowy: kabina jachtu żaglowego z iluminatorami" } },
     images: [
-      { file: "01.jpg", ratio: 3 / 2, wide: true, alt: { en: "Placeholder image: saloon table", it: "Immagine segnaposto: tavolo del salone", pl: "Obraz przykładowy: stół w salonie" } },
-      { file: "02.jpg", ratio: 4 / 5, alt: { en: "Placeholder image: forward cabin", it: "Immagine segnaposto: cabina di prua", pl: "Obraz przykładowy: kabina dziobowa" } }
+      { file: "01.jpg", wide: true, alt: { en: "Placeholder image: saloon table", it: "Immagine segnaposto: tavolo del salone", pl: "Obraz przykładowy: stół w salonie" } },
+      { file: "02.jpg", alt: { en: "Placeholder image: forward cabin", it: "Immagine segnaposto: cabina di prua", pl: "Obraz przykładowy: kabina dziobowa" } }
     ]
   },
 
@@ -185,10 +189,10 @@ window.WD_PROJECTS = [
       it: ["[Testo segnaposto] Sostituisci questo testo con una breve descrizione del prodotto."],
       pl: ["[Tekst przykładowy] Zastąp ten tekst krótkim opisem produktu."]
     },
-    cover: { file: "cover.jpg", ratio: 3 / 2, alt: { en: "Placeholder image: table lamp on a plinth", it: "Immagine segnaposto: lampada da tavolo su un piedistallo", pl: "Obraz przykładowy: lampa stołowa na postumencie" } },
+    cover: { file: "cover.jpg", alt: { en: "Placeholder image: table lamp on a plinth", it: "Immagine segnaposto: lampada da tavolo su un piedistallo", pl: "Obraz przykładowy: lampa stołowa na postumencie" } },
     images: [
-      { file: "01.jpg", ratio: 4 / 5, alt: { en: "Placeholder image: lamp detail", it: "Immagine segnaposto: dettaglio della lampada", pl: "Obraz przykładowy: detal lampy" } },
-      { file: "02.jpg", ratio: 4 / 5, alt: { en: "Placeholder image: lamp, side view", it: "Immagine segnaposto: lampada, vista laterale", pl: "Obraz przykładowy: lampa, widok z boku" } }
+      { file: "01.jpg", alt: { en: "Placeholder image: lamp detail", it: "Immagine segnaposto: dettaglio della lampada", pl: "Obraz przykładowy: detal lampy" } },
+      { file: "02.jpg", alt: { en: "Placeholder image: lamp, side view", it: "Immagine segnaposto: lampada, vista laterale", pl: "Obraz przykładowy: lampa, widok z boku" } }
     ]
   },
 
@@ -211,10 +215,10 @@ window.WD_PROJECTS = [
       it: ["[Testo segnaposto] Sostituisci questo testo con una breve descrizione del progetto."],
       pl: ["[Tekst przykładowy] Zastąp ten tekst krótkim opisem projektu."]
     },
-    cover: { file: "cover.jpg", ratio: 3 / 2, alt: { en: "Placeholder image: stationery and cards on a table", it: "Immagine segnaposto: cancelleria e biglietti su un tavolo", pl: "Obraz przykładowy: materiały firmowe i wizytówki na stole" } },
+    cover: { file: "cover.jpg", alt: { en: "Placeholder image: stationery and cards on a table", it: "Immagine segnaposto: cancelleria e biglietti su un tavolo", pl: "Obraz przykładowy: materiały firmowe i wizytówki na stole" } },
     images: [
-      { file: "01.jpg", ratio: 4 / 5, alt: { en: "Placeholder image: cup with logo", it: "Immagine segnaposto: tazza con logo", pl: "Obraz przykładowy: kubek z logo" } },
-      { file: "02.jpg", ratio: 4 / 5, alt: { en: "Placeholder image: business cards", it: "Immagine segnaposto: biglietti da visita", pl: "Obraz przykładowy: wizytówki" } }
+      { file: "01.jpg", alt: { en: "Placeholder image: cup with logo", it: "Immagine segnaposto: tazza con logo", pl: "Obraz przykładowy: kubek z logo" } },
+      { file: "02.jpg", alt: { en: "Placeholder image: business cards", it: "Immagine segnaposto: biglietti da visita", pl: "Obraz przykładowy: wizytówki" } }
     ]
   }
 ];
