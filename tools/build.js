@@ -25,7 +25,7 @@ for (const f of ["content/site.js", "content/text.js", "content/projects.js", "a
 const { WD, WD_SITE: SITE, WD_TEXT: TEXT, WD_PROJECTS: PROJECTS } = ctx;
 // Where the site is published. On GitHub the workflow passes the real address, so the site works
 // both at https://<user>.github.io/<repo>/ (before the domain is connected) and at the domain.
-const BASE = (process.env.SITE_BASE || "").replace(/\/$/, "");           // "" or "/Lamare"
+const BASE = (process.env.SITE_BASE || "").replace(/\/$/, "");           // "" or "/witkowskidesign-site"
 const DOMAIN = (process.env.SITE_ORIGIN || SITE.domain).replace(/\/$/, ""); // https://witkowskidesign.com
 ctx.WD_ROOT = BASE + "/";
 const A = (p) => BASE + p; // asset path

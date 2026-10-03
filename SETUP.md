@@ -3,7 +3,7 @@
 Two parts:
 
 - **Part A** puts the site online now, for free, at
-  **https://bartekarchi56.github.io/Lamare/** (about 5 minutes).
+  **https://bartekarchi56.github.io/witkowskidesign-site/** (about 5 minutes).
 - **Part B** moves it to **https://witkowskidesign.com** whenever you are ready
   (about 15 minutes, then some waiting while DNS updates).
 
@@ -13,29 +13,22 @@ You need to be logged in to **GitHub** (and to **Cloudflare** for Part B).
 
 ## Part A · Online now at github.io
 
-### A1 · Make the repository public
+The site lives in the repository **https://github.com/bartekarchi56/witkowskidesign-site**
+(public, which GitHub Pages needs on a free plan).
 
-GitHub Pages is free for public repositories. (Private ones need a paid GitHub plan.)
+### A1 · Turn on GitHub Pages
 
-1. Open https://github.com/bartekarchi56/Lamare
-2. Click **Settings** (top menu of the repository).
-3. Scroll to the bottom, **Danger Zone** → **Change visibility** → **Change to public** and confirm.
-
-Only the website files are in this repository, so nothing private is exposed.
-
-### A2 · Turn on GitHub Pages
-
-1. Still in **Settings**, click **Pages** in the left column.
+1. Open https://github.com/bartekarchi56/witkowskidesign-site/settings/pages
 2. Under **Build and deployment** → **Source**, choose **GitHub Actions**.
 
-### A3 · Publish
+### A2 · Publish
 
-1. Merge the pull request with the new site into `main`
-   (open the pull request link, click **Merge pull request** → **Confirm merge**).
-2. Click the **Actions** tab. A run called **Publish site** starts by itself; wait for the
-   green tick (one or two minutes). If it shows a red cross because Pages was not switched on
-   yet, click **Publish site** on the left → **Run workflow** → **Run workflow**.
-3. Open **https://bartekarchi56.github.io/Lamare/**
+1. Click the **Actions** tab of the repository.
+2. Click **Publish site** on the left → **Run workflow** → **Run workflow**.
+   (A run may already be there with a red cross: that one started before Pages was switched on.
+   Running it again fixes it.)
+3. Wait for the green tick (one or two minutes), then open
+   **https://bartekarchi56.github.io/witkowskidesign-site/**
 
 From now on, every change saved on the `main` branch (a new project, new photos, text edits)
 goes live by itself in a minute or two.
@@ -84,14 +77,14 @@ goes live by itself in a minute or two.
 
 ### B3 · Publish once more
 
-The site needs one new publish so its links point to the domain instead of `/Lamare/`:
+The site needs one new publish so its links point to the domain instead of `/witkowskidesign-site/`:
 **Actions** tab → **Publish site** → **Run workflow** → **Run workflow**.
 
 ### B4 · Check
 
 - https://witkowskidesign.com opens the site.
 - https://www.witkowskidesign.com goes to the same site.
-- https://bartekarchi56.github.io/Lamare/ now forwards to witkowskidesign.com.
+- https://bartekarchi56.github.io/witkowskidesign-site/ now forwards to witkowskidesign.com.
 - https://timbro.witkowskidesign.com still opens Timbro, and email through Resend still works.
 
 ---

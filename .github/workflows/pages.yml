@@ -36,7 +36,7 @@ jobs:
           npm install --prefix "$RUNNER_TEMP/img" --no-save --no-package-lock sharp@0.34
           NODE_PATH="$RUNNER_TEMP/img/node_modules" node tools/optimize-images.js
       - name: Build pages
-        # base_path is "/Lamare" on github.io and "" once the custom domain is connected
+        # base_path is "/witkowskidesign-site" on github.io and "" once the custom domain is connected
         env:
           SITE_BASE: ${{ steps.pages.outputs.base_path }}
           SITE_ORIGIN: ${{ steps.pages.outputs.origin }}
