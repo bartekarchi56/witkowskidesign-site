@@ -61,6 +61,45 @@ window.WD_PROJECTS = [
   },
 
   {
+    slug: "modern-house-35-lamare",
+    title: "Modern House 35, Lamare",
+    categories: ["products", "interiors", "visualisation"],
+    featured: true,
+    year: "",
+    client: "Lamare",
+    place: { en: "Compact house", it: "Casa compatta", pl: "Kompaktowy dom" },
+    scope: { en: "House design, interior, 3D visualisation", it: "Progetto della casa, interni, visualizzazione 3D", pl: "Projekt domu, wnętrze, wizualizacja 3D" },
+    summary: {
+      en: "Design and 3D visualisation of Modern House 35, a compact house for Lamare.",
+      it: "Progetto e visualizzazione 3D di Modern House 35, una casa compatta per Lamare.",
+      pl: "Projekt i wizualizacja 3D Modern House 35, kompaktowego domu dla Lamare."
+    },
+    text: {
+      en: [
+        "Modern House 35, a compact house for Lamare.",
+        "Vertical timber cladding sits inside a black steel frame that reaches past the walls to frame the deck. Full-height sliding doors open the living room and kitchen onto the terrace, with outdoor dining on one side and a lounge on the other."
+      ],
+      it: [
+        "Modern House 35, una casa compatta per Lamare.",
+        "Il rivestimento verticale in legno è racchiuso in un telaio in acciaio nero che si estende oltre le pareti e incornicia la terrazza. Porte scorrevoli a tutta altezza aprono soggiorno e cucina sul deck, con il pranzo all'aperto da un lato e un salotto dall'altro."
+      ],
+      pl: [
+        "Modern House 35, kompaktowy dom dla Lamare.",
+        "Pionowe drewniane okładziny zamyka czarna stalowa rama, która wychodzi poza ściany i obramowuje taras. Przesuwne drzwi od podłogi do sufitu otwierają salon i kuchnię na taras, z miejscem do jedzenia po jednej stronie i strefą wypoczynku po drugiej."
+      ]
+    },
+    cover: {
+      file: "cover.jpg",
+      alt: {
+        en: "Compact house with vertical timber cladding, a black steel frame and a deck with outdoor dining and lounge at sunset, 3D render",
+        it: "Casa compatta con rivestimento verticale in legno, telaio in acciaio nero e terrazza con pranzo e salotto all'aperto al tramonto, rendering 3D",
+        pl: "Kompaktowy dom z pionową drewnianą okładziną, czarną stalową ramą i tarasem z jadalnią i strefą wypoczynku o zachodzie słońca, wizualizacja 3D"
+      }
+    },
+    images: []
+  },
+
+  {
     slug: "kitchen-sokole-kuznica",
     title: { en: "Kitchen, Sokole Kuźnica", it: "Cucina, Sokole Kuźnica", pl: "Kuchnia, Sokole Kuźnica" },
     categories: ["interiors", "visualisation"],
@@ -177,7 +216,6 @@ window.WD_PROJECTS = [
     images: []
   },
 
-
   {
     slug: "gucci-restaurant-secret-manor",
     title: "Gucci Restaurant, The Secret Manor",
@@ -215,32 +253,6 @@ window.WD_PROJECTS = [
       }
     },
     images: []
-  },
-
-  {
-    slug: "onda-lamp",
-    placeholder: true,
-    title: { en: "Onda lamp", it: "Lampada Onda", pl: "Lampa Onda" },
-    categories: ["products", "visualisation"],
-    year: "2025",
-    client: { en: "[Placeholder] Lighting brand", it: "[Segnaposto] Marchio di illuminazione", pl: "[Przykład] Marka oświetleniowa" },
-    place: { en: "Product design", it: "Design di prodotto", pl: "Projekt produktu" },
-    scope: { en: "Industrial design, prototyping, product renders", it: "Design industriale, prototipazione, rendering di prodotto", pl: "Wzornictwo przemysłowe, prototyp, wizualizacje produktu" },
-    summary: {
-      en: "[Placeholder text] A table lamp in turned brass and opal glass.",
-      it: "[Testo segnaposto] Una lampada da tavolo in ottone tornito e vetro opale.",
-      pl: "[Tekst przykładowy] Lampa stołowa z toczonego mosiądzu i szkła opalowego."
-    },
-    text: {
-      en: ["[Placeholder text] Replace this with a short description of the product."],
-      it: ["[Testo segnaposto] Sostituisci questo testo con una breve descrizione del prodotto."],
-      pl: ["[Tekst przykładowy] Zastąp ten tekst krótkim opisem produktu."]
-    },
-    cover: { file: "cover.jpg", alt: { en: "Placeholder image: table lamp on a plinth", it: "Immagine segnaposto: lampada da tavolo su un piedistallo", pl: "Obraz przykładowy: lampa stołowa na postumencie" } },
-    images: [
-      { file: "01.jpg", alt: { en: "Placeholder image: lamp detail", it: "Immagine segnaposto: dettaglio della lampada", pl: "Obraz przykładowy: detal lampy" } },
-      { file: "02.jpg", alt: { en: "Placeholder image: lamp, side view", it: "Immagine segnaposto: lampada, vista laterale", pl: "Obraz przykładowy: lampa, widok z boku" } }
-    ]
   },
 
   {
