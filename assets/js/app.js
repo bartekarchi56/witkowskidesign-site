@@ -42,8 +42,7 @@
     opts = opts || {};
     var w = 1600, h = Math.round(w / (ratio || 1.5));
     return '<img src="' + esc(src) + '" alt="' + esc(alt) + '" width="' + w + '" height="' + h + '"' +
-      (opts.eager ? ' fetchpriority="high"' : ' loading="lazy"') + ' decoding="async"' +
- + ">";
+      (opts.eager ? ' fetchpriority="high"' : ' loading="lazy"') + ' decoding="async">';
   }
   var LEVEL = '<svg viewBox="0 0 14 12" aria-hidden="true" focusable="false"><path d="M1.5 1.5h11L7 10.5z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M0 11h14" stroke="currentColor" stroke-width="1.2"/></svg>';
   function datum(left, right) {
@@ -196,7 +195,7 @@
     var text = (loc(p.text, lang) || []);
     if (typeof text === "string") text = [text];
     var gallery = (p.images || []).map(function (im) {
-      return '<figure class="reveal' + (im.wide ? " wide" : "") + '">' + imgTag(img(p.slug, im.file), loc(im.alt, lang), im.ratio, {}) + "</figure>";
+      return '<figure class="reveal' + (im.wide ? " wide" : "") + '">' + imgTag(img(p.slug, im.file), loc(im.alt, lang), im.ratio) +"</figure>";
     }).join("");
     return '<section class="page-head project-head wrap">' +
       '<a class="back" href="' + url(lang, "work") + '"><span aria-hidden="true">←</span> ' + P.back + "</a>" +
