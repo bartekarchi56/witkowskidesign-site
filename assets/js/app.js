@@ -13,6 +13,20 @@
   var PATHS = { home: "/", work: "/work/", services: "/services/", about: "/about/", contact: "/contact/", privacy: "/privacy/", notfound: "/404.html" };
   var CATS = ["interiors", "yachts", "products", "visualisation", "branding"];
   var NAV = ["work", "services", "about", "contact"];
+  var ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
+  // Pages that open on a full-screen photo: the menu sits on top of the image.
+  var HERO_PAGES = { home: true, project: true };
+
+  // "Witkoś" logo, drawn as a vector so it can be white over photos and black on white pages.
+  var LOGO_SVG = '<svg class="logo" viewBox="100 412 960 346" aria-hidden="true" focusable="false"><g fill="currentColor">' +
+    '<path d="M113 430H178V572Q178 586 187.5 586Q197 586 197 572V430H262V572Q262 586 271.5 586Q281 586 281 572V430H346V586C346 626 318 652 282 652C258 652 241 641 230 622C219 641 202 652 178 652C140 652 113 628 113 586Z"/>' +
+    '<rect x="379" y="493" width="61" height="159"/><ellipse cx="409.5" cy="460" rx="32" ry="31"/>' +
+    '<path d="M470 524H529V585H557V648H531V658C531 675 539 683 557 683V745C505 745 470 717 470 668Z"/>' +
+    '<rect x="591" y="426" width="60" height="222"/><path d="M676 545L703 487H764L736 546L778 650H712Z"/>' +
+    '<path fill-rule="evenodd" d="M860 487C907 487 946 524 946 571C946 618 907 655 860 655C813 655 775 618 775 571C775 524 813 487 860 487ZM861 547C847 547 837 557 837 571C837 585 847 595 861 595C875 595 885 585 885 571C885 557 875 547 861 547Z"/>' +
+    '<path d="M1027 478C990 484 962 505 962 535C962 560 985 575 993 590C998 602 990 612 955 618L975 652C1015 646 1044 624 1044 592C1044 566 1024 552 1013 538C1004 526 1012 516 1041 514Z"/>' +
+    '<path d="M975 477C988 458 1003 439 1012 431C1020 424 1028 430 1022 449C1017 465 1002 474 975 477Z"/>' +
+    "</g></svg>";
 
   /* ------------------------------------------------------------ helpers */
   function esc(s) {
@@ -42,15 +56,22 @@
     opts = opts || {};
     var w = 1600, h = Math.round(w / (ratio || 1.5));
     return '<img src="' + esc(src) + '" alt="' + esc(alt) + '" width="' + w + '" height="' + h + '"' +
-      (opts.eager ? ' fetchpriority="high"' : ' loading="lazy"') + ' decoding="async">';
-  }
-  var LEVEL = '<svg viewBox="0 0 14 12" aria-hidden="true" focusable="false"><path d="M1.5 1.5h11L7 10.5z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M0 11h14" stroke="currentColor" stroke-width="1.2"/></svg>';
-  function datum(left, right) {
-    return '<div class="datum" aria-hidden="true"><span class="datum__mark label">' + LEVEL + esc(left) + '</span><span class="datum__line"></span>' +
-      (right ? '<span class="datum__end label">' + right + "</span>" : "") + "</div>";
+      (opts.eager ? ' fetchpriority="high"' : ' loading="lazy"') +
+      (opts.focus ? ' style="object-position:' + esc(opts.focus) + '"' : "") + ' decoding="async">';
   }
   function waLink() { return "https://wa.me/" + SITE.contact.whatsapp; }
   function telLink() { return "tel:" + SITE.contact.phone.replace(/[^\d+]/g, ""); }
+  function logo() {
+    if (SITE.logo) {
+      return '<img class="logo logo--dark" src="' + esc(SITE.logo) + '" alt="">' +
+        '<img class="logo logo--light" src="' + esc(SITE.logoLight || SITE.logo) + '" alt="">';
+    }
+    return LOGO_SVG;
+  }
+  function brand(lang) {
+    return '<a class="brand" href="' + url(lang, "home") + '" aria-label="Witkowski Design, ' + esc(TEXT[lang].nav.home) + '">' + logo() + "</a>";
+  }
+  function arrow() { return '<span class="arrow" aria-hidden="true">→</span>'; }
 
   /* ------------------------------------------------------------ chrome */
   function langLinks(lang, page, slug) {
@@ -63,23 +84,23 @@
     var T = TEXT[lang];
     var active = page === "project" ? "work" : page;
     var links = NAV.map(function (k) {
-      return '<li><a href="' + url(lang, k) + '"' + (k === active ? ' aria-current="page"' : "") + ">" + T.nav[k] + "</a></li>";
+      return '<a href="' + url(lang, k) + '"' + (k === active ? ' aria-current="page"' : "") + ">" + T.nav[k] + "</a>";
     }).join("");
+    var over = HERO_PAGES[page] && (page !== "project" || find(slug));
     return '<a class="skip" href="#main">' + T.nav.skip + "</a>" +
-      '<header class="site-header" id="top"><div class="wrap site-header__in">' +
-      '<a class="wordmark" href="' + url(lang, "home") + '">Witkowski <em>Design</em></a>' +
-      '<nav class="nav" aria-label="' + T.nav.main + '"><ul class="nav__links">' + links + "</ul>" +
-      '<div class="langs" role="group" aria-label="' + T.nav.language + '">' + langLinks(lang, page, slug) + "</div></nav>" +
-      '<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">' + T.nav.menu + "</button>" +
-      "</div></header>" +
+      '<header class="site-header' + (over ? " is-over" : "") + '" id="top">' +
+      '<button class="burger" type="button" aria-expanded="false" aria-controls="menu"><span></span><span></span><span class="sr-only">' + T.nav.menu + "</span></button>" +
+      '<nav class="nav" aria-label="' + T.nav.main + '">' + links + "</nav>" +
+      brand(lang) +
+      '<div class="langs" role="group" aria-label="' + T.nav.language + '">' + langLinks(lang, page, slug) + "</div>" +
+      "</header>" +
       '<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="' + T.nav.menu + '">' +
-      '<div class="menu__top"><a class="wordmark" href="' + url(lang, "home") + '">Witkowski <em>Design</em></a>' +
-      '<button class="menu-btn menu-close" type="button">' + T.nav.close + "</button></div>" +
+      '<div class="menu__top"><button class="menu-close" type="button">' + T.nav.close + "</button>" + brand(lang) + "<span></span></div>" +
       '<nav class="menu__links" aria-label="' + T.nav.main + '">' +
-      NAV.map(function (k) { return '<a href="' + url(lang, k) + '"' + (k === active ? ' aria-current="page"' : "") + ">" + T.nav[k] + "</a>"; }).join("") +
+      '<a href="' + url(lang, "home") + '"' + (active === "home" ? ' aria-current="page"' : "") + ">" + T.nav.home + "</a>" + links +
       "</nav>" +
-      '<div class="menu__foot"><a class="label" href="mailto:' + SITE.contact.email + '">' + SITE.contact.email + "</a>" +
-      '<div class="langs" role="group" aria-label="' + T.nav.language + '">' + langLinks(lang, page, slug) + "</div></div>" +
+      '<div class="menu__foot"><div class="langs" role="group" aria-label="' + T.nav.language + '">' + langLinks(lang, page, slug) + "</div>" +
+      '<a href="mailto:' + SITE.contact.email + '">' + SITE.contact.email + "</a></div>" +
       "</div>";
   }
   function footer(lang) {
@@ -87,42 +108,47 @@
     var social = "";
     if (SITE.social && SITE.social.instagram) social += '<a href="' + esc(SITE.social.instagram) + '" rel="noopener">Instagram</a>';
     if (SITE.social && SITE.social.linkedin) social += '<a href="' + esc(SITE.social.linkedin) + '" rel="noopener">LinkedIn</a>';
-    return '<footer class="site-footer"><div class="wrap">' +
-      '<div class="grid">' +
-      '<div class="foot-brand"><a class="wordmark" href="' + url(lang, "home") + '">Witkowski <em>Design</em></a><p class="label">' + esc(c.cities) + "</p></div>" +
-      '<nav class="foot-nav" aria-label="Footer">' + NAV.map(function (k) { return '<a href="' + url(lang, k) + '">' + T.nav[k] + "</a>"; }).join("") + "</nav>" +
-      '<div class="foot-contact"><a href="mailto:' + c.email + '">' + c.email + '</a><a href="' + telLink() + '">' + esc(c.phone) + '</a><a href="' + waLink() + '" rel="noopener">WhatsApp</a>' + social + "</div>" +
-      "</div>" +
-      '<div class="foot-base label"><span>© ' + year + " Witkowski Design. " + T.footer.rights + "</span>" +
-      '<nav aria-label="Legal"><a href="' + url(lang, "privacy") + '">' + T.footer.privacy + '</a><a href="#top">' + T.footer.top + " ↑</a></nav></div>" +
+    return '<footer class="site-footer"><div class="wrap foot">' +
+      "<p>© " + year + " Witkowski Design · " + esc(c.cities) + "</p>" +
+      '<nav aria-label="' + T.nav.contact + '"><a href="mailto:' + c.email + '">' + c.email + '</a><a href="' + telLink() + '">' + esc(c.phone) + '</a><a href="' + waLink() + '" rel="noopener">WhatsApp</a>' + social +
+      '<a href="' + url(lang, "privacy") + '">' + T.footer.privacy + "</a></nav>" +
       "</div></footer>";
   }
 
   /* ------------------------------------------------------------ shared blocks */
-  function card(p, lang, ratio, i) {
-    var T = TEXT[lang];
-    var title = loc(p.title, lang);
+  function caption(p, lang, T) {
     var meta = catsLabel(p, T) + (p.year ? " · " + esc(p.year) : "");
-    return '<a class="card reveal" href="' + url(lang, "project", p.slug) + '">' +
-      '<div class="card__img">' + imgTag(img(p.slug, p.cover.file), loc(p.cover.alt, lang), p.cover.ratio) + "</div>" +
-      '<div class="card__cap"><div><h3 class="card__title">' + esc(title) + '</h3><p class="card__meta label">' + meta + "</p></div>" +
-      (p.placeholder ? '<span class="tag">' + T.common.placeholder + "</span>" : "") + "</div></a>";
+    return '<span class="cap"><span class="cap__title">' + esc(loc(p.title, lang)) + "</span>" +
+      '<span class="cap__meta">' + meta + "</span>" +
+      (p.placeholder ? '<span class="tag">' + T.common.placeholder + "</span>" : "") + "</span>";
   }
-  function cta(lang) {
+  function card(p, lang, extra) {
+    var T = TEXT[lang];
+    return '<a class="card reveal' + (extra ? " " + extra : "") + '" href="' + url(lang, "project", p.slug) + '">' +
+      '<span class="card__img">' + imgTag(img(p.slug, p.cover.file), loc(p.cover.alt, lang), p.cover.ratio, { focus: p.cover.focus }) + "</span>" +
+      caption(p, lang, T) + "</a>";
+  }
+  function row(p, lang) {
+    var T = TEXT[lang];
+    return '<a class="row reveal" href="' + url(lang, "project", p.slug) + '">' +
+      '<span class="row__title">' + esc(loc(p.title, lang)) + (p.placeholder ? ' <span class="tag">' + T.common.placeholder + "</span>" : "") + "</span>" +
+      '<span class="row__meta">' + catsLabel(p, T) + "</span>" +
+      '<span class="row__place">' + esc(loc(p.place, lang)) + "</span>" +
+      '<span class="row__year">' + esc(p.year || "") + "</span></a>";
+  }
+  function contactBlock(lang) {
     var T = TEXT[lang], c = SITE.contact;
-    return '<section class="cta wrap reveal" aria-labelledby="cta-title">' +
-      '<p class="label">' + T.nav.contact + "</p>" +
-      '<h2 class="h1" id="cta-title" style="margin-top:1rem">' + T.home.contactTitle + "</h2>" +
-      "<p>" + T.home.contactText + "</p>" +
-      '<div class="cta__row">' +
-      '<div><span class="label">' + T.contact.email + '</span><a href="mailto:' + c.email + '">' + c.email + "</a></div>" +
-      '<div><span class="label">' + T.contact.phone + '</span><a href="' + telLink() + '">' + esc(c.phone) + "</a></div>" +
-      '<div><span class="label">' + T.contact.whatsapp + '</span><a href="' + waLink() + '" rel="noopener">' + T.contact.whatsappAction + ' <span class="arrow">→</span></a></div>' +
+    return '<section class="contact-band reveal" aria-labelledby="cta-title"><div class="wrap center">' +
+      '<p class="eyebrow">' + T.nav.contact + "</p>" +
+      '<h2 class="statement" id="cta-title">' + T.home.contactTitle + "</h2>" +
+      '<p class="muted narrow">' + T.home.contactText + "</p>" +
+      '<p class="big-link"><a href="mailto:' + c.email + '">' + c.email + "</a></p>" +
+      '<p class="inline-links"><a href="' + telLink() + '">' + esc(c.phone) + '</a><a href="' + waLink() + '" rel="noopener">' + T.contact.whatsappAction + "</a></p>" +
       "</div></section>";
   }
-  function pageHead(title, lead, left, right) {
-    return '<section class="page-head wrap"><h1 class="h1">' + title + "</h1>" +
-      (lead ? '<p class="lead">' + lead + "</p>" : "") + datum(left || "±0.00", right) + "</section>";
+  function pageTop(title, lead) {
+    return '<section class="page-top wrap center"><h1 class="page-title">' + title + "</h1>" +
+      (lead ? '<p class="page-lead">' + lead + "</p>" : "") + "</section>";
   }
 
   /* ------------------------------------------------------------ pages */
@@ -130,40 +156,45 @@
 
   pages.home = function (lang) {
     var T = TEXT[lang], H = T.home;
-    var featured = PROJECTS.filter(function (p) { return p.featured; }).slice(0, 4);
-    var hero = featured[0] || PROJECTS[0];
-    var ratios = [3 / 2, 4 / 5, 4 / 5, 3 / 2];
-    var services = CATS.map(function (k) {
-      return '<li><a href="' + url(lang, "services") + "#" + k + '"><span class="disc__name">' + T.services.items[k].name + '</span><span class="disc__text">' + H.services[k] + '</span><span class="arrow" aria-hidden="true">→</span></a></li>';
+    var featured = PROJECTS.filter(function (p) { return p.featured; });
+    if (!featured.length) featured = PROJECTS.slice(0, 1);
+    var slides = featured.map(function (p, i) {
+      return '<figure class="slide' + (i === 0 ? " is-active" : "") + '"' + (i ? ' aria-hidden="true"' : "") + ">" +
+        imgTag(img(p.slug, p.cover.file), loc(p.cover.alt, lang), p.cover.ratio, { eager: i === 0, focus: p.cover.focus }) + "</figure>";
     }).join("");
-    var stamps = "";
-    for (var i = 0; i < 10; i++) stamps += '<span class="' + (i < 7 ? "on" : "") + '"></span>';
+    var caps = featured.map(function (p, i) {
+      return '<a class="hero__cap' + (i === 0 ? " is-active" : "") + '" href="' + url(lang, "project", p.slug) + '"' + (i ? ' tabindex="-1" aria-hidden="true"' : "") + ">" +
+        '<span class="hero__title">' + esc(loc(p.title, lang)) + '</span><span class="hero__meta">' + esc(loc(p.place, lang)) + "</span></a>";
+    }).join("");
+    var sel = featured.slice(0, 4);
+    var services = CATS.map(function (k) {
+      return '<li><a href="' + url(lang, "services") + "#" + k + '">' + T.services.items[k].name + "</a></li>";
+    }).join("");
 
-    return '<section class="hero wrap">' +
-      '<div class="hero__row"><p class="label">' + H.eyebrow + '</p><p class="label">' + esc(SITE.contact.cities) + "</p></div>" +
-      '<h1 class="display hero__title">' + H.title + "</h1>" +
-      datum("±0.00", "Witkowski Design") + "</section>" +
-      (hero ? '<figure class="hero__media" style="margin:0">' + imgTag(img(hero.slug, hero.cover.file), loc(hero.cover.alt, lang), hero.cover.ratio, { eager: true }) + "</figure>" +
-        '<div class="wrap hero__caption"><a class="label" href="' + url(lang, "project", hero.slug) + '">' + H.caption + ' <span class="arrow">→</span></a></div>' : "") +
-
-      '<section class="section wrap grid statement reveal"><p class="label">' + T.nav.about + '</p><p class="lead">' + H.statement + "</p></section>" +
-
-      '<section class="section wrap" aria-labelledby="sel-title"><div class="section-head"><div><p class="label">' + T.nav.work + '</p><h2 class="h2" id="sel-title">' + H.selected + "</h2></div>" +
-      '<a class="more" href="' + url(lang, "work") + '">' + H.allWork + ' <span class="arrow">→</span></a></div>' +
-      '<div class="grid selected">' + featured.map(function (p, i) { return card(p, lang, ratios[i], i); }).join("") + "</div></section>" +
-
-      '<section class="section wrap" aria-labelledby="srv-title"><div class="section-head"><div><p class="label">' + T.nav.services + '</p><h2 class="h2" id="srv-title">' + H.servicesTitle + "</h2></div>" +
-      '<a class="more" href="' + url(lang, "services") + '">' + H.servicesLink + ' <span class="arrow">→</span></a></div>' +
-      '<ul class="disc reveal">' + services + "</ul></section>" +
-
-      '<section class="timbro on-dark" aria-labelledby="timbro-title"><div class="wrap grid">' +
-      '<div class="timbro__text reveal"><p class="label">' + H.timbroEyebrow + '</p><h2 class="h1" id="timbro-title"><em>Timbro</em></h2><p>' + H.timbroText + "</p>" +
-      '<a class="btn" href="' + SITE.timbro.url + '" rel="noopener">' + H.timbroLink + ' <span class="arrow">→</span></a></div>' +
-      '<div class="timbro__visual reveal" aria-hidden="true"><div class="pass"><div class="pass__top"><span class="pass__brand">Timbro</span><span class="label">7 / 10</span></div>' +
-      '<p class="pass__name">' + H.timbroCard + '</p><div class="stamps">' + stamps + '</div><div class="pass__foot"><span class="label">Apple Wallet</span><span class="label">Google Wallet</span></div></div></div>' +
+    return '<section class="hero" aria-label="' + esc(H.selected) + '">' +
+      '<h1 class="sr-only">' + esc(T.meta.home.title) + "</h1>" +
+      '<div class="hero__slides">' + slides + "</div>" +
+      '<div class="hero__bar">' + '<div class="hero__caps">' + caps + "</div>" +
+      (featured.length > 1 ? '<button class="hero__pause" type="button" data-pause="' + esc(H.pause) + '" data-play="' + esc(H.play) + '" aria-label="' + esc(H.pause) + '"><span aria-hidden="true"></span></button>' : "") +
       "</div></section>" +
 
-      cta(lang);
+      '<section class="intro wrap center reveal"><p class="statement">' + H.intro + "</p>" +
+      '<p><a class="text-link" href="' + url(lang, "about") + '">' + H.studioLink + " " + arrow() + "</a></p></section>" +
+
+      '<section class="selected wrap" aria-labelledby="sel-title">' +
+      '<div class="section-head"><h2 class="eyebrow" id="sel-title">' + H.selected + '</h2><a class="text-link" href="' + url(lang, "work") + '">' + H.allWork + " " + arrow() + "</a></div>" +
+      '<div class="selected__grid">' + sel.map(function (p, i) { return card(p, lang, "s" + (i + 1)); }).join("") + "</div></section>" +
+
+      '<section class="disciplines wrap center reveal" aria-labelledby="srv-title"><h2 class="eyebrow" id="srv-title">' + H.servicesTitle + "</h2>" +
+      '<ul class="disciplines__list">' + services + "</ul>" +
+      '<p><a class="text-link" href="' + url(lang, "services") + '">' + H.servicesLink + " " + arrow() + "</a></p></section>" +
+
+      '<section class="timbro" aria-labelledby="timbro-title"><div class="wrap center reveal">' +
+      '<p class="eyebrow">' + H.timbroEyebrow + '</p><h2 class="timbro__name" id="timbro-title">Timbro</h2>' +
+      '<p class="narrow">' + H.timbroText + "</p>" +
+      '<p><a class="text-link" href="' + SITE.timbro.url + '" rel="noopener">' + H.timbroLink + " " + arrow() + "</a></p></div></section>" +
+
+      contactBlock(lang);
   };
 
   pages.work = function (lang) {
@@ -171,12 +202,15 @@
     var counts = { all: PROJECTS.length };
     CATS.forEach(function (c) { counts[c] = PROJECTS.filter(function (p) { return (p.categories || []).indexOf(c) > -1; }).length; });
     var filters = ["all"].concat(CATS).map(function (c) {
-      return '<button type="button" data-cat="' + c + '" aria-pressed="' + (c === "all") + '">' + T.cats[c] + "<sup>" + counts[c] + "</sup></button>";
+      return '<button type="button" data-cat="' + c + '" aria-pressed="' + (c === "all") + '">' + T.cats[c] + " <sup>" + counts[c] + "</sup></button>";
     }).join("");
-    return '<section class="page-head wrap"><h1 class="h1">' + W.title + '</h1><p class="lead">' + W.intro + "</p>" +
+    return pageTop(W.title, W.intro) +
+      '<div class="wrap work-tools">' +
       '<div class="filters" role="group" aria-label="' + W.filterLabel + '">' + filters + "</div>" +
-      datum("±0.00", '<span class="work-count" aria-live="polite">' + countText(lang, PROJECTS.length) + "</span>") + "</section>" +
-      '<section class="wrap section--last"><div class="work-grid">' + PROJECTS.map(function (p) { return card(p, lang, 1.5); }).join("") + "</div></section>";
+      '<div class="views" role="group" aria-label="' + W.view + '"><button type="button" data-view="grid" aria-pressed="true">' + W.viewImages + '</button><button type="button" data-view="list" aria-pressed="false">' + W.viewList + "</button></div>" +
+      '<p class="sr-only work-count" aria-live="polite">' + countText(lang, PROJECTS.length) + "</p>" +
+      "</div>" +
+      '<section class="wrap work"><div class="work-grid">' + PROJECTS.map(function (p) { return card(p, lang); }).join("") + "</div></section>";
   };
   function countText(lang, n) {
     var W = TEXT[lang].work;
@@ -186,88 +220,93 @@
   pages.project = function (lang, slug) {
     var T = TEXT[lang], P = T.project, p = find(slug);
     if (!p) {
-      return pageHead(P.missingTitle, P.missingText) + '<section class="wrap section--last"><a class="more" href="' + url(lang, "work") + '">' + P.back + ' <span class="arrow">→</span></a></section>';
+      return pageTop(P.missingTitle, P.missingText) + '<section class="wrap center pad-bottom"><a class="text-link" href="' + url(lang, "work") + '">' + P.back + " " + arrow() + "</a></section>";
     }
     var idx = PROJECTS.indexOf(p), next = PROJECTS[(idx + 1) % PROJECTS.length];
     var rows = [["client", loc(p.client, lang)], ["place", loc(p.place, lang)], ["year", p.year], ["scope", loc(p.scope, lang)], ["category", catsLabel(p, T)]]
       .filter(function (r) { return r[1]; })
-      .map(function (r) { return '<div><dt class="label">' + P[r[0]] + "</dt><dd>" + esc(r[1]) + "</dd></div>"; }).join("");
-    var text = (loc(p.text, lang) || []);
+      .map(function (r) { return "<div><dt>" + P[r[0]] + "</dt><dd>" + esc(r[1]) + "</dd></div>"; }).join("");
+    var text = loc(p.text, lang) || [];
     if (typeof text === "string") text = [text];
     var gallery = (p.images || []).map(function (im) {
-      return '<figure class="reveal' + (im.wide ? " wide" : "") + '">' + imgTag(img(p.slug, im.file), loc(im.alt, lang), im.ratio) +"</figure>";
+      return '<figure class="reveal' + (im.wide ? " wide" : "") + '">' + imgTag(img(p.slug, im.file), loc(im.alt, lang), im.ratio, { focus: im.focus }) + "</figure>";
     }).join("");
-    return '<section class="page-head project-head wrap">' +
-      '<a class="back" href="' + url(lang, "work") + '"><span aria-hidden="true">←</span> ' + P.back + "</a>" +
-      '<h1 class="h1">' + esc(loc(p.title, lang)) + "</h1>" +
-      (p.placeholder ? '<span class="tag">' + T.common.placeholder + "</span>" : "") +
-      '<p class="lead">' + esc(loc(p.summary, lang)) + "</p>" +
-      datum("±0.00", esc(catsLabel(p, T))) + "</section>" +
-      '<figure class="wrap project-hero-wrap" style="margin-top:0"><div class="project-hero">' + imgTag(img(p.slug, p.cover.file), loc(p.cover.alt, lang), p.cover.ratio, { eager: true }) + "</div></figure>" +
-      '<section class="wrap grid project-body">' +
-      '<dl class="titleblock"><div class="titleblock__head"><span class="label">Witkowski Design</span><span class="label">' + esc(p.year || "") + "</span></div>" + rows + "</dl>" +
+    return '<section class="hero hero--project">' +
+      '<div class="hero__slides"><figure class="slide is-active">' + imgTag(img(p.slug, p.cover.file), loc(p.cover.alt, lang), p.cover.ratio, { eager: true, focus: p.cover.focus }) + "</figure></div>" +
+      '<div class="hero__bar"><div class="hero__caps"><div class="hero__cap is-active">' +
+      '<h1 class="hero__title">' + esc(loc(p.title, lang)) + "</h1>" +
+      '<span class="hero__meta">' + esc(loc(p.place, lang)) + "</span>" +
+      (p.placeholder ? '<span class="tag tag--light">' + T.common.placeholder + "</span>" : "") +
+      "</div></div></div></section>" +
+      '<section class="wrap project-info">' +
+      '<p class="back-row"><a class="text-link" href="' + url(lang, "work") + '"><span aria-hidden="true">←</span> ' + P.back + "</a></p>" +
+      '<dl class="facts">' + rows + "</dl>" +
       '<div class="project-text">' + text.map(function (t) { return "<p>" + esc(t) + "</p>"; }).join("") + "</div>" +
       "</section>" +
       '<section class="wrap gallery">' + gallery + "</section>" +
-      (next && next !== p ? '<section class="wrap section"><a class="next" href="' + url(lang, "project", next.slug) + '"><div><p class="label">' + P.next + '</p><p class="h2">' + esc(loc(next.title, lang)) + ' <span class="arrow" aria-hidden="true">→</span></p></div>' +
-        '<div class="next__img">' + imgTag(img(next.slug, next.cover.file), loc(next.cover.alt, lang), next.cover.ratio) + "</div></a></section>" : "") +
-      cta(lang);
+      (next && next !== p ? '<a class="next" href="' + url(lang, "project", next.slug) + '">' +
+        '<span class="next__img">' + imgTag(img(next.slug, next.cover.file), loc(next.cover.alt, lang), next.cover.ratio, { focus: next.cover.focus }) + "</span>" +
+        '<span class="next__text"><span class="eyebrow">' + P.next + '</span><span class="next__title">' + esc(loc(next.title, lang)) + "</span></span></a>" : "") +
+      contactBlock(lang);
   };
 
   pages.services = function (lang) {
     var T = TEXT[lang], S = T.services;
     var blocks = CATS.map(function (k) {
       var it = S.items[k];
-      return '<article class="service grid reveal" id="' + k + '"><div class="service__head"><span class="label">' + T.cats[k] + '</span><h2 class="h2">' + it.name + "</h2></div>" +
-        '<div class="service__body"><p>' + it.text + '</p><span class="label">' + S.deliverables + '</span><ul class="deliver">' +
-        it.list.map(function (li) { return "<li>" + li + "</li>"; }).join("") + "</ul></div></article>";
+      return '<article class="service reveal" id="' + k + '"><h2 class="service__name">' + it.name + "</h2>" +
+        '<div class="service__body"><p>' + it.text + '</p><p class="service__list"><span class="eyebrow">' + S.deliverables + "</span>" +
+        it.list.join(" · ") + "</p></div></article>";
     }).join("");
     var steps = S.steps.map(function (s, i) {
-      return '<li><span class="num label">0' + (i + 1) + '</span><h3 class="h3">' + s.name + "</h3><p>" + s.text + "</p></li>";
+      return '<li><span class="step__num">' + ROMAN[i] + '</span><h3 class="step__name">' + s.name + "</h3><p>" + s.text + "</p></li>";
     }).join("");
-    return pageHead(S.title, S.intro, "±0.00", CATS.length + " · " + S.steps.length) +
-      '<div class="wrap">' + blocks + "</div>" +
-      '<section class="section wrap" aria-labelledby="proc-title"><p class="label">' + S.processIntro + '</p><h2 class="h1" id="proc-title" style="margin-top:1rem">' + S.processTitle + "</h2>" +
-      '<ol class="process reveal">' + steps + "</ol>" +
-      '<p style="margin-top:2rem"><a class="btn" href="' + url(lang, "contact") + '">' + S.cta + ' <span class="arrow">→</span></a></p></section>' +
-      cta(lang);
+    return pageTop(S.title, S.intro) +
+      '<div class="wrap services">' + blocks + "</div>" +
+      '<section class="process wrap reveal" aria-labelledby="proc-title"><div class="center"><h2 class="eyebrow" id="proc-title">' + S.processTitle + '</h2><p class="statement statement--small">' + S.processIntro + "</p></div>" +
+      '<ol class="steps">' + steps + "</ol>" +
+      '<p class="center"><a class="btn" href="' + url(lang, "contact") + '">' + S.cta + "</a></p></section>" +
+      contactBlock(lang);
   };
 
   pages.about = function (lang) {
     var T = TEXT[lang], A = T.about;
-    return '<section class="page-head wrap"><h1 class="h1">' + A.title + "</h1>" + datum("±0.00", esc(SITE.contact.cities)) + "</section>" +
-      '<section class="wrap grid about-top">' +
+    return pageTop(A.title) +
+      '<section class="wrap about">' +
       (SITE.portrait
-        ? '<figure class="portrait portrait--photo reveal">' + imgTag(SITE.portrait, SITE.legal.owner || SITE.contact.name, 4 / 5) + "</figure>"
-        : '<div class="portrait reveal" role="img" aria-label="' + A.photoNote + '"><span class="label">' + A.photoNote + "</span></div>") +
-      '<div class="about-text reveal"><p class="h3">' + A.lead + "</p>" + A.bio.map(function (b) { return "<p>" + b + "</p>"; }).join("") + "</div>" +
+        ? '<figure class="portrait reveal">' + imgTag(SITE.portrait, SITE.legal.owner || SITE.contact.name, 4 / 5) + "</figure>"
+        : '<div class="portrait portrait--empty reveal" role="img" aria-label="' + A.photoNote + '"><span>' + A.photoNote + "</span></div>") +
+      '<div class="about__text reveal"><p class="statement statement--left">' + A.lead + "</p>" + A.bio.map(function (b) { return "<p>" + b + "</p>"; }).join("") + "</div>" +
       "</section>" +
-      '<section class="section wrap" aria-labelledby="appr-title"><h2 class="h2" id="appr-title" style="margin-bottom:2.5rem">' + A.approachTitle + "</h2>" +
-      '<ul class="principles reveal">' + A.principles.map(function (p) { return '<li><h3 class="h3">' + p.name + "</h3><p>" + p.text + "</p></li>"; }).join("") + "</ul></section>" +
-      '<section class="section wrap" aria-labelledby="bases-title"><h2 class="h2" id="bases-title" style="margin-bottom:2.5rem">' + A.basesTitle + "</h2>" +
-      '<ul class="bases reveal">' + A.bases.map(function (p) { return '<li><h3 class="h3">' + p.name + "</h3><p>" + p.text + "</p></li>"; }).join("") + "</ul></section>" +
-      cta(lang);
+      '<section class="wrap principles-wrap" aria-labelledby="appr-title"><h2 class="eyebrow center" id="appr-title">' + A.approachTitle + "</h2>" +
+      '<ul class="principles reveal">' + A.principles.map(function (p) { return "<li><h3>" + p.name + "</h3><p>" + p.text + "</p></li>"; }).join("") + "</ul></section>" +
+      '<section class="wrap principles-wrap" aria-labelledby="bases-title"><h2 class="eyebrow center" id="bases-title">' + A.basesTitle + "</h2>" +
+      '<ul class="principles principles--two reveal">' + A.bases.map(function (p) { return "<li><h3>" + p.name + "</h3><p>" + p.text + "</p></li>"; }).join("") + "</ul></section>" +
+      contactBlock(lang);
   };
 
   pages.contact = function (lang) {
     var T = TEXT[lang], C = T.contact, c = SITE.contact;
     var opts = C.types.map(function (t) { return "<option>" + t + "</option>"; }).join("");
-    return pageHead(C.title, C.intro, "±0.00", esc(c.name)) +
-      '<section class="wrap grid contact-grid section--last">' +
-      '<ul class="contact-list reveal">' +
-      '<li><span class="label">' + C.email + '</span><a href="mailto:' + c.email + '">' + c.email + "</a></li>" +
-      '<li><span class="label">' + C.phone + '</span><a href="' + telLink() + '">' + esc(c.phone) + "</a></li>" +
-      '<li><span class="label">' + C.whatsapp + '</span><a href="' + waLink() + '" rel="noopener">' + C.whatsappAction + ' <span class="arrow">→</span></a></li>' +
-      '<li><span class="label">' + C.based + '</span><span class="v">' + esc(c.cities) + "</span></li>" +
-      "</ul>" +
-      '<form class="form reveal" id="contact-form" novalidate data-email="' + esc(c.email) + '">' +
-      '<h2 class="h3">' + C.formTitle + "</h2>" +
-      '<div class="field"><label class="label" for="f-name">' + C.name + '</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name"><p class="err" id="e-name"></p></div>' +
-      '<div class="field"><label class="label" for="f-email">' + C.yourEmail + '</label><input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email"><p class="err" id="e-email"></p></div>' +
-      '<div class="field"><label class="label" for="f-type">' + C.type + '</label><select id="f-type" name="type">' + opts + "</select></div>" +
-      '<div class="field"><label class="label" for="f-msg">' + C.message + '</label><textarea id="f-msg" name="message" required aria-describedby="e-msg"></textarea><p class="err" id="e-msg"></p></div>' +
-      '<button class="btn" type="submit">' + C.send + ' <span class="arrow" aria-hidden="true">→</span></button>' +
-      '<p class="note">' + C.note + '</p><p class="status" role="status" aria-live="polite"></p>' +
+    return pageTop(C.title, C.intro) +
+      '<section class="wrap center contact-direct reveal">' +
+      '<p class="big-link"><a href="mailto:' + c.email + '">' + c.email + "</a></p>" +
+      '<dl class="contact-list">' +
+      "<div><dt>" + C.phone + '</dt><dd><a href="' + telLink() + '">' + esc(c.phone) + "</a></dd></div>" +
+      "<div><dt>" + C.whatsapp + '</dt><dd><a href="' + waLink() + '" rel="noopener">' + C.whatsappAction + "</a></dd></div>" +
+      "<div><dt>" + C.based + "</dt><dd>" + esc(c.cities) + "</dd></div>" +
+      "</dl></section>" +
+      '<section class="wrap form-wrap reveal">' +
+      '<form class="form" id="contact-form" novalidate data-email="' + esc(c.email) + '">' +
+      '<h2 class="eyebrow center">' + C.formTitle + "</h2>" +
+      '<div class="form__row">' +
+      '<div class="field"><label for="f-name">' + C.name + '</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name"><p class="err" id="e-name"></p></div>' +
+      '<div class="field"><label for="f-email">' + C.yourEmail + '</label><input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email"><p class="err" id="e-email"></p></div>' +
+      "</div>" +
+      '<div class="field"><label for="f-type">' + C.type + '</label><select id="f-type" name="type">' + opts + "</select></div>" +
+      '<div class="field"><label for="f-msg">' + C.message + '</label><textarea id="f-msg" name="message" required aria-describedby="e-msg"></textarea><p class="err" id="e-msg"></p></div>' +
+      '<p class="center"><button class="btn" type="submit">' + C.send + "</button></p>" +
+      '<p class="note center">' + C.note + '</p><p class="status center" role="status" aria-live="polite"></p>' +
       "</form></section>";
   };
 
@@ -275,19 +314,19 @@
     var T = TEXT[lang], P = T.privacy, L = SITE.legal;
     var facts = ["company", "owner", "address", "vat", "email", "country"].map(function (k) {
       var v = L[k];
-      return '<div><dt class="label">' + P.fields[k] + "</dt><dd>" + (v ? esc(v) : '<span class="todo">' + T.common.todo + "</span>") + "</dd></div>";
+      return "<div><dt>" + P.fields[k] + "</dt><dd>" + (v ? esc(v) : '<span class="todo">' + T.common.todo + "</span>") + "</dd></div>";
     }).join("");
-    return pageHead(P.title, P.lead) +
-      '<section class="wrap section--last"><div class="prose">' +
+    return pageTop(P.title, P.lead) +
+      '<section class="wrap prose pad-bottom">' +
       P.sections.map(function (s) { return "<h2>" + s.title + "</h2><p>" + s.text + "</p>"; }).join("") +
-      "<h2>" + P.controllerTitle + '</h2><dl class="facts">' + facts + "</dl>" +
-      '<p class="label" style="margin-top:2.5rem">' + P.updated + "</p></div></section>";
+      "<h2>" + P.controllerTitle + '</h2><dl class="facts facts--legal">' + facts + "</dl>" +
+      '<p class="muted small">' + P.updated + "</p></section>";
   };
 
   pages.notfound = function (lang) {
     var T = TEXT[lang], N = T.notfound;
-    return '<section class="page-head wrap nf"><p class="label">404</p><h1 class="h1" style="margin-top:1rem;max-width:14ch">' + N.title + '</h1><p class="lead">' + N.text + "</p>" +
-      datum("±0.00") + '<p style="margin-top:2.5rem"><a class="btn" href="' + url(lang, "home") + '">' + N.home + ' <span class="arrow">→</span></a></p></section>';
+    return '<section class="page-top wrap center nf"><p class="eyebrow">404</p><h1 class="statement">' + N.title + '</h1><p class="page-lead">' + N.text + "</p>" +
+      '<p><a class="btn" href="' + url(lang, "home") + '">' + N.home + "</a></p></section>";
   };
 
   /* ------------------------------------------------------------ public API */
@@ -341,17 +380,24 @@
 
   function bindHeader() {
     var head = document.querySelector(".site-header");
+    var hero = document.querySelector(".hero");
     var menu = document.getElementById("menu");
-    var openBtn = document.querySelector(".site-header .menu-btn");
-    var closeBtn = menu && menu.querySelector(".menu-close");
+    var openBtn = head.querySelector(".burger");
+    var closeBtn = menu.querySelector(".menu-close");
+    var canOver = head.classList.contains("is-over") && hero;
     var lastY = window.scrollY;
-    window.addEventListener("scroll", function () {
+
+    function onScroll() {
       var y = window.scrollY;
-      head.classList.toggle("is-scrolled", y > 8);
-      var hide = y > 480 && y > lastY && !head.contains(document.activeElement);
-      head.classList.toggle("is-hidden", hide);
+      if (canOver) head.classList.toggle("is-over", y < hero.offsetHeight - head.offsetHeight);
+      head.classList.toggle("is-solid", !head.classList.contains("is-over") && y > 4);
+      var hide = y > window.innerHeight * 0.6 && y > lastY + 2 && !head.contains(document.activeElement);
+      if (y < lastY - 2 || y < 80) hide = false;
+      if (Math.abs(y - lastY) > 2) head.classList.toggle("is-hidden", hide);
       lastY = y;
-    }, { passive: true });
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
 
     function open() {
       menu.classList.add("is-open");
@@ -367,19 +413,49 @@
       document.body.style.overflow = "";
       openBtn.focus();
     }
-    if (openBtn && menu) {
-      openBtn.addEventListener("click", open);
-      closeBtn.addEventListener("click", close);
-      document.addEventListener("keydown", function (e) {
-        if (!menu.classList.contains("is-open")) return;
-        if (e.key === "Escape") return close();
-        if (e.key !== "Tab") return;
-        var f = menu.querySelectorAll("a, button");
-        var first = f[0], last = f[f.length - 1];
-        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-      });
+    openBtn.addEventListener("click", open);
+    closeBtn.addEventListener("click", close);
+    document.addEventListener("keydown", function (e) {
+      if (!menu.classList.contains("is-open")) return;
+      if (e.key === "Escape") return close();
+      if (e.key !== "Tab") return;
+      var f = menu.querySelectorAll("a, button");
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+  }
+
+  function bindSlideshow() {
+    var slides = document.querySelectorAll(".hero:not(.hero--project) .slide");
+    if (slides.length < 2) return;
+    var caps = document.querySelectorAll(".hero__cap");
+    var btn = document.querySelector(".hero__pause");
+    var i = 0, timer = null, playing = !reduce;
+    function show(n) {
+      slides[i].classList.remove("is-active"); slides[i].setAttribute("aria-hidden", "true");
+      caps[i].classList.remove("is-active"); caps[i].setAttribute("aria-hidden", "true"); caps[i].setAttribute("tabindex", "-1");
+      i = (n + slides.length) % slides.length;
+      slides[i].classList.add("is-active"); slides[i].removeAttribute("aria-hidden");
+      caps[i].classList.add("is-active"); caps[i].removeAttribute("aria-hidden"); caps[i].removeAttribute("tabindex");
+      var im = slides[i].querySelector("img");
+      if (im && im.loading === "lazy") im.loading = "eager";
     }
+    function start() { stop(); timer = setInterval(function () { show(i + 1); }, 6500); }
+    function stop() { if (timer) clearInterval(timer); timer = null; }
+    function sync() {
+      btn.classList.toggle("is-paused", !playing);
+      btn.setAttribute("aria-label", btn.getAttribute(playing ? "data-pause" : "data-play"));
+      document.querySelector(".hero").classList.toggle("is-paused", !playing);
+    }
+    // preload the next images once the first one is shown
+    window.addEventListener("load", function () {
+      slides.forEach(function (s) { var im = s.querySelector("img"); if (im) im.loading = "eager"; });
+    });
+    btn.addEventListener("click", function () { playing = !playing; if (playing) start(); else stop(); sync(); });
+    document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); else if (playing) start(); });
+    if (playing) start();
+    sync();
   }
 
   function bindReveal() {
@@ -392,36 +468,51 @@
       entries.forEach(function (en) {
         if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
       });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    }, { rootMargin: "0px 0px -6% 0px", threshold: 0.06 });
     els.forEach(function (el) { io.observe(el); });
   }
 
-  function bindFilters(ctx) {
+  function bindWork(ctx) {
     var bar = document.querySelector(".filters");
     if (!bar) return;
-    var grid = document.querySelector(".work-grid");
+    var views = document.querySelector(".views");
+    var section = document.querySelector(".work");
     var countEl = document.querySelector(".work-count");
     var T = TEXT[ctx.lang];
-    function apply(cat, push) {
-      if (CATS.indexOf(cat) < 0) cat = "all";
-      bar.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-cat") === cat)); });
-      var list = PROJECTS.filter(function (p) { return cat === "all" || (p.categories || []).indexOf(cat) > -1; });
-      grid.innerHTML = list.length ? list.map(function (p) { return card(p, ctx.lang, 1.5); }).join("") : '<p class="empty">' + T.work.empty + "</p>";
-      grid.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-in"); });
-      grid.classList.remove("work-grid--fade"); void grid.offsetWidth; grid.classList.add("work-grid--fade");
+    var state = { cat: "all", view: "grid" };
+    try { state.view = localStorage.getItem("wd-view") === "list" ? "list" : "grid"; } catch (e) { /* storage blocked */ }
+    function draw(push) {
+      bar.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-cat") === state.cat)); });
+      views.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-view") === state.view)); });
+      var list = PROJECTS.filter(function (p) { return state.cat === "all" || (p.categories || []).indexOf(state.cat) > -1; });
+      var inner = !list.length ? '<p class="empty center">' + T.work.empty + "</p>" :
+        state.view === "list" ? '<div class="work-list">' + list.map(function (p) { return row(p, ctx.lang); }).join("") + "</div>" :
+        '<div class="work-grid">' + list.map(function (p) { return card(p, ctx.lang); }).join("") + "</div>";
+      section.innerHTML = inner;
+      section.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-in"); });
       countEl.textContent = countText(ctx.lang, list.length);
       if (push && history.replaceState) {
         var u = new URL(location.href);
-        if (cat === "all") u.searchParams.delete("c"); else u.searchParams.set("c", cat);
+        if (state.cat === "all") u.searchParams.delete("c"); else u.searchParams.set("c", state.cat);
         history.replaceState(null, "", u.pathname + u.search);
       }
     }
     bar.addEventListener("click", function (e) {
       var b = e.target.closest("button");
-      if (b) apply(b.getAttribute("data-cat"), true);
+      if (!b) return;
+      state.cat = CATS.indexOf(b.getAttribute("data-cat")) > -1 ? b.getAttribute("data-cat") : "all";
+      draw(true);
+    });
+    views.addEventListener("click", function (e) {
+      var b = e.target.closest("button");
+      if (!b) return;
+      state.view = b.getAttribute("data-view") === "list" ? "list" : "grid";
+      try { localStorage.setItem("wd-view", state.view); } catch (err) { /* storage blocked */ }
+      draw(false);
     });
     var initial = new URLSearchParams(location.search).get("c");
-    if (initial) apply(initial, false);
+    if (CATS.indexOf(initial) > -1) state.cat = initial;
+    if (state.cat !== "all" || state.view !== "grid") draw(false);
   }
 
   function bindForm(ctx) {
@@ -455,10 +546,12 @@
     var app = document.getElementById("app");
     if (!app) return;
     app.innerHTML = render(ctx.lang, ctx.page, ctx.slug);
+    document.body.classList.toggle("has-hero", ctx.page === "home" || (ctx.page === "project" && !!find(ctx.slug)));
     if (ctx.page === "project" || document.body.getAttribute("data-page") === "notfound") setMeta(ctx);
     bindHeader();
+    bindSlideshow();
     bindReveal();
-    bindFilters(ctx);
+    bindWork(ctx);
     bindForm(ctx);
     if (location.hash && location.hash.length > 1) {
       var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));

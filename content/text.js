@@ -14,25 +14,29 @@ window.WD_TEXT = {
     langName: "English",
     meta: {
       home: { title: "Witkowski Design · Interior, yacht and product design", description: "Witkowski Design is an interior, yacht interior and product design studio working between Milan and Poland, with 3D visualisation and branding." },
-      work: { title: "Work · Witkowski Design", description: "Selected interiors, yacht interiors, products, visualisations and identities by Witkowski Design." },
+      work: { title: "Projects · Witkowski Design", description: "Selected interiors, yacht interiors, products, visualisations and identities by Witkowski Design." },
       project: { title: "Project · Witkowski Design", description: "A project by Witkowski Design." },
       services: { title: "Services · Witkowski Design", description: "Interior design, yacht interior design, product design, 3D visualisation and branding. One studio, one way of working." },
-      about: { title: "About · Witkowski Design", description: "Witkowski Design is the studio of Bartek Witkowski, working between Milan and Poland for clients across Europe." },
+      about: { title: "Studio · Witkowski Design", description: "Witkowski Design is the studio of Bartek Witkowski, working between Milan and Poland for clients across Europe." },
       contact: { title: "Contact · Witkowski Design", description: "Write, call or send a WhatsApp message to Witkowski Design about your interior, yacht or product." },
       privacy: { title: "Privacy · Witkowski Design", description: "Privacy note for witkowskidesign.com. No tracking cookies, no analytics." },
       notfound: { title: "Page not found · Witkowski Design", description: "This page does not exist." }
     },
-    nav: { home: "Home", work: "Work", services: "Services", about: "About", contact: "Contact", menu: "Menu", close: "Close", skip: "Skip to content", language: "Language", main: "Main" },
+    nav: { home: "Home", work: "Projects", services: "Services", about: "Studio", contact: "Contact", menu: "Menu", close: "Close", skip: "Skip to content", language: "Language", main: "Main" },
     cats: { all: "All", interiors: "Interiors", yachts: "Yachts", products: "Products", visualisation: "Visualisation", branding: "Branding" },
     common: { placeholder: "Placeholder", viewProject: "View project", todo: "to be completed" },
 
     home: {
       eyebrow: "Interiors · Yachts · Products",
+      intro: "Witkowski Design is an interior and product design studio between Milan and Poland. Homes, yacht interiors and objects, each one drawn, modelled and rendered before it is built.",
+      studioLink: "The studio",
+      pause: "Pause slideshow",
+      play: "Play slideshow",
       title: "Calm spaces,<br> on land <em>and at sea.</em>",
       caption: "La Mare · yacht cabin · 3D visualisation",
       statement: "I'm Bartek, and Witkowski Design is my studio between Milan and Poland. I design homes, yacht interiors and objects, and every one of them is drawn, modelled and rendered before it is built, so you see the result first.",
-      selected: "Selected work",
-      allWork: "See all work",
+      selected: "Selected projects",
+      allWork: "All projects",
       servicesTitle: "What the studio does",
       servicesLink: "How I work",
       services: {
@@ -51,12 +55,15 @@ window.WD_TEXT = {
     },
 
     work: {
-      title: "Work",
+      title: "Projects",
       intro: "Interiors, yachts, products, visualisations and identities. Choose a category to narrow the list.",
       filterLabel: "Filter projects by category",
       showing: "{n} projects",
       showingOne: "1 project",
-      empty: "No projects in this category yet."
+      empty: "No projects in this category yet.",
+      view: "View",
+      viewImages: "Images",
+      viewList: "List"
     },
 
     project: {
@@ -65,7 +72,7 @@ window.WD_TEXT = {
       year: "Year",
       scope: "Scope",
       category: "Category",
-      back: "All work",
+      back: "All projects",
       next: "Next project",
       missingTitle: "Project not found",
       missingText: "This project may have been renamed or removed."
@@ -115,7 +122,7 @@ window.WD_TEXT = {
     },
 
     about: {
-      title: "About",
+      title: "Studio",
       lead: "Witkowski Design is the studio of Bartosz Witkowski, Bartek to everyone he works with.",
       photoNote: "Portrait coming soon",
       bio: [
@@ -197,6 +204,10 @@ window.WD_TEXT = {
 
     home: {
       eyebrow: "Interni · Yacht · Prodotti",
+      intro: "Witkowski Design è uno studio di interior e product design tra Milano e la Polonia. Case, interni di yacht e oggetti, ognuno disegnato, modellato e renderizzato prima di essere costruito.",
+      studioLink: "Lo studio",
+      pause: "Metti in pausa le immagini",
+      play: "Riprendi le immagini",
       title: "Spazi calmi,<br> a terra <em>e in mare.</em>",
       caption: "La Mare · cabina di yacht · visualizzazione 3D",
       statement: "Sono Bartek, e Witkowski Design è il mio studio tra Milano e la Polonia. Progetto case, interni di yacht e oggetti, e ognuno viene disegnato, modellato e renderizzato prima di essere costruito, così vedi il risultato per primo.",
@@ -225,7 +236,10 @@ window.WD_TEXT = {
       filterLabel: "Filtra i progetti per categoria",
       showing: "{n} progetti",
       showingOne: "1 progetto",
-      empty: "Ancora nessun progetto in questa categoria."
+      empty: "Ancora nessun progetto in questa categoria.",
+      view: "Vista",
+      viewImages: "Immagini",
+      viewList: "Elenco"
     },
 
     project: {
@@ -355,17 +369,21 @@ window.WD_TEXT = {
       work: { title: "Projekty · Witkowski Design", description: "Wybrane wnętrza, jachty, produkty, wizualizacje i identyfikacje Witkowski Design." },
       project: { title: "Projekt · Witkowski Design", description: "Projekt Witkowski Design." },
       services: { title: "Usługi · Witkowski Design", description: "Projektowanie wnętrz, wnętrz jachtów, produktów, wizualizacje 3D i branding. Jedno studio, jeden sposób pracy." },
-      about: { title: "O studiu · Witkowski Design", description: "Witkowski Design to studio Bartka Witkowskiego, działające między Mediolanem a Polską dla klientów z całej Europy." },
+      about: { title: "Studio · Witkowski Design", description: "Witkowski Design to studio Bartka Witkowskiego, działające między Mediolanem a Polską dla klientów z całej Europy." },
       contact: { title: "Kontakt · Witkowski Design", description: "Napisz, zadzwoń lub wyślij wiadomość na WhatsAppie do Witkowski Design w sprawie wnętrza, jachtu lub produktu." },
       privacy: { title: "Prywatność · Witkowski Design", description: "Informacja o prywatności witkowskidesign.com. Bez śledzących ciasteczek i analityki." },
       notfound: { title: "Nie znaleziono strony · Witkowski Design", description: "Ta strona nie istnieje." }
     },
-    nav: { home: "Start", work: "Projekty", services: "Usługi", about: "O studiu", contact: "Kontakt", menu: "Menu", close: "Zamknij", skip: "Przejdź do treści", language: "Język", main: "Główna" },
+    nav: { home: "Start", work: "Projekty", services: "Usługi", about: "Studio", contact: "Kontakt", menu: "Menu", close: "Zamknij", skip: "Przejdź do treści", language: "Język", main: "Główna" },
     cats: { all: "Wszystkie", interiors: "Wnętrza", yachts: "Jachty", products: "Produkty", visualisation: "Wizualizacje", branding: "Branding" },
     common: { placeholder: "Przykład", viewProject: "Zobacz projekt", todo: "do uzupełnienia" },
 
     home: {
       eyebrow: "Wnętrza · Jachty · Produkty",
+      intro: "Witkowski Design to studio projektowania wnętrz i produktów między Mediolanem a Polską. Domy, wnętrza jachtów i przedmioty, każdy narysowany, wymodelowany i wyrenderowany, zanim powstanie.",
+      studioLink: "O studiu",
+      pause: "Zatrzymaj pokaz zdjęć",
+      play: "Wznów pokaz zdjęć",
       title: "Spokojne wnętrza,<br> na lądzie <em>i na morzu.</em>",
       caption: "La Mare · kabina jachtu · wizualizacja 3D",
       statement: "Nazywam się Bartek, a Witkowski Design to moje studio między Mediolanem a Polską. Projektuję domy, wnętrza jachtów i przedmioty. Każdy projekt rysuję, modeluję i renderuję, zanim powstanie, więc widzisz efekt jako pierwszy.",
@@ -394,7 +412,10 @@ window.WD_TEXT = {
       filterLabel: "Filtruj projekty według kategorii",
       showing: "Projekty: {n}",
       showingOne: "Projekty: 1",
-      empty: "W tej kategorii nie ma jeszcze projektów."
+      empty: "W tej kategorii nie ma jeszcze projektów.",
+      view: "Widok",
+      viewImages: "Zdjęcia",
+      viewList: "Lista"
     },
 
     project: {
@@ -453,7 +474,7 @@ window.WD_TEXT = {
     },
 
     about: {
-      title: "O studiu",
+      title: "Studio",
       lead: "Witkowski Design to studio Bartosza Witkowskiego, dla wszystkich, z którymi pracuje, po prostu Bartka.",
       photoNote: "Portret wkrótce",
       bio: [

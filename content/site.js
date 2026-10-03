@@ -27,6 +27,12 @@ window.WD_SITE = {
     linkedin: ""
   },
 
+  // Logo in the menu. Leave both "" to use the built-in "Witkoś" logo (it turns white over photos).
+  // To use your own file instead, upload it to assets/img/ and write the paths here:
+  // logo = dark version for white pages, logoLight = white version for use over photos.
+  logo: "",
+  logoLight: "",
+
   // Portrait on the About page. Upload a photo (portrait format, about 1200 x 1500 px)
   // to assets/img/ and write its path here, e.g. "/assets/img/portrait.jpg". Leave "" for the placeholder.
   portrait: "",

@@ -66,11 +66,10 @@ function head(lang, page, slug, opts = {}) {
   <meta property="og:image" content="${DOMAIN + m.image}">
   <meta property="og:locale" content="${LOCALE[lang]}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#f6f6f3">
+  <meta name="theme-color" content="#fcfcfb">
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-  <link rel="preload" href="/assets/fonts/bodoni-moda-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/cormorant-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/style.css">
   <script>document.documentElement.classList.add("js")</script>
   <script src="/content/site.js" defer></script>
@@ -83,7 +82,7 @@ function head(lang, page, slug, opts = {}) {
 function page(lang, name, slug, opts = {}) {
   const body = WD.render(lang, name, slug);
   return `${head(lang, name, slug, opts)}
-<body data-page="${name}"${slug ? ` data-slug="${slug}"` : ""}>
+<body data-page="${name}"${slug ? ` data-slug="${slug}"` : ""}${name === "home" || name === "project" ? ' class="has-hero"' : ""}>
 <div id="app">${body}</div>
 </body>
 </html>
