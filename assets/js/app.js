@@ -40,11 +40,15 @@
     if (typeof v === "string" || typeof v === "number" || Array.isArray(v)) return v;
     return v[lang] != null ? v[lang] : (v.en != null ? v.en : "");
   }
+  // Site root. "/" on the live site; a relative root (with explicit index.html) for offline previews.
+  function base() { return root.WD_ROOT || "/"; }
   function url(lang, page, slug) {
-    if (page === "project") return PREFIX[lang] + "/work/" + slug + "/";
-    return PREFIX[lang] + (PATHS[page] || "/");
+    var path = page === "project" ? "work/" + slug + "/" : (PATHS[page] || "/").slice(1);
+    var full = (PREFIX[lang] ? PREFIX[lang].slice(1) + "/" : "") + path;
+    if (root.WD_INDEX && (full === "" || full.slice(-1) === "/")) full += "index.html";
+    return base() + full;
   }
-  function img(slug, file) { return "/projects/" + slug + "/" + file; }
+  function img(slug, file) { return base() + "projects/" + slug + "/" + file; }
   function find(slug) {
     for (var i = 0; i < PROJECTS.length; i++) if (PROJECTS[i].slug === slug) return PROJECTS[i];
     return null;
@@ -492,9 +496,11 @@
       section.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-in"); });
       countEl.textContent = countText(ctx.lang, list.length);
       if (push && history.replaceState) {
-        var u = new URL(location.href);
-        if (state.cat === "all") u.searchParams.delete("c"); else u.searchParams.set("c", state.cat);
-        history.replaceState(null, "", u.pathname + u.search);
+        try {
+          var u = new URL(location.href);
+          if (state.cat === "all") u.searchParams.delete("c"); else u.searchParams.set("c", state.cat);
+          history.replaceState(null, "", u.pathname + u.search);
+        } catch (err) { /* address bar not writable (preview frame) */ }
       }
     }
     bar.addEventListener("click", function (e) {
