@@ -217,6 +217,45 @@ window.WD_PROJECTS = [
   },
 
   {
+    slug: "chain-moray",
+    title: "Chain Moray",
+    categories: ["yachts", "interiors", "visualisation"],
+    featured: true,
+    year: "",
+    client: "",
+    place: { en: "Yacht interior, 43 m, Saudi Arabia", it: "Interni di yacht, 43 m, Arabia Saudita", pl: "Wnętrze jachtu, 43 m, Arabia Saudyjska" },
+    scope: { en: "Yacht interior design, 3D visualisation", it: "Interni per yacht, visualizzazione 3D", pl: "Projekt wnętrz jachtu, wizualizacja 3D" },
+    summary: {
+      en: "Interior design and 3D visualisation for Chain Moray, a 43 metre yacht, Saudi Arabia.",
+      it: "Progetto degli interni e visualizzazione 3D per Chain Moray, yacht di 43 metri, Arabia Saudita.",
+      pl: "Projekt i wizualizacja 3D wnętrz Chain Moray, jachtu o długości 43 metrów, Arabia Saudyjska."
+    },
+    text: {
+      en: [
+        "Interior design for Chain Moray, a 43 metre yacht, Saudi Arabia.",
+        "The saloon is lined in pale oak and opens to the sea through long windows on both sides. Two deep textured sofas face a dark marble table, and behind them a long dining table sits under a light sculpture that drifts like a ribbon."
+      ],
+      it: [
+        "Progetto degli interni di Chain Moray, yacht di 43 metri, Arabia Saudita.",
+        "Il salone è rivestito in rovere chiaro e si apre sul mare con lunghe finestre su entrambi i lati. Due profondi divani in tessuto materico si affacciano su un tavolino in marmo scuro e, alle loro spalle, un lungo tavolo da pranzo sta sotto una scultura luminosa che fluttua come un nastro."
+      ],
+      pl: [
+        "Projekt wnętrz Chain Moray, jachtu o długości 43 metrów, Arabia Saudyjska.",
+        "Salon wyłożony jasnym dębem otwiera się na morze długimi oknami po obu stronach. Dwie głębokie sofy z fakturowej tkaniny stoją wokół stolika z ciemnego marmuru, a za nimi długi stół jadalny pod świetlną rzeźbą, która unosi się jak wstęga."
+      ]
+    },
+    cover: {
+      file: "cover.jpg",
+      alt: {
+        en: "Yacht saloon in pale oak with two large sofas, a dark marble table, a dining table and windows onto the sea on both sides, 3D render",
+        it: "Salone di yacht in rovere chiaro con due grandi divani, tavolino in marmo scuro, tavolo da pranzo e finestre sul mare su entrambi i lati, rendering 3D",
+        pl: "Salon jachtu w jasnym dębie z dwiema dużymi sofami, stolikiem z ciemnego marmuru, stołem jadalnym i oknami na morze po obu stronach, wizualizacja 3D"
+      }
+    },
+    images: []
+  },
+
+  {
     slug: "gucci-restaurant-secret-manor",
     title: "Gucci Restaurant, The Secret Manor",
     categories: ["interiors", "visualisation"],
