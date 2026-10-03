@@ -179,29 +179,42 @@ window.WD_PROJECTS = [
 
 
   {
-    slug: "sailing-yacht-tramontana",
-    placeholder: true,
-    title: { en: "Sailing yacht Tramontana", it: "Barca a vela Tramontana", pl: "Jacht żaglowy Tramontana" },
-    categories: ["yachts", "visualisation"],
-    year: "2024",
-    client: { en: "[Placeholder] Private owner", it: "[Segnaposto] Armatore privato", pl: "[Przykład] Armator prywatny" },
-    place: { en: "18 m sailing yacht, refit", it: "Barca a vela di 18 m, refit", pl: "Jacht żaglowy 18 m, refit" },
-    scope: { en: "Interior refit, renders for approval", it: "Refit degli interni, rendering per approvazione", pl: "Refit wnętrza, wizualizacje do akceptacji" },
+    slug: "gucci-restaurant-secret-manor",
+    title: "Gucci Restaurant, The Secret Manor",
+    categories: ["interiors", "visualisation"],
+    featured: true,
+    year: "",
+    client: "",
+    place: { en: "The Secret Manor, Milan", it: "The Secret Manor, Milano", pl: "The Secret Manor, Mediolan" },
+    scope: { en: "Restaurant interior design, 3D visualisation", it: "Progetto d'interni del ristorante, visualizzazione 3D", pl: "Projekt wnętrza restauracji, wizualizacja 3D" },
     summary: {
-      en: "[Placeholder text] A classic hull with a lighter, quieter interior.",
-      it: "[Testo segnaposto] Uno scafo classico con un interno più leggero e silenzioso.",
-      pl: "[Tekst przykładowy] Klasyczny kadłub z jaśniejszym, spokojniejszym wnętrzem."
+      en: "Restaurant and bar interior and 3D visualisation, The Secret Manor, Milan.",
+      it: "Interni e visualizzazione 3D di un ristorante con bar, The Secret Manor, Milano.",
+      pl: "Projekt i wizualizacja 3D wnętrza restauracji z barem, The Secret Manor w Mediolanie."
     },
     text: {
-      en: ["[Placeholder text] Replace this with a short description of the project."],
-      it: ["[Testo segnaposto] Sostituisci questo testo con una breve descrizione del progetto."],
-      pl: ["[Tekst przykładowy] Zastąp ten tekst krótkim opisem projektu."]
+      en: [
+        "Restaurant and bar interior, The Secret Manor, Milan.",
+        "A round bar stands at the centre under a fluted copper canopy that holds the bottles. The counter glows through red stone above a base of green glazed tiles, ringed by a brass footrest. Persian rugs, red velvet and arched floral booths keep the room warm and theatrical."
+      ],
+      it: [
+        "Interno di ristorante e bar, The Secret Manor, Milano.",
+        "Un bancone circolare al centro, sotto un baldacchino in rame scanalato che ospita le bottiglie. Il piano si illumina attraverso la pietra rossa, sopra una base di piastrelle verdi smaltate cinta da un poggiapiedi in ottone. Tappeti persiani, velluto rosso e nicchie ad arco con tessuti floreali rendono la sala calda e teatrale."
+      ],
+      pl: [
+        "Wnętrze restauracji i baru, The Secret Manor w Mediolanie.",
+        "Okrągły bar stoi w centrum pod żłobionym miedzianym baldachimem, na którym stoją butelki. Blat z czerwonego kamienia jest podświetlony od środka, a podstawę z zielonych glazurowanych płytek otacza mosiężny podnóżek. Perskie dywany, czerwony aksamit i łukowe loże w kwiatowych tkaninach nadają sali ciepły, teatralny charakter."
+      ]
     },
-    cover: { file: "cover.jpg", alt: { en: "Placeholder image: sailing yacht cabin with portholes", it: "Immagine segnaposto: cabina di barca a vela con oblò", pl: "Obraz przykładowy: kabina jachtu żaglowego z iluminatorami" } },
-    images: [
-      { file: "01.jpg", wide: true, alt: { en: "Placeholder image: saloon table", it: "Immagine segnaposto: tavolo del salone", pl: "Obraz przykładowy: stół w salonie" } },
-      { file: "02.jpg", alt: { en: "Placeholder image: forward cabin", it: "Immagine segnaposto: cabina di prua", pl: "Obraz przykładowy: kabina dziobowa" } }
-    ]
+    cover: {
+      file: "cover.jpg",
+      alt: {
+        en: "Round bar under a copper canopy with a red stone counter, green tiles and velvet stools on Persian rugs, 3D render",
+        it: "Bancone circolare sotto un baldacchino in rame, con piano in pietra rossa, piastrelle verdi e sgabelli in velluto su tappeti persiani, rendering 3D",
+        pl: "Okrągły bar pod miedzianym baldachimem z blatem z czerwonego kamienia, zielonymi płytkami i aksamitnymi hokerami na perskich dywanach, wizualizacja 3D"
+      }
+    },
+    images: []
   },
 
   {
