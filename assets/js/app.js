@@ -104,7 +104,8 @@
       '<a href="' + url(lang, "home") + '"' + (active === "home" ? ' aria-current="page"' : "") + ">" + T.nav.home + "</a>" + links +
       "</nav>" +
       '<div class="menu__foot"><div class="langs" role="group" aria-label="' + T.nav.language + '">' + langLinks(lang, page, slug) + "</div>" +
-      '<a href="mailto:' + SITE.contact.email + '">' + SITE.contact.email + "</a></div>" +
+      '<a href="mailto:' + SITE.contact.email + '">' + SITE.contact.email + "</a>" +
+      '<a href="' + url(lang, "privacy") + '">' + T.footer.privacy + "</a></div>" +
       "</div>";
   }
   function footer(lang) {
@@ -115,6 +116,7 @@
     return '<footer class="site-footer"><div class="wrap foot">' +
       "<p>© " + year + " Witkowski Design · " + esc(c.cities) + "</p>" +
       '<nav aria-label="' + T.nav.contact + '"><a href="mailto:' + c.email + '">' + c.email + '</a><a href="' + telLink() + '">' + esc(c.phone) + '</a><a href="' + waLink() + '" rel="noopener">WhatsApp</a>' + social +
+      '<a href="' + SITE.timbro.url + '" rel="noopener">Timbro</a>' +
       '<a href="' + url(lang, "privacy") + '">' + T.footer.privacy + "</a></nav>" +
       "</div></footer>";
   }
@@ -170,36 +172,22 @@
       return '<a class="hero__cap' + (i === 0 ? " is-active" : "") + '" href="' + url(lang, "project", p.slug) + '"' + (i ? ' tabindex="-1" aria-hidden="true"' : "") + ">" +
         '<span class="hero__title">' + esc(loc(p.title, lang)) + '</span><span class="hero__meta">' + esc(loc(p.place, lang)) + "</span></a>";
     }).join("");
-    var sel = featured.slice(0, 4);
-    var services = CATS.map(function (k) {
-      return '<li><a href="' + url(lang, "services") + "#" + k + '">' + T.services.items[k].name + "</a></li>";
-    }).join("");
-
-    return '<section class="hero" aria-label="' + esc(H.selected) + '">' +
+    // The home page is one screen: the full-screen photographs and the menu, nothing to scroll.
+    return '<section class="hero hero--home" aria-label="' + esc(H.selected) + '">' +
       '<h1 class="sr-only">' + esc(T.meta.home.title) + "</h1>" +
       '<div class="hero__slides">' + slides + "</div>" +
       '<div class="hero__bar">' + '<div class="hero__caps">' + caps + "</div>" +
       (featured.length > 1 ? '<button class="hero__pause" type="button" data-pause="' + esc(H.pause) + '" data-play="' + esc(H.play) + '" aria-label="' + esc(H.pause) + '"><span aria-hidden="true"></span></button>' : "") +
-      "</div></section>" +
+      "</div></section>";
+  };
 
-      '<section class="intro wrap center reveal"><p class="statement">' + H.intro + "</p>" +
-      '<p><a class="text-link" href="' + url(lang, "about") + '">' + H.studioLink + " " + arrow() + "</a></p></section>" +
-
-      '<section class="selected wrap" aria-labelledby="sel-title">' +
-      '<div class="section-head"><h2 class="eyebrow" id="sel-title">' + H.selected + '</h2><a class="text-link" href="' + url(lang, "work") + '">' + H.allWork + " " + arrow() + "</a></div>" +
-      '<div class="selected__grid">' + sel.map(function (p, i) { return card(p, lang, "s" + (i + 1)); }).join("") + "</div></section>" +
-
-      '<section class="disciplines wrap center reveal" aria-labelledby="srv-title"><h2 class="eyebrow" id="srv-title">' + H.servicesTitle + "</h2>" +
-      '<ul class="disciplines__list">' + services + "</ul>" +
-      '<p><a class="text-link" href="' + url(lang, "services") + '">' + H.servicesLink + " " + arrow() + "</a></p></section>" +
-
-      '<section class="timbro" aria-labelledby="timbro-title"><div class="wrap center reveal">' +
+  function timbroBlock(lang) {
+    var H = TEXT[lang].home;
+    return '<section class="timbro" id="timbro" aria-labelledby="timbro-title"><div class="wrap center reveal">' +
       '<p class="eyebrow">' + H.timbroEyebrow + '</p><h2 class="timbro__name" id="timbro-title">Timbro</h2>' +
       '<p class="narrow">' + H.timbroText + "</p>" +
-      '<p><a class="text-link" href="' + SITE.timbro.url + '" rel="noopener">' + H.timbroLink + " " + arrow() + "</a></p></div></section>" +
-
-      contactBlock(lang);
-  };
+      '<p><a class="text-link" href="' + SITE.timbro.url + '" rel="noopener">' + H.timbroLink + " " + arrow() + "</a></p></div></section>";
+  }
 
   pages.work = function (lang) {
     var T = TEXT[lang], W = T.work;
@@ -286,6 +274,7 @@
       '<ul class="principles reveal">' + A.principles.map(function (p) { return "<li><h3>" + p.name + "</h3><p>" + p.text + "</p></li>"; }).join("") + "</ul></section>" +
       '<section class="wrap principles-wrap" aria-labelledby="bases-title"><h2 class="eyebrow center" id="bases-title">' + A.basesTitle + "</h2>" +
       '<ul class="principles principles--two reveal">' + A.bases.map(function (p) { return "<li><h3>" + p.name + "</h3><p>" + p.text + "</p></li>"; }).join("") + "</ul></section>" +
+      timbroBlock(lang) +
       contactBlock(lang);
   };
 
@@ -349,7 +338,7 @@
   }
   function render(lang, page, slug) {
     var fn = pages[page] || pages.notfound;
-    return header(lang, page, slug) + '<main id="main" tabindex="-1">' + fn(lang, slug) + "</main>" + footer(lang);
+    return header(lang, page, slug) + '<main id="main" tabindex="-1">' + fn(lang, slug) + "</main>" + (page === "home" ? "" : footer(lang));
   }
   root.WD = { LANGS: LANGS, PREFIX: PREFIX, url: url, render: render, meta: meta, find: find, img: img };
 
@@ -431,7 +420,7 @@
   }
 
   function bindSlideshow() {
-    var slides = document.querySelectorAll(".hero:not(.hero--project) .slide");
+    var slides = document.querySelectorAll(".hero--home .slide");
     if (slides.length < 2) return;
     var caps = document.querySelectorAll(".hero__cap");
     var btn = document.querySelector(".hero__pause");
@@ -553,6 +542,7 @@
     if (!app) return;
     app.innerHTML = render(ctx.lang, ctx.page, ctx.slug);
     document.body.classList.toggle("has-hero", ctx.page === "home" || (ctx.page === "project" && !!find(ctx.slug)));
+    document.body.classList.toggle("is-home", ctx.page === "home");
     if (ctx.page === "project" || document.body.getAttribute("data-page") === "notfound") setMeta(ctx);
     bindHeader();
     bindSlideshow();

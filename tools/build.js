@@ -82,7 +82,7 @@ function head(lang, page, slug, opts = {}) {
 function page(lang, name, slug, opts = {}) {
   const body = WD.render(lang, name, slug);
   return `${head(lang, name, slug, opts)}
-<body data-page="${name}"${slug ? ` data-slug="${slug}"` : ""}${name === "home" || name === "project" ? ' class="has-hero"' : ""}>
+<body data-page="${name}"${slug ? ` data-slug="${slug}"` : ""}${name === "home" ? ' class="has-hero is-home"' : name === "project" ? ' class="has-hero"' : ""}>
 <div id="app">${body}</div>
 </body>
 </html>

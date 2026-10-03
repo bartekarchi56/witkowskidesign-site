@@ -205,11 +205,9 @@ a.hero__cap:hover .hero__title { text-decoration: underline; text-underline-offs
 .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 1.2s var(--ease), transform 1.2s var(--ease); }
 .js .reveal.is-in { opacity: 1; transform: none; }
 
-/* ------------------------------------------------------------ home */
-.intro { padding: var(--space) var(--gutter); }
-
-.section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1.5rem; margin-bottom: 2.25rem; }
-.section-head .eyebrow { margin: 0; }
+/* ------------------------------------------------------------ home: one screen, nothing to scroll */
+body.is-home { overflow: hidden; }
+.hero--home { height: 100vh; height: 100dvh; min-height: 0; }
 
 .card { display: block; text-decoration: none; }
 .card__img { display: block; overflow: hidden; background: var(--stone); }
@@ -220,21 +218,7 @@ a.hero__cap:hover .hero__title { text-decoration: underline; text-underline-offs
 .cap__meta { font-style: italic; color: var(--grey); font-size: 1.1rem; }
 .card:hover .cap__title { text-decoration: underline; text-underline-offset: .35em; text-decoration-thickness: 1px; }
 
-.selected__grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(4rem, 8vw, 7.5rem) clamp(1rem, 2.4vw, 2.5rem); }
-.selected__grid .s1 { grid-column: 1 / -1; }
-.selected__grid .s1 .card__img { aspect-ratio: 16 / 8; }
-.selected__grid .s2 { grid-column: 1 / span 6; }
-.selected__grid .s3 { grid-column: 7 / span 6; margin-top: clamp(3rem, 10vw, 10rem); }
-.selected__grid .s2 .card__img, .selected__grid .s3 .card__img { aspect-ratio: 4 / 5; }
-.selected__grid .s4 { grid-column: 3 / span 8; }
-.selected__grid .s4 .card__img { aspect-ratio: 3 / 2; }
-
-.disciplines { padding: var(--space) var(--gutter) 0; }
-.disciplines__list { margin: 0 0 3rem; display: grid; gap: .35rem; }
-.disciplines__list a { text-decoration: none; font-size: clamp(1.75rem, 3.4vw, 2.9rem); font-weight: 400; line-height: 1.25; }
-.disciplines__list a:hover { font-style: italic; }
-
-.timbro { background: var(--stone); padding: var(--space) 0; margin-top: var(--space); }
+.timbro { background: var(--stone); padding: var(--space) 0; margin-top: var(--space); scroll-margin-top: var(--header-h); }
 .timbro__name { font-style: italic; font-weight: 400; font-size: clamp(3.75rem, 9vw, 7rem); line-height: 1; margin: 0 0 1.75rem; }
 .timbro p.narrow { margin-bottom: 2.25rem; }
 
@@ -420,9 +404,6 @@ a.hero__cap:hover .hero__title { text-decoration: underline; text-underline-offs
 }
 @media (max-width: 700px) {
   body { font-size: 1.2rem; }
-  .selected__grid { grid-template-columns: 1fr; }
-  .selected__grid > .card { grid-column: 1 / -1 !important; margin-top: 0 !important; }
-  .selected__grid .card .card__img { aspect-ratio: 4 / 5 !important; }
   .work-grid { grid-template-columns: 1fr; }
   .work-grid .card__img { aspect-ratio: 4 / 5; }
   .gallery { grid-template-columns: 1fr; }
