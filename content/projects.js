@@ -21,43 +21,43 @@
 */
 window.WD_PROJECTS = [
   {
-    slug: "la-mare",
-    title: "La Mare",
-    categories: ["visualisation", "yachts"],
+    slug: "lamare-pola-negri",
+    title: "Lamare Club Pola Negri",
+    categories: ["interiors", "yachts"],
     featured: true,
     year: "",
-    client: { en: "Private", it: "Privato", pl: "Klient prywatny" },
-    place: { en: "Yacht cabin", it: "Cabina di yacht", pl: "Kabina jachtu" },
-    scope: {
-      en: "Interior concept, 3D modelling, rendering",
-      it: "Concept d'interni, modellazione 3D, rendering",
-      pl: "Koncepcja wnętrza, modelowanie 3D, rendering"
-    },
+    client: "LAMARE Houseboats",
+    place: { en: "Houseboat, Lamare Club", it: "Houseboat, Lamare Club", pl: "Dom na wodzie, Lamare Club" },
+    scope: { en: "Interior design", it: "Progetto d'interni", pl: "Projekt wnętrza" },
     summary: {
-      en: "A 3D visualisation of a yacht cabin, where every surface follows the curve of the hull.",
-      it: "Una visualizzazione 3D di una cabina di yacht, dove ogni superficie segue la curva dello scafo.",
-      pl: "Wizualizacja 3D kabiny jachtu, w której każda powierzchnia podąża za krzywizną kadłuba."
+      en: "A houseboat interior for LAMARE Houseboats at Lamare Club Pola Negri.",
+      it: "Un interno di houseboat per LAMARE Houseboats al Lamare Club Pola Negri.",
+      pl: "Wnętrze domu na wodzie dla LAMARE Houseboats w Lamare Club Pola Negri."
     },
     text: {
       en: [
-        "La Mare is a study of a guest cabin below deck: a small room asked to feel open, quiet and warm at the same time.",
-        "Light timber lines the curved walls, the berth sits low under the portholes, and indirect light follows the joinery so the space reads as one continuous surface. The renders were built to let the owner walk through the cabin before a single panel was cut."
+        "A houseboat interior for LAMARE Houseboats, Lamare Club Pola Negri.",
+        "Oak laid in a chevron pattern, dark timber wall panels and full-height windows that bring the light and the movement of the water inside."
       ],
       it: [
-        "La Mare è lo studio di una cabina ospiti sottocoperta: una stanza piccola che deve sembrare aperta, silenziosa e calda allo stesso tempo.",
-        "Il legno chiaro riveste le pareti curve, il letto è basso sotto gli oblò e la luce indiretta segue gli arredi, così lo spazio si legge come un'unica superficie continua. I rendering sono stati pensati per far attraversare la cabina all'armatore prima di tagliare un solo pannello."
+        "Un interno di houseboat per LAMARE Houseboats, Lamare Club Pola Negri.",
+        "Rovere posato a spina ungherese, pannelli a parete in legno scuro e finestre a tutta altezza che portano dentro la luce e il movimento dell'acqua."
       ],
       pl: [
-        "La Mare to studium kabiny gościnnej pod pokładem: małego pomieszczenia, które ma być jednocześnie otwarte, ciche i ciepłe.",
-        "Jasne drewno pokrywa zakrzywione ściany, koja leży nisko pod iluminatorami, a światło pośrednie biegnie wzdłuż zabudowy, dzięki czemu wnętrze czyta się jak jedna ciągła powierzchnia. Wizualizacje powstały po to, by armator mógł przejść przez kabinę, zanim zostanie wycięty pierwszy panel."
+        "Wnętrze domu na wodzie dla LAMARE Houseboats, Lamare Club Pola Negri.",
+        "Dąb ułożony w jodełkę francuską, ciemne drewniane panele ścienne i okna od podłogi do sufitu, które wpuszczają do środka światło i ruch wody."
       ]
     },
-    cover: { file: "cover.jpg", alt: { en: "La Mare: guest cabin with curved timber walls and portholes, 3D render", it: "La Mare: cabina ospiti con pareti curve in legno e oblò, rendering 3D", pl: "La Mare: kabina gościnna z zakrzywionymi drewnianymi ścianami i iluminatorami, wizualizacja 3D" } },
-    images: [
-      { file: "01.jpg", wide: true, alt: { en: "Berth under a row of portholes", it: "Letto sotto una fila di oblò", pl: "Koja pod rzędem iluminatorów" } },
-      { file: "02.jpg", alt: { en: "Detail of curved timber panelling", it: "Dettaglio della boiserie curva in legno", pl: "Detal zakrzywionej boazerii" } },
-      { file: "03.jpg", alt: { en: "Porthole and indirect light along the joinery", it: "Oblò e luce indiretta lungo gli arredi", pl: "Iluminator i światło pośrednie wzdłuż zabudowy" } }
-    ]
+    cover: {
+      file: "cover.jpg",
+      focus: "50% 58%",
+      alt: {
+        en: "Oak chevron floor, dark timber wall and a full-height window onto the water",
+        it: "Pavimento in rovere a spina ungherese, parete in legno scuro e finestra a tutta altezza sull'acqua",
+        pl: "Dębowa podłoga w jodełkę francuską, ciemna drewniana ściana i okno od podłogi do sufitu z widokiem na wodę"
+      }
+    },
+    images: []
   },
 
   {

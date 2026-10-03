@@ -250,7 +250,7 @@
       '<dl class="facts">' + rows + "</dl>" +
       '<div class="project-text">' + text.map(function (t) { return "<p>" + esc(t) + "</p>"; }).join("") + "</div>" +
       "</section>" +
-      '<section class="wrap gallery">' + gallery + "</section>" +
+      (gallery ? '<section class="wrap gallery">' + gallery + "</section>" : "") +
       (next && next !== p ? '<a class="next" href="' + url(lang, "project", next.slug) + '">' +
         '<span class="next__img">' + picTag(next, next.cover, lang) + "</span>" +
         '<span class="next__text"><span class="eyebrow">' + P.next + '</span><span class="next__title">' + esc(loc(next.title, lang)) + "</span></span></a>" : "") +
