@@ -100,6 +100,45 @@ window.WD_PROJECTS = [
   },
 
   {
+    slug: "kitchen-apartment-bydgoszcz",
+    title: { en: "Apartment kitchen, Bydgoszcz", it: "Cucina di un appartamento, Bydgoszcz", pl: "Kuchnia w mieszkaniu, Bydgoszcz" },
+    categories: ["interiors", "visualisation"],
+    featured: true,
+    year: "",
+    client: "",
+    place: { en: "Bydgoszcz, Poland", it: "Bydgoszcz, Polonia", pl: "Bydgoszcz, Polska" },
+    scope: { en: "Kitchen design, 3D visualisation", it: "Progetto della cucina, visualizzazione 3D", pl: "Projekt kuchni, wizualizacja 3D" },
+    summary: {
+      en: "Kitchen design and 3D visualisation for an apartment in Bydgoszcz.",
+      it: "Progetto e visualizzazione 3D della cucina di un appartamento a Bydgoszcz.",
+      pl: "Projekt i wizualizacja 3D kuchni w mieszkaniu w Bydgoszczy."
+    },
+    text: {
+      en: [
+        "A kitchen for an apartment in Bydgoszcz.",
+        "A white stone island runs into a timber dining table on glass legs, so cooking and eating share one long surface. Handleless white cabinetry, glass-fronted upper cupboards in black frames and a wire pendant keep the room light."
+      ],
+      it: [
+        "Una cucina per un appartamento a Bydgoszcz.",
+        "Un'isola in pietra bianca prosegue in un tavolo in legno su gambe di vetro, così cucinare e mangiare condividono un unico lungo piano. Mobili bianchi senza maniglie, pensili in vetro con telaio nero e una sospensione in filo metallico mantengono la stanza luminosa."
+      ],
+      pl: [
+        "Kuchnia w mieszkaniu w Bydgoszczy.",
+        "Wyspa z białego kamienia przechodzi w drewniany stół na szklanych nogach, więc gotowanie i jedzenie dzielą jeden długi blat. Białe fronty bez uchwytów, przeszklone górne szafki w czarnych ramach i druciana lampa sprawiają, że wnętrze pozostaje jasne."
+      ]
+    },
+    cover: {
+      file: "cover.jpg",
+      alt: {
+        en: "Kitchen with a white stone island, a timber dining table on glass legs and a large wire pendant, 3D render",
+        it: "Cucina con isola in pietra bianca, tavolo in legno su gambe di vetro e grande sospensione in filo metallico, rendering 3D",
+        pl: "Kuchnia z wyspą z białego kamienia, drewnianym stołem na szklanych nogach i dużą drucianą lampą, wizualizacja 3D"
+      }
+    },
+    images: []
+  },
+
+  {
     slug: "motor-yacht-maestrale",
     placeholder: true,
     title: { en: "Motor yacht Maestrale", it: "Motor yacht Maestrale", pl: "Jacht motorowy Maestrale" },
@@ -127,33 +166,6 @@ window.WD_PROJECTS = [
     ]
   },
 
-  {
-    slug: "townhouse-krakow",
-    placeholder: true,
-    title: { en: "Townhouse in Kraków", it: "Casa a Cracovia", pl: "Kamienica w Krakowie" },
-    categories: ["interiors"],
-    featured: true,
-    year: "2024",
-    client: { en: "[Placeholder] Private client", it: "[Segnaposto] Cliente privato", pl: "[Przykład] Klient prywatny" },
-    place: { en: "Kraków, Poland", it: "Cracovia, Polonia", pl: "Kraków, Polska" },
-    scope: { en: "Full interior design, custom joinery", it: "Progetto d'interni completo, falegnameria su misura", pl: "Pełny projekt wnętrza, zabudowy na wymiar" },
-    summary: {
-      en: "[Placeholder text] Three floors, one material palette, light from above.",
-      it: "[Testo segnaposto] Tre piani, una sola palette di materiali, luce dall'alto.",
-      pl: "[Tekst przykładowy] Trzy kondygnacje, jedna paleta materiałów, światło z góry."
-    },
-    text: {
-      en: ["[Placeholder text] Replace this with a short description of the project."],
-      it: ["[Testo segnaposto] Sostituisci questo testo con una breve descrizione del progetto."],
-      pl: ["[Tekst przykładowy] Zastąp ten tekst krótkim opisem projektu."]
-    },
-    cover: { file: "cover.jpg", alt: { en: "Placeholder image: stairwell with daylight from above", it: "Immagine segnaposto: vano scala con luce dall'alto", pl: "Obraz przykładowy: klatka schodowa ze światłem z góry" } },
-    images: [
-      { file: "01.jpg", alt: { en: "Placeholder image: kitchen niche", it: "Immagine segnaposto: nicchia cucina", pl: "Obraz przykładowy: wnęka kuchenna" } },
-      { file: "02.jpg", alt: { en: "Placeholder image: bedroom wall", it: "Immagine segnaposto: parete della camera", pl: "Obraz przykładowy: ściana sypialni" } },
-      { file: "03.jpg", wide: true, alt: { en: "Placeholder image: dining room", it: "Immagine segnaposto: sala da pranzo", pl: "Obraz przykładowy: jadalnia" } }
-    ]
-  },
 
   {
     slug: "sailing-yacht-tramontana",
