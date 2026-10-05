@@ -101,30 +101,33 @@ window.WD_PROJECTS = [
 
   {
     slug: "apartment-sokole-kuznica",
-    title: { en: "Kitchen, Sokole Kuźnica", it: "Cucina, Sokole Kuźnica", pl: "Kuchnia, Sokole Kuźnica" },
+    title: { en: "Apartment, Sokole Kuźnica", it: "Appartamento, Sokole Kuźnica", pl: "Mieszkanie, Sokole Kuźnica" },
     categories: ["interiors", "visualisation"],
     featured: true,
     year: "",
     client: "",
     place: { en: "Residential complex, Sokole Kuźnica", it: "Complesso residenziale, Sokole Kuźnica", pl: "Osiedle mieszkaniowe, Sokole Kuźnica" },
-    scope: { en: "Kitchen design, 3D visualisation", it: "Progetto della cucina, visualizzazione 3D", pl: "Projekt kuchni, wizualizacja 3D" },
+    scope: { en: "Interior design, 3D visualisation", it: "Progetto d'interni, visualizzazione 3D", pl: "Projekt wnętrz, wizualizacja 3D" },
     summary: {
-      en: "Kitchen design and 3D visualisation for a home in a residential complex in Sokole Kuźnica.",
-      it: "Progetto e visualizzazione 3D di una cucina per un'abitazione in un complesso residenziale a Sokole Kuźnica.",
-      pl: "Projekt i wizualizacja 3D kuchni dla mieszkania na osiedlu Sokole Kuźnica."
+      en: "Interior design and 3D visualisation for an apartment in a residential complex in Sokole Kuźnica.",
+      it: "Progetto d'interni e visualizzazione 3D di un appartamento in un complesso residenziale a Sokole Kuźnica.",
+      pl: "Projekt i wizualizacja 3D wnętrz mieszkania na osiedlu Sokole Kuźnica."
     },
     text: {
       en: [
-        "A kitchen for a home in a residential complex in Sokole Kuźnica.",
-        "A veined stone island with waterfall sides, dark wood joinery and copper fittings under a cluster of glass pendants. Tall steel-framed windows open the room to the garden."
+        "An apartment in a residential complex in Sokole Kuźnica.",
+        "The kitchen is built around a veined stone island with waterfall sides under a cluster of glass pendants, with dark wood joinery, copper fittings and tall steel-framed windows onto the garden. It opens to a living area with a deep-seated cream sofa, all on a dark chevron floor.",
+        "The bedroom is quieter and darker: a channelled upholstered bed, a green marble lamp on a stone-topped side table, a desk topped in the same stone, and a steel-framed glass door that carries the line of the kitchen through the home."
       ],
       it: [
-        "Una cucina per un'abitazione in un complesso residenziale a Sokole Kuźnica.",
-        "Un'isola in pietra venata con fianchi a cascata, arredi in legno scuro e finiture in rame sotto un grappolo di sospensioni in vetro. Alte finestre con telaio in acciaio aprono la stanza sul giardino."
+        "Un appartamento in un complesso residenziale a Sokole Kuźnica.",
+        "La cucina ruota attorno a un'isola in pietra venata con fianchi a cascata, tra arredi in legno scuro e finiture in rame, sotto un grappolo di sospensioni in vetro, con alte finestre in acciaio sul giardino. Si apre su una zona giorno con un ampio divano color crema, il tutto su un parquet scuro a spina ungherese.",
+        "La camera è più raccolta e scura: un letto con testiera imbottita a canne, una lampada in marmo verde su un comodino con piano in pietra, una scrivania nella stessa pietra e una porta vetrata con telaio in acciaio che riprende, come in tutta la casa, la linea della cucina."
       ],
       pl: [
-        "Kuchnia dla mieszkania na osiedlu Sokole Kuźnica.",
-        "Wyspa z żyłkowanego kamienia z bokami w formie wodospadu, ciemna drewniana zabudowa i miedziane dodatki pod kompozycją szklanych lamp. Wysokie okna w stalowych ramach otwierają wnętrze na ogród."
+        "Mieszkanie na osiedlu Sokole Kuźnica.",
+        "Kuchnia powstała wokół wyspy z żyłkowanego kamienia z bokami w formie wodospadu, nad którą wisi lampa ze szklanych kul. Wnętrze dopełniają ciemna drewniana zabudowa, miedziane dodatki i wysokie okna w stalowych ramach z widokiem na ogród. Kuchnia otwiera się na strefę dzienną z głęboką kremową sofą, a całość łączy ciemna podłoga w jodełkę francuską.",
+        "Sypialnia jest spokojniejsza i ciemniejsza: łóżko z pikowanym zagłówkiem, lampa z zielonego marmuru, stolik nocny i biurko z kamiennymi blatami oraz przeszklone drzwi w stalowej ramie, które przenoszą motyw z kuchni na całe mieszkanie."
       ]
     },
     cover: {
@@ -135,7 +138,40 @@ window.WD_PROJECTS = [
         pl: "Kuchnia z wyspą z żyłkowanego kamienia, ciemną zabudową, miedzianymi hokerami i szklanymi lampami, wizualizacja 3D"
       }
     },
-    images: []
+    images: [
+      {
+        file: "01.jpg",
+        alt: {
+          en: "Kitchen seen from the front: a veined stone island with three copper-framed bar stools, a cluster of glass pendants and steel-framed windows onto the trees, 3D render",
+          it: "Cucina vista di fronte: isola in pietra venata con tre sgabelli con struttura in rame, un grappolo di sospensioni in vetro e finestre con telaio in acciaio sugli alberi, rendering 3D",
+          pl: "Kuchnia od frontu: wyspa z żyłkowanego kamienia z trzema kremowymi hokerami na miedzianych nogach, lampa ze szklanych kul i okna w stalowych ramach z widokiem na drzewa, wizualizacja 3D"
+        }
+      },
+      {
+        file: "02.jpg",
+        alt: {
+          en: "View from above the kitchen to the living area: the stone island, a copper sink, a cream sofa and a glass bubble pendant over a dark chevron floor, 3D render",
+          it: "Vista dall'alto dalla cucina alla zona giorno: l'isola in pietra, il lavello in rame, un divano color crema e una sospensione a bolle di vetro sopra il parquet scuro a spina ungherese, rendering 3D",
+          pl: "Widok z góry od strony kuchni na strefę dzienną: kamienna wyspa, miedziany zlew, kremowa sofa, lampa ze szklanych kul i ciemna podłoga w jodełkę francuską, wizualizacja 3D"
+        }
+      },
+      {
+        file: "03.jpg",
+        alt: {
+          en: "Bedroom at night with a channelled upholstered bed, a green marble lamp on a side table, a stone-topped desk and a steel-framed glass door, 3D render",
+          it: "Camera da letto di sera con letto dalla testiera imbottita, lampada in marmo verde sul comodino, scrivania con piano in pietra e porta vetrata con telaio in acciaio, rendering 3D",
+          pl: "Sypialnia wieczorem, z łóżkiem z pikowanym zagłówkiem, lampą z zielonego marmuru na stoliku nocnym, biurkiem z kamiennym blatem i przeszklonymi drzwiami w stalowej ramie, wizualizacja 3D"
+        }
+      },
+      {
+        file: "04.jpg",
+        alt: {
+          en: "Detail of the bedside: a green marble table lamp with a tilted dark shade on a stone-topped side table, 3D render",
+          it: "Dettaglio del comodino con piano in pietra: lampada da tavolo in marmo verde con paralume scuro inclinato, rendering 3D",
+          pl: "Detal przy łóżku: lampa stołowa z zielonego marmuru z pochylonym ciemnym kloszem na stoliku z kamiennym blatem, wizualizacja 3D"
+        }
+      }
+    ]
   },
 
   {
