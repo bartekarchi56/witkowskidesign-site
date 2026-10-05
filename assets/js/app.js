@@ -184,6 +184,7 @@
     return '<section class="hero hero--home" aria-label="' + esc(H.selected) + '">' +
       '<h1 class="sr-only">' + esc(T.meta.home.title) + "</h1>" +
       '<div class="hero__slides">' + slides + "</div>" +
+      (H.tagline ? '<p class="hero__tagline">' + H.tagline + "</p>" : "") +
       '<div class="hero__bar">' + '<div class="hero__caps">' + caps + "</div>" +
       (featured.length > 1 ? '<button class="hero__pause" type="button" data-pause="' + esc(H.pause) + '" data-play="' + esc(H.play) + '" aria-label="' + esc(H.pause) + '"><span aria-hidden="true"></span></button>' : "") +
       "</div></section>";
