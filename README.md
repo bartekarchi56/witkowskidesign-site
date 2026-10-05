@@ -1,6 +1,6 @@
-# Witkowski Design · website
+# abit. studio · website
 
-The studio website for **Witkowski Design**, published at **https://witkowskidesign.com**.
+The studio website for **abit. studio**, published at **https://witkowskidesign.com**.
 Plain HTML, CSS and JavaScript. No accounts, no paid services, no tracking.
 
 > First time? Follow **[SETUP.md](SETUP.md)** to switch on GitHub Pages and connect the domain in Cloudflare.

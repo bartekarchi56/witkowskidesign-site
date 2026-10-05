@@ -1,5 +1,5 @@
 /*
-  WITKOWSKI DESIGN · PROJECTS
+  ABIT. STUDIO · PROJECTS
   ---------------------------
   Every project on the site comes from this list. To add one:
 

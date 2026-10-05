@@ -1,5 +1,5 @@
 /*
-  WITKOWSKI DESIGN · SITE TEXTS
+  ABIT. STUDIO · SITE TEXTS
   -----------------------------
   All words on the site, in English (en), Italian (it) and Polish (pl).
   Edit the text between the quotes. Keep the quotes and commas.
@@ -13,14 +13,14 @@ window.WD_TEXT = {
   en: {
     langName: "English",
     meta: {
-      home: { title: "Witkowski Design · Interior, yacht and product design", description: "Witkowski Design is an interior, yacht interior and product design studio working between Milan and Poland, with 3D visualisation and branding." },
-      work: { title: "Projects · Witkowski Design", description: "Selected interiors, yacht interiors, products, visualisations and identities by Witkowski Design." },
-      project: { title: "Project · Witkowski Design", description: "A project by Witkowski Design." },
-      services: { title: "Services · Witkowski Design", description: "Interior design, yacht interior design, product design, 3D visualisation and branding. One studio, one way of working." },
-      about: { title: "Studio · Witkowski Design", description: "Witkowski Design is the studio of Bartek Witkowski, working between Milan and Poland for clients across Europe." },
-      contact: { title: "Contact · Witkowski Design", description: "Write, call or send a WhatsApp message to Witkowski Design about your interior, yacht or product." },
-      privacy: { title: "Privacy · Witkowski Design", description: "Privacy note for witkowskidesign.com. No tracking cookies, no analytics." },
-      notfound: { title: "Page not found · Witkowski Design", description: "This page does not exist." }
+      home: { title: "abit. studio · Interior, yacht and product design", description: "abit. studio designs interiors, yacht interiors and products between Milan and Poland, with 3D visualisation and branding." },
+      work: { title: "Projects · abit. studio", description: "Selected interiors, yacht interiors, products, visualisations and identities by abit. studio." },
+      project: { title: "Project · abit. studio", description: "A project by abit. studio." },
+      services: { title: "Services · abit. studio", description: "Interior design, yacht interior design, product design, 3D visualisation and branding. One studio, one way of working." },
+      about: { title: "Bartek Witkowski · abit. studio", description: "abit. studio is led by Bartek Witkowski and works between Milan and Poland for clients across Europe." },
+      contact: { title: "Contact · abit. studio", description: "Write, call or send a WhatsApp message to abit. studio about your interior, yacht or product." },
+      privacy: { title: "Privacy · abit. studio", description: "Privacy note for witkowskidesign.com. No tracking cookies, no analytics." },
+      notfound: { title: "Page not found · abit. studio", description: "This page does not exist." }
     },
     nav: { home: "Home", work: "Projects", services: "Services", about: "Studio", contact: "Contact", menu: "Menu", close: "Close", skip: "Skip to content", language: "Language", main: "Main" },
     cats: { all: "All", interiors: "Interiors", yachts: "Yachts", products: "Products", visualisation: "Visualisation", branding: "Branding" },
@@ -28,13 +28,13 @@ window.WD_TEXT = {
 
     home: {
       eyebrow: "Interiors · Yachts · Products",
-      intro: "Witkowski Design is an interior and product design studio between Milan and Poland. Homes, yacht interiors and objects, each one drawn, modelled and rendered before it is built.",
+      intro: "abit. studio designs interiors and products between Milan and Poland. Homes, yacht interiors and objects, each one drawn, modelled and rendered before it is built.",
       studioLink: "The studio",
       pause: "Pause slideshow",
       play: "Play slideshow",
       title: "Calm spaces,<br> on land <em>and at sea.</em>",
       caption: "La Mare · yacht cabin · 3D visualisation",
-      statement: "I'm Bartek, and Witkowski Design is my studio between Milan and Poland. I design homes, yacht interiors and objects, and every one of them is drawn, modelled and rendered before it is built, so you see the result first.",
+      statement: "I'm Bartek, and abit. studio is my practice between Milan and Poland. I design homes, yacht interiors and objects, and every one of them is drawn, modelled and rendered before it is built, so you see the result first.",
       selected: "Selected projects",
       allWork: "All projects",
       servicesTitle: "What the studio does",
@@ -46,7 +46,7 @@ window.WD_TEXT = {
         visualisation: "Photorealistic renders that let you walk through a space before it exists.",
         branding: "Identities, print and signage that belong to the places they serve."
       },
-      timbroEyebrow: "A product by Witkowski Design",
+      timbroEyebrow: "A product by abit. studio",
       timbroText: "A digital loyalty stamp card for cafés. Guests add it to Apple Wallet or Google Wallet in one tap: no app to download, no paper card to lose.",
       timbroLink: "Visit Timbro",
       timbroCard: "Coffee card",
@@ -123,7 +123,7 @@ window.WD_TEXT = {
 
     about: {
       title: "Studio",
-      lead: "Witkowski Design is the studio of Bartosz Witkowski, Bartek to everyone he works with.",
+      lead: "abit. studio is led by Bartosz Witkowski, Bartek to everyone who works with the studio.",
       photoNote: "Portrait coming soon",
       bio: [
         "The studio works between Milan and Poland, for clients across Europe and beyond. It designs homes, yacht interiors and objects, and creates the images and identities that go with them.",
@@ -189,14 +189,14 @@ window.WD_TEXT = {
   it: {
     langName: "Italiano",
     meta: {
-      home: { title: "Witkowski Design · Design d'interni, yacht e prodotto", description: "Witkowski Design è uno studio di interior design, design di interni per yacht e design di prodotto tra Milano e la Polonia, con visualizzazione 3D e branding." },
-      work: { title: "Progetti · Witkowski Design", description: "Una selezione di interni, yacht, prodotti, visualizzazioni e identità di Witkowski Design." },
-      project: { title: "Progetto · Witkowski Design", description: "Un progetto di Witkowski Design." },
-      services: { title: "Servizi · Witkowski Design", description: "Interior design, interni per yacht, design di prodotto, visualizzazione 3D e branding. Uno studio, un solo metodo." },
-      about: { title: "Studio · Witkowski Design", description: "Witkowski Design è lo studio di Bartek Witkowski, tra Milano e la Polonia, per clienti in tutta Europa." },
-      contact: { title: "Contatti · Witkowski Design", description: "Scrivi, chiama o manda un messaggio WhatsApp a Witkowski Design per il tuo interno, yacht o prodotto." },
-      privacy: { title: "Privacy · Witkowski Design", description: "Informativa privacy di witkowskidesign.com. Nessun cookie di tracciamento, nessuna analisi." },
-      notfound: { title: "Pagina non trovata · Witkowski Design", description: "Questa pagina non esiste." }
+      home: { title: "abit. studio · Design d'interni, yacht e prodotto", description: "abit. studio progetta interni, interni per yacht e prodotti tra Milano e la Polonia, con visualizzazione 3D e branding." },
+      work: { title: "Progetti · abit. studio", description: "Una selezione di interni, yacht, prodotti, visualizzazioni e identità di abit. studio." },
+      project: { title: "Progetto · abit. studio", description: "Un progetto di abit. studio." },
+      services: { title: "Servizi · abit. studio", description: "Interior design, interni per yacht, design di prodotto, visualizzazione 3D e branding. Uno studio, un solo metodo." },
+      about: { title: "Bartek Witkowski · abit. studio", description: "abit. studio, guidato da Bartek Witkowski, lavora tra Milano e la Polonia per clienti in tutta Europa." },
+      contact: { title: "Contatti · abit. studio", description: "Scrivi, chiama o manda un messaggio WhatsApp a abit. studio per il tuo interno, yacht o prodotto." },
+      privacy: { title: "Privacy · abit. studio", description: "Informativa privacy di witkowskidesign.com. Nessun cookie di tracciamento, nessuna analisi." },
+      notfound: { title: "Pagina non trovata · abit. studio", description: "Questa pagina non esiste." }
     },
     nav: { home: "Home", work: "Progetti", services: "Servizi", about: "Studio", contact: "Contatti", menu: "Menu", close: "Chiudi", skip: "Vai al contenuto", language: "Lingua", main: "Principale" },
     cats: { all: "Tutti", interiors: "Interni", yachts: "Yacht", products: "Prodotti", visualisation: "Visualizzazione", branding: "Branding" },
@@ -204,13 +204,13 @@ window.WD_TEXT = {
 
     home: {
       eyebrow: "Interni · Yacht · Prodotti",
-      intro: "Witkowski Design è uno studio di interior e product design tra Milano e la Polonia. Case, interni di yacht e oggetti, ognuno disegnato, modellato e renderizzato prima di essere costruito.",
+      intro: "abit. studio progetta interni e prodotti tra Milano e la Polonia. Case, interni di yacht e oggetti, ognuno disegnato, modellato e renderizzato prima di essere costruito.",
       studioLink: "Lo studio",
       pause: "Metti in pausa le immagini",
       play: "Riprendi le immagini",
       title: "Spazi calmi,<br> a terra <em>e in mare.</em>",
       caption: "La Mare · cabina di yacht · visualizzazione 3D",
-      statement: "Sono Bartek, e Witkowski Design è il mio studio tra Milano e la Polonia. Progetto case, interni di yacht e oggetti, e ognuno viene disegnato, modellato e renderizzato prima di essere costruito, così vedi il risultato per primo.",
+      statement: "Sono Bartek e questo è abit. studio, il mio studio tra Milano e la Polonia. Progetto case, interni di yacht e oggetti, e ognuno viene disegnato, modellato e renderizzato prima di essere costruito, così vedi il risultato per primo.",
       selected: "Progetti scelti",
       allWork: "Tutti i progetti",
       servicesTitle: "Cosa fa lo studio",
@@ -222,7 +222,7 @@ window.WD_TEXT = {
         visualisation: "Rendering fotorealistici per attraversare uno spazio prima che esista.",
         branding: "Identità, stampa e segnaletica che appartengono ai luoghi per cui nascono."
       },
-      timbroEyebrow: "Un prodotto di Witkowski Design",
+      timbroEyebrow: "Un prodotto di abit. studio",
       timbroText: "Una carta fedeltà digitale a timbri per i caffè. I clienti la aggiungono ad Apple Wallet o Google Wallet con un tocco: nessuna app da scaricare, nessuna tessera di carta da perdere.",
       timbroLink: "Scopri Timbro",
       timbroCard: "Carta caffè",
@@ -299,7 +299,7 @@ window.WD_TEXT = {
 
     about: {
       title: "Studio",
-      lead: "Witkowski Design è lo studio di Bartosz Witkowski, Bartek per chiunque lavori con lui.",
+      lead: "abit. studio è guidato da Bartosz Witkowski, Bartek per chiunque lavori con lo studio.",
       photoNote: "Ritratto in arrivo",
       bio: [
         "Lo studio lavora tra Milano e la Polonia, per clienti in Europa e oltre. Progetta case, interni di yacht e oggetti, e crea le immagini e le identità che li accompagnano.",
@@ -365,14 +365,14 @@ window.WD_TEXT = {
   pl: {
     langName: "Polski",
     meta: {
-      home: { title: "Witkowski Design · Projektowanie wnętrz, jachtów i produktów", description: "Witkowski Design to studio projektowania wnętrz, wnętrz jachtów i produktów działające między Mediolanem a Polską, z wizualizacjami 3D i brandingiem." },
-      work: { title: "Projekty · Witkowski Design", description: "Wybrane wnętrza, jachty, produkty, wizualizacje i identyfikacje Witkowski Design." },
-      project: { title: "Projekt · Witkowski Design", description: "Projekt Witkowski Design." },
-      services: { title: "Usługi · Witkowski Design", description: "Projektowanie wnętrz, wnętrz jachtów, produktów, wizualizacje 3D i branding. Jedno studio, jeden sposób pracy." },
-      about: { title: "Studio · Witkowski Design", description: "Witkowski Design to studio Bartka Witkowskiego, działające między Mediolanem a Polską dla klientów z całej Europy." },
-      contact: { title: "Kontakt · Witkowski Design", description: "Napisz, zadzwoń lub wyślij wiadomość na WhatsAppie do Witkowski Design w sprawie wnętrza, jachtu lub produktu." },
-      privacy: { title: "Prywatność · Witkowski Design", description: "Informacja o prywatności witkowskidesign.com. Bez śledzących ciasteczek i analityki." },
-      notfound: { title: "Nie znaleziono strony · Witkowski Design", description: "Ta strona nie istnieje." }
+      home: { title: "abit. studio · Projektowanie wnętrz, jachtów i produktów", description: "abit. studio projektuje wnętrza, wnętrza jachtów i produkty oraz tworzy wizualizacje 3D i branding, pracując między Mediolanem a Polską." },
+      work: { title: "Projekty · abit. studio", description: "Wybrane wnętrza, jachty, produkty, wizualizacje i identyfikacje abit. studio." },
+      project: { title: "Projekt · abit. studio", description: "Projekt abit. studio." },
+      services: { title: "Usługi · abit. studio", description: "Projektowanie wnętrz, wnętrz jachtów, produktów, wizualizacje 3D i branding. Jedno studio, jeden sposób pracy." },
+      about: { title: "Bartek Witkowski · abit. studio", description: "abit. studio prowadzi Bartek Witkowski. Pracownia działa między Mediolanem a Polską dla klientów z całej Europy." },
+      contact: { title: "Kontakt · abit. studio", description: "Napisz, zadzwoń lub wyślij wiadomość na WhatsAppie do abit. studio w sprawie wnętrza, jachtu lub produktu." },
+      privacy: { title: "Prywatność · abit. studio", description: "Informacja o prywatności witkowskidesign.com. Bez śledzących ciasteczek i analityki." },
+      notfound: { title: "Nie znaleziono strony · abit. studio", description: "Ta strona nie istnieje." }
     },
     nav: { home: "Start", work: "Projekty", services: "Usługi", about: "Studio", contact: "Kontakt", menu: "Menu", close: "Zamknij", skip: "Przejdź do treści", language: "Język", main: "Główna" },
     cats: { all: "Wszystkie", interiors: "Wnętrza", yachts: "Jachty", products: "Produkty", visualisation: "Wizualizacje", branding: "Branding" },
@@ -380,13 +380,13 @@ window.WD_TEXT = {
 
     home: {
       eyebrow: "Wnętrza · Jachty · Produkty",
-      intro: "Witkowski Design to studio projektowania wnętrz i produktów między Mediolanem a Polską. Domy, wnętrza jachtów i przedmioty, każdy narysowany, wymodelowany i wyrenderowany, zanim powstanie.",
+      intro: "abit. studio projektuje wnętrza i produkty między Mediolanem a Polską. Domy, wnętrza jachtów i przedmioty, każdy narysowany, wymodelowany i wyrenderowany, zanim powstanie.",
       studioLink: "O studiu",
       pause: "Zatrzymaj pokaz zdjęć",
       play: "Wznów pokaz zdjęć",
       title: "Spokojne wnętrza,<br> na lądzie <em>i na morzu.</em>",
       caption: "La Mare · kabina jachtu · wizualizacja 3D",
-      statement: "Nazywam się Bartek, a Witkowski Design to moje studio między Mediolanem a Polską. Projektuję domy, wnętrza jachtów i przedmioty. Każdy projekt rysuję, modeluję i renderuję, zanim powstanie, więc widzisz efekt jako pierwszy.",
+      statement: "Nazywam się Bartek, a abit. studio to moja pracownia między Mediolanem a Polską. Projektuję domy, wnętrza jachtów i przedmioty. Każdy projekt rysuję, modeluję i renderuję, zanim powstanie, więc widzisz efekt jako pierwszy.",
       selected: "Wybrane projekty",
       allWork: "Wszystkie projekty",
       servicesTitle: "Czym zajmuje się studio",
@@ -398,7 +398,7 @@ window.WD_TEXT = {
         visualisation: "Fotorealistyczne wizualizacje, dzięki którym przejdziesz przez wnętrze, zanim powstanie.",
         branding: "Identyfikacje, druki i oznakowanie, które pasują do miejsc, dla których powstają."
       },
-      timbroEyebrow: "Produkt Witkowski Design",
+      timbroEyebrow: "Produkt abit. studio",
       timbroText: "Cyfrowa karta lojalnościowa z pieczątkami dla kawiarni. Goście dodają ją do Apple Wallet lub Google Wallet jednym dotknięciem: bez aplikacji do pobrania i bez papierowej karty do zgubienia.",
       timbroLink: "Poznaj Timbro",
       timbroCard: "Karta kawowa",
@@ -475,7 +475,7 @@ window.WD_TEXT = {
 
     about: {
       title: "Studio",
-      lead: "Witkowski Design to studio Bartosza Witkowskiego, dla wszystkich, z którymi pracuje, po prostu Bartka.",
+      lead: "abit. studio prowadzi Bartosz Witkowski, dla wszystkich współpracujących ze studiem po prostu Bartek.",
       photoNote: "Portret wkrótce",
       bio: [
         "Studio działa między Mediolanem a Polską, dla klientów z Europy i spoza niej. Projektuje domy, wnętrza jachtów i przedmioty, a także tworzy obrazy i identyfikacje, które im towarzyszą.",

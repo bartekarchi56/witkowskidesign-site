@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
-  Witkowski Design · page generator (optional)
+  abit. studio · page generator (optional)
 
   The site works without this script: every page renders itself in the browser
   from the files in content/. This script writes ready-made HTML for every page,
@@ -64,7 +64,7 @@ function head(lang, page, slug, opts = {}) {
   ${opts.noindex ? '<meta name="robots" content="noindex">' : `<link rel="canonical" href="${self}">`}
   ${alternates}
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Witkowski Design">
+  <meta property="og:site_name" content="${SITE.studio}">
   <meta property="og:title" content="${esc(m.title)}">
   <meta property="og:description" content="${esc(m.description)}">
   <meta property="og:url" content="${self}">

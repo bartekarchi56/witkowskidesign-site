@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
-  Witkowski Design · image optimiser (runs automatically on GitHub before publishing)
+  abit. studio · image optimiser (runs automatically on GitHub before publishing)
 
   Makes every photo in projects/ and assets/img/ web-ready, so you can upload
   full-size photos straight from a camera or a render:

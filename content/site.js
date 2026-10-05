@@ -1,5 +1,5 @@
 /*
-  WITKOWSKI DESIGN · SITE SETTINGS
+  ABIT. STUDIO · SITE SETTINGS
   ---------------------------------
   Contact details and company data live here, and only here.
   Change a value, save, and every page picks it up.
@@ -8,7 +8,7 @@
   highlighted as "to be completed" until you fill it in.
 */
 window.WD_SITE = {
-  studio: "Witkowski Design",
+  studio: "abit. studio",
   handle: "witkowskidesign",
   domain: "https://witkowskidesign.com",
 
@@ -43,7 +43,7 @@ window.WD_SITE = {
 
   // Shown on the Privacy page. Empty fields are flagged "to be completed".
   legal: {
-    company: "Witkowski Design",
+    company: "abit. studio",
     owner: "Bartosz Witkowski",
     address: "",
     vat: "",          // VAT / NIP / Partita IVA

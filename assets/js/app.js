@@ -1,5 +1,5 @@
 /*
-  Witkowski Design · site renderer
+  abit. studio · site renderer
   Builds every page from content/site.js, content/text.js and content/projects.js.
   The same code runs in the browser and in tools/build.js (which pre-renders the
   HTML for search engines), so there is only one place where markup is defined.
@@ -81,7 +81,7 @@
     return LOGO_SVG;
   }
   function brand(lang) {
-    return '<a class="brand" href="' + url(lang, "home") + '" aria-label="abit. Witkowski Design, ' + esc(TEXT[lang].nav.home) + '">' + logo() + "</a>";
+    return '<a class="brand" href="' + url(lang, "home") + '" aria-label="' + esc(SITE.studio) + ', ' + esc(TEXT[lang].nav.home) + '">' + logo() + "</a>";
   }
   function arrow() { return '<span class="arrow" aria-hidden="true">→</span>'; }
 
@@ -122,7 +122,7 @@
     if (SITE.social && SITE.social.instagram) social += '<a href="' + esc(SITE.social.instagram) + '" rel="noopener">Instagram</a>';
     if (SITE.social && SITE.social.linkedin) social += '<a href="' + esc(SITE.social.linkedin) + '" rel="noopener">LinkedIn</a>';
     return '<footer class="site-footer"><div class="wrap foot">' +
-      "<p>© " + year + " Witkowski Design · " + esc(c.cities) + "</p>" +
+      "<p>© " + year + " " + esc(SITE.studio) + " · " + esc(c.cities) + "</p>" +
       '<nav aria-label="' + T.nav.contact + '"><a href="mailto:' + c.email + '">' + c.email + '</a><a href="' + telLink() + '">' + esc(c.phone) + '</a><a href="' + waLink() + '" rel="noopener">WhatsApp</a>' + social +
       '<a href="' + SITE.timbro.url + '" rel="noopener">Timbro</a>' +
       '<a href="' + url(lang, "privacy") + '">' + T.footer.privacy + "</a></nav>" +
@@ -337,7 +337,7 @@
     if (page === "project") {
       var p = find(slug);
       if (p) {
-        out.title = loc(p.title, lang) + " · Witkowski Design";
+        out.title = loc(p.title, lang) + " · " + SITE.studio;
         out.description = String(loc(p.summary, lang)).replace(/^\[[^\]]*\]\s*/, "");
         out.image = pic(p, p.cover, lang).src;
       }
