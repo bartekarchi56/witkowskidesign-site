@@ -13,7 +13,7 @@ window.WD_TEXT = {
   en: {
     langName: "English",
     meta: {
-      home: { title: "abit. studio · Interior, yacht and product design", description: "abit. studio designs interiors, yacht interiors and products between Milan and Poland, with 3D visualisation and branding." },
+      home: { title: "abit. studio · Interior, yacht and product design", description: "abit. studio designs interiors, yacht interiors, furniture and products between Milan and Poland, with photorealistic 3D visualisation and branding." },
       work: { title: "Projects · abit. studio", description: "Selected interiors, yacht interiors, products, visualisations and identities by abit. studio." },
       project: { title: "Project · abit. studio", description: "A project by abit. studio." },
       services: { title: "Services · abit. studio", description: "Interior design, yacht interior design, product design, 3D visualisation and branding. One studio, one way of working." },
@@ -29,6 +29,7 @@ window.WD_TEXT = {
     home: {
       eyebrow: "Interiors · Yachts · Products",
       intro: "abit. studio designs interiors and products between Milan and Poland. Homes, yacht interiors and objects, each one drawn, modelled and rendered before it is built.",
+      tagline: "A bit of everything. Every bit considered.",
       studioLink: "The studio",
       pause: "Pause slideshow",
       play: "Play slideshow",
@@ -50,13 +51,13 @@ window.WD_TEXT = {
       timbroText: "A digital loyalty stamp card for cafés. Guests add it to Apple Wallet or Google Wallet in one tap: no app to download, no paper card to lose.",
       timbroLink: "Visit Timbro",
       timbroCard: "Coffee card",
-      contactTitle: "Tell us about <em>your space.</em>",
+      contactTitle: "Tell us about <em>your project.</em>",
       contactText: "A home, a cabin, an object. Send a few lines and a photo or a plan if you have one. We reply personally."
     },
 
     work: {
       title: "Projects",
-      intro: "Interiors, yachts, products, visualisations and identities. Choose a category to narrow the list.",
+      intro: "Interiors, yachts, products, visualisations and identities. Everything at once, or a bit at a time: choose a category to narrow the list.",
       filterLabel: "Filter projects by category",
       showing: "{n} projects",
       showingOne: "1 project",
@@ -80,7 +81,7 @@ window.WD_TEXT = {
 
     services: {
       title: "Services",
-      intro: "Five disciplines, one way of working. Every project moves through the same five steps, so you always know what comes next.",
+      intro: "Five disciplines, one way of working. Every project follows the same five steps, so you always know what comes next.",
       deliverables: "What you receive",
       items: {
         interiors: {
@@ -110,7 +111,7 @@ window.WD_TEXT = {
         }
       },
       processTitle: "How we work",
-      processIntro: "The same five steps for a cabin, a kitchen or a lamp.",
+      processIntro: "Bit by bit, whether it is a cabin, a kitchen or a lamp.",
       steps: [
         { name: "Brief", text: "We meet in person or online. We listen to how you live, work or sail, and together we agree on scope, timing and budget." },
         { name: "Concept", text: "Mood boards, first sketches and a layout. One clear idea before any detail." },
@@ -126,7 +127,7 @@ window.WD_TEXT = {
       lead: "abit. studio is led by Bartosz Witkowski and Amina Tilesheva.",
       photoNote: "Portrait coming soon",
       bio: [
-        "The studio works between Milan and Poland, for clients across Europe and beyond. It designs homes, yacht interiors and objects, and creates the images and identities that go with them.",
+        "Say the name out loud and you will hear “a bit”. We do a bit of interiors, a bit of yachts, a bit of furniture and lighting, and every bit of it properly. We work between Milan and Poland, for clients across Europe and beyond, and create the images and identities that go with what we design.",
         "Keeping the interior, the furniture, the renders and the brand under one roof means fewer handovers and one idea carried from the first sketch to the finished room.",
         "Alongside client work the studio builds its own products. The first one is Timbro, a digital loyalty card for cafés."
       ],
@@ -136,7 +137,7 @@ window.WD_TEXT = {
         { name: "Drawn to the millimetre", text: "On a yacht every centimetre is planned. Homes and objects get the same care." },
         { name: "See it first", text: "Every project is rendered before it is built, so decisions are made with your own eyes." }
       ],
-      basesTitle: "Between two places",
+      basesTitle: "Either side of the Alps",
       bases: [
         { name: "Milan", text: "Italian design culture, makers and suppliers, and the yachting coast within reach." },
         { name: "Poland", text: "Joinery workshops, craftspeople and production partners." }
@@ -145,7 +146,7 @@ window.WD_TEXT = {
 
     contact: {
       title: "Contact",
-      intro: "Write, call or send a WhatsApp message. Tell us what you are planning, where it is and roughly when.",
+      intro: "Write, call or send a WhatsApp message. A few lines are enough: what you are planning, where it is and roughly when.",
       email: "Email",
       phone: "Phone",
       whatsapp: "WhatsApp",
@@ -182,14 +183,14 @@ window.WD_TEXT = {
 
     footer: { rights: "All rights reserved.", privacy: "Privacy", top: "Back to top" },
 
-    notfound: { title: "This page is not on the drawings.", text: "The link may be old or mistyped.", home: "Go to the home page" }
+    notfound: { title: "This bit is not on the drawings.", text: "The link may be old or mistyped.", home: "Go to the home page" }
   },
 
   /* ================================================================ ITALIANO */
   it: {
     langName: "Italiano",
     meta: {
-      home: { title: "abit. studio · Design d'interni, yacht e prodotto", description: "abit. studio progetta interni, interni per yacht e prodotti tra Milano e la Polonia, con visualizzazione 3D e branding." },
+      home: { title: "abit. studio · Design d'interni, yacht e prodotto", description: "abit. studio progetta interni di case, locali e yacht, arredi e prodotti tra Milano e la Polonia, con visualizzazione 3D fotorealistica e branding." },
       work: { title: "Progetti · abit. studio", description: "Una selezione di interni, yacht, prodotti, visualizzazioni e identità di abit. studio." },
       project: { title: "Progetto · abit. studio", description: "Un progetto di abit. studio." },
       services: { title: "Servizi · abit. studio", description: "Interior design, interni per yacht, design di prodotto, visualizzazione 3D e branding. Uno studio, un solo metodo." },
@@ -205,6 +206,7 @@ window.WD_TEXT = {
     home: {
       eyebrow: "Interni · Yacht · Prodotti",
       intro: "abit. studio progetta interni e prodotti tra Milano e la Polonia. Case, interni di yacht e oggetti, ognuno disegnato, modellato e renderizzato prima di essere costruito.",
+      tagline: "Disegniamo ciò che abiti.",
       studioLink: "Lo studio",
       pause: "Metti in pausa le immagini",
       play: "Riprendi le immagini",
@@ -226,13 +228,13 @@ window.WD_TEXT = {
       timbroText: "Una carta fedeltà digitale a timbri per i caffè. I clienti la aggiungono ad Apple Wallet o Google Wallet con un tocco: nessuna app da scaricare, nessuna tessera di carta da perdere.",
       timbroLink: "Scopri Timbro",
       timbroCard: "Carta caffè",
-      contactTitle: "Raccontaci <em>il tuo spazio.</em>",
+      contactTitle: "Raccontaci <em>il tuo progetto.</em>",
       contactText: "Una casa, una cabina, un oggetto. Scrivi due righe e allega una foto o una pianta, se ce l'hai. Rispondiamo personalmente."
     },
 
     work: {
       title: "Progetti",
-      intro: "Interni, yacht, prodotti, visualizzazioni e identità. Scegli una categoria per filtrare l'elenco.",
+      intro: "Un po' di tutto, e ogni cosa al suo posto. Scegli una categoria per filtrare l'elenco.",
       filterLabel: "Filtra i progetti per categoria",
       showing: "{n} progetti",
       showingOne: "1 progetto",
@@ -256,7 +258,7 @@ window.WD_TEXT = {
 
     services: {
       title: "Servizi",
-      intro: "Cinque discipline, un solo metodo. Ogni progetto attraversa le stesse cinque fasi, così sai sempre cosa viene dopo.",
+      intro: "Cinque discipline, un solo metodo. Ogni progetto segue le stesse cinque fasi, così sai sempre cosa viene dopo.",
       deliverables: "Cosa ricevi",
       items: {
         interiors: {
@@ -286,7 +288,7 @@ window.WD_TEXT = {
         }
       },
       processTitle: "Come lavoriamo",
-      processIntro: "Le stesse cinque fasi per una cabina, una cucina o una lampada.",
+      processIntro: "Una cabina, una cucina, una lampada: da abitare o da accendere, il percorso è lo stesso.",
       steps: [
         { name: "Brief", text: "Ci incontriamo di persona oppure online. Ascoltiamo come vivi, lavori o navighi, e definiamo insieme ambito, tempi e budget." },
         { name: "Concept", text: "Moodboard, primi schizzi e una pianta. Un'idea chiara prima di ogni dettaglio." },
@@ -302,7 +304,7 @@ window.WD_TEXT = {
       lead: "abit. studio è guidato da Bartosz Witkowski e Amina Tilesheva.",
       photoNote: "Ritratto in arrivo",
       bio: [
-        "Lo studio lavora tra Milano e la Polonia, per clienti in Europa e oltre. Progetta case, interni di yacht e oggetti, e crea le immagini e le identità che li accompagnano.",
+        "Letto all'inglese, abit. è «a bit»: facciamo un po' di tutto, ma niente a metà. Letto all'italiana, è l'inizio di «abitare». Lavoriamo tra Milano e la Polonia, per clienti in Europa e oltre: progettiamo case, interni di yacht, arredi e oggetti, e creiamo le immagini e le identità che li accompagnano.",
         "Tenere insieme interno, arredi, rendering e marchio significa meno passaggi di mano e una sola idea, dal primo schizzo alla stanza finita.",
         "Accanto ai progetti per i clienti, lo studio sviluppa prodotti propri. Il primo è Timbro, una carta fedeltà digitale per i caffè."
       ],
@@ -312,7 +314,7 @@ window.WD_TEXT = {
         { name: "Disegnato al millimetro", text: "Su uno yacht ogni centimetro è pensato. Case e oggetti ricevono la stessa cura." },
         { name: "Vederlo prima", text: "Ogni progetto viene renderizzato prima di essere costruito, così si decide con i propri occhi." }
       ],
-      basesTitle: "Tra due luoghi",
+      basesTitle: "Di qua e di là dalle Alpi",
       bases: [
         { name: "Milano", text: "La cultura del design italiano, artigiani e fornitori, e la costa dello yachting a portata di mano." },
         { name: "Polonia", text: "Laboratori di falegnameria, artigiani e partner di produzione." }
@@ -321,7 +323,7 @@ window.WD_TEXT = {
 
     contact: {
       title: "Contatti",
-      intro: "Scrivi, chiama o manda un messaggio WhatsApp. Raccontaci cosa hai in mente, dove si trova e più o meno quando.",
+      intro: "Scrivi, chiama o manda un messaggio su WhatsApp. Bastano poche righe: cosa hai in mente, dove e più o meno quando.",
       email: "Email",
       phone: "Telefono",
       whatsapp: "WhatsApp",
@@ -358,14 +360,14 @@ window.WD_TEXT = {
 
     footer: { rights: "Tutti i diritti riservati.", privacy: "Privacy", top: "Torna su" },
 
-    notfound: { title: "Questa pagina non è nei disegni.", text: "Il link potrebbe essere vecchio o sbagliato.", home: "Vai alla home" }
+    notfound: { title: "Qui non abita nessuno.", text: "Il link potrebbe essere vecchio o sbagliato.", home: "Vai alla home" }
   },
 
   /* ================================================================ POLSKI */
   pl: {
     langName: "Polski",
     meta: {
-      home: { title: "abit. studio · Projektowanie wnętrz, jachtów i produktów", description: "abit. studio projektuje wnętrza, wnętrza jachtów i produkty oraz tworzy wizualizacje 3D i branding, pracując między Mediolanem a Polską." },
+      home: { title: "abit. studio · Projektowanie wnętrz, jachtów i produktów", description: "abit. studio, między Mediolanem a Polską: wnętrza domów, lokali i jachtów, meble i przedmioty, fotorealistyczne wizualizacje 3D oraz branding." },
       work: { title: "Projekty · abit. studio", description: "Wybrane wnętrza, jachty, produkty, wizualizacje i identyfikacje abit. studio." },
       project: { title: "Projekt · abit. studio", description: "Projekt abit. studio." },
       services: { title: "Usługi · abit. studio", description: "Projektowanie wnętrz, wnętrz jachtów, produktów, wizualizacje 3D i branding. Jedno studio, jeden sposób pracy." },
@@ -381,6 +383,7 @@ window.WD_TEXT = {
     home: {
       eyebrow: "Wnętrza · Jachty · Produkty",
       intro: "abit. studio projektuje wnętrza i produkty między Mediolanem a Polską. Domy, wnętrza jachtów i przedmioty, wszystkie narysowane, wymodelowane i wyrenderowane, zanim powstaną.",
+      tagline: "Wszystkiego po trochu, niczego na skróty.",
       studioLink: "O studiu",
       pause: "Zatrzymaj pokaz zdjęć",
       play: "Wznów pokaz zdjęć",
@@ -402,13 +405,13 @@ window.WD_TEXT = {
       timbroText: "Cyfrowa karta lojalnościowa z pieczątkami dla kawiarni. Goście dodają ją do Apple Wallet lub Google Wallet jednym dotknięciem: bez aplikacji do pobrania i bez papierowej karty do zgubienia.",
       timbroLink: "Poznaj Timbro",
       timbroCard: "Karta kawowa",
-      contactTitle: "Opowiedz nam <em>o swoim wnętrzu.</em>",
+      contactTitle: "Opowiedz nam <em>o swoim projekcie.</em>",
       contactText: "Dom, kabina, przedmiot. Napisz kilka zdań i dołącz zdjęcie lub rzut, jeśli je masz. Odpowiadamy osobiście."
     },
 
     work: {
       title: "Projekty",
-      intro: "Wnętrza, jachty, produkty, wizualizacje i identyfikacje. Wybierz kategorię, aby zawęzić listę.",
+      intro: "Wnętrza, jachty, produkty, wizualizacje i identyfikacje. Wszystko naraz albo po kawałku: wybierz kategorię, aby zawęzić listę.",
       filterLabel: "Filtruj projekty według kategorii",
       showing: "Projekty: {n}",
       showingOne: "Projekty: 1",
@@ -462,7 +465,7 @@ window.WD_TEXT = {
         }
       },
       processTitle: "Jak pracujemy",
-      processIntro: "Te same pięć etapów dla kabiny, kuchni czy lampy.",
+      processIntro: "Kawałek po kawałku: te same pięć etapów dla kabiny, kuchni czy lampy.",
       steps: [
         { name: "Brief", text: "Spotykamy się osobiście lub online. Słuchamy, jak mieszkasz, pracujesz lub żeglujesz, i ustalamy zakres, terminy oraz budżet." },
         { name: "Koncepcja", text: "Moodboardy, pierwsze szkice i układ. Jedna jasna idea, zanim pojawią się detale." },
@@ -478,7 +481,7 @@ window.WD_TEXT = {
       lead: "abit. studio prowadzą Bartosz Witkowski i Amina Tilesheva.",
       photoNote: "Portret wkrótce",
       bio: [
-        "Studio działa między Mediolanem a Polską, dla klientów z Europy i spoza niej. Projektuje domy, wnętrza jachtów i przedmioty, a także tworzy obrazy i identyfikacje, które im towarzyszą.",
+        "Nazwa abit. brzmi jak angielskie „a bit”, czyli „trochę”. Robimy trochę wnętrz na lądzie, trochę na jachtach, trochę mebli i przedmiotów, do tego wizualizacje i identyfikacje, a każdy kawałek dopracowujemy do końca. Pracujemy między Mediolanem a Polską, dla klientów z Europy i spoza niej.",
         "Wnętrze, meble, wizualizacje i marka w jednych rękach to mniej przekazywania pracy dalej i jedna idea prowadzona od pierwszego szkicu do gotowego wnętrza.",
         "Obok projektów dla klientów studio tworzy własne produkty. Pierwszym jest Timbro, cyfrowa karta lojalnościowa dla kawiarni."
       ],
@@ -488,7 +491,7 @@ window.WD_TEXT = {
         { name: "Narysowane co do milimetra", text: "Na jachcie każdy centymetr jest zaplanowany. Domy i przedmioty dostają tę samą uwagę." },
         { name: "Zobacz najpierw", text: "Każdy projekt powstaje w wizualizacji, zanim zostanie zbudowany, więc decyzje zapadają na podstawie tego, co widzisz." }
       ],
-      basesTitle: "Między dwoma miejscami",
+      basesTitle: "Po obu stronach Alp",
       bases: [
         { name: "Mediolan", text: "Włoska kultura designu, rzemieślnicy i dostawcy, a wybrzeże jachtowe w zasięgu ręki." },
         { name: "Polska", text: "Pracownie stolarskie, rzemieślnicy i partnerzy produkcyjni." }
@@ -497,7 +500,7 @@ window.WD_TEXT = {
 
     contact: {
       title: "Kontakt",
-      intro: "Napisz, zadzwoń lub wyślij wiadomość na WhatsAppie. Opowiedz, co planujesz, gdzie i mniej więcej kiedy.",
+      intro: "Napisz, zadzwoń lub wyślij wiadomość na WhatsAppie. Wystarczy kilka zdań: co planujesz, gdzie i mniej więcej kiedy.",
       email: "E-mail",
       phone: "Telefon",
       whatsapp: "WhatsApp",
@@ -534,6 +537,6 @@ window.WD_TEXT = {
 
     footer: { rights: "Wszelkie prawa zastrzeżone.", privacy: "Prywatność", top: "Do góry" },
 
-    notfound: { title: "Tej strony nie ma na rysunkach.", text: "Link może być nieaktualny lub błędnie wpisany.", home: "Przejdź na stronę główną" }
+    notfound: { title: "Tego kawałka nie ma na rysunkach.", text: "Link może być nieaktualny lub błędnie wpisany.", home: "Przejdź na stronę główną" }
   }
 };
