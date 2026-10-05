@@ -262,7 +262,51 @@ window.WD_PROJECTS = [
         pl: "Salon jachtu w jasnym dębie z dwiema dużymi sofami, stolikiem z ciemnego marmuru, stołem jadalnym i oknami na morze po obu stronach, wizualizacja 3D"
       }
     },
-    images: []
+    images: [
+      {
+        file: "01.jpg",
+        wide: true,
+        alt: {
+          en: "Saloon seen from the sofas: textured sofas around a dark marble table, the dining table under a ribbon light sculpture and a long window onto the sea, 3D render",
+          it: "Il salone visto dai divani: divani in tessuto materico attorno a un tavolino in marmo scuro, il tavolo da pranzo sotto una scultura luminosa a nastro e una lunga vetrata sul mare, rendering 3D",
+          pl: "Salon widziany od strony sof: sofy z fakturowej tkaniny wokół stolika z ciemnego marmuru, stół jadalny pod świetlną rzeźbą w kształcie wstęgi i długie okno z widokiem na morze, wizualizacja 3D"
+        }
+      },
+      {
+        file: "02.jpg",
+        wide: true,
+        alt: {
+          en: "Lobby with curved oak wall panels, a herringbone floor and a low cabinet along the window, leading out to the deck, 3D render",
+          it: "Corridoio con pannelli curvi in rovere, pavimento a spina di pesce e un mobile basso lungo la finestra, verso il ponte, rendering 3D",
+          pl: "Korytarz z zaokrąglonymi dębowymi panelami, podłogą w jodełkę i niską szafką wzdłuż okna, prowadzący na pokład, wizualizacja 3D"
+        }
+      },
+      {
+        file: "03.jpg",
+        alt: {
+          en: "Stateroom with an upholstered bed, a desk and a window seat facing the sea, under a curved lit ceiling, 3D render",
+          it: "Cabina con letto imbottito, scrivania e seduta lungo la finestra sul mare, sotto un soffitto curvo illuminato, rendering 3D",
+          pl: "Kabina z tapicerowanym łóżkiem, biurkiem i siedziskiem przy oknie z widokiem na morze, pod zaokrąglonym podświetlonym sufitem, wizualizacja 3D"
+        }
+      },
+      {
+        file: "04.jpg",
+        alt: {
+          en: "Cabin in oak with a carved stone panel behind the bed, glass globe pendants and a curved desk, 3D render",
+          it: "Cabina in rovere con pannello in pietra scolpita dietro il letto, sospensioni a sfera in vetro e scrivania curva, rendering 3D",
+          pl: "Kabina w dębie z rzeźbionym kamiennym panelem za łóżkiem, szklanymi lampami w kształcie kul i zaokrąglonym biurkiem, wizualizacja 3D"
+        }
+      },
+      {
+        file: "05.jpg",
+        wide: true,
+        alt: {
+          en: "Deck with a spa pool set into curved sunpads, teak steps and an open view of the sea, 3D render",
+          it: "Ponte con vasca idromassaggio incassata tra prendisole curvi, gradini in teak e vista aperta sul mare, rendering 3D",
+          pl: "Pokład z wanną z hydromasażem wpuszczoną między zaokrąglone leżanki, tekowymi stopniami i otwartym widokiem na morze, wizualizacja 3D"
+        }
+      }
+    ]
   },
 
   {
