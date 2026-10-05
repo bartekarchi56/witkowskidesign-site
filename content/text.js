@@ -34,11 +34,11 @@ window.WD_TEXT = {
       play: "Play slideshow",
       title: "Calm spaces,<br> on land <em>and at sea.</em>",
       caption: "La Mare · yacht cabin · 3D visualisation",
-      statement: "I'm Bartek, and abit. studio is my practice between Milan and Poland. I design homes, yacht interiors and objects, and every one of them is drawn, modelled and rendered before it is built, so you see the result first.",
+      statement: "We are Bartek and Amina, and abit. studio is our practice between Milan and Poland. We design homes, yacht interiors and objects, and every one of them is drawn, modelled and rendered before it is built, so you see the result first.",
       selected: "Selected projects",
       allWork: "All projects",
       servicesTitle: "What the studio does",
-      servicesLink: "How I work",
+      servicesLink: "How we work",
       services: {
         interiors: "Homes and hospitality spaces, from the layout to the last handle.",
         yachts: "Cabins, saloons and refits where every centimetre is planned.",
@@ -50,8 +50,8 @@ window.WD_TEXT = {
       timbroText: "A digital loyalty stamp card for cafés. Guests add it to Apple Wallet or Google Wallet in one tap: no app to download, no paper card to lose.",
       timbroLink: "Visit Timbro",
       timbroCard: "Coffee card",
-      contactTitle: "Tell me about <em>your space.</em>",
-      contactText: "A home, a cabin, an object. Send a few lines and a photo or a plan if you have one. I reply personally."
+      contactTitle: "Tell us about <em>your space.</em>",
+      contactText: "A home, a cabin, an object. Send a few lines and a photo or a plan if you have one. We reply personally."
     },
 
     work: {
@@ -85,34 +85,34 @@ window.WD_TEXT = {
       items: {
         interiors: {
           name: "Interior design",
-          text: "Private homes, apartments and small hospitality spaces. I plan the layout, choose the materials and draw the custom furniture and joinery, then follow the work on site.",
+          text: "Private homes, apartments and small hospitality spaces. We plan the layout, choose the materials and draw the custom furniture and joinery, then follow the work on site.",
           list: ["Layout and space planning", "Materials and finishes", "Custom joinery and furniture", "Lighting plan", "Technical drawings", "Site supervision"]
         },
         yachts: {
           name: "Yacht interior design",
-          text: "Cabins, saloons and full refits for motor and sailing yachts. Within the limits of weight, curves and class rules, I design interiors that feel calm and generous in a small volume.",
+          text: "Cabins, saloons and full refits for motor and sailing yachts. Within the limits of weight, curves and class rules, we design interiors that feel calm and generous in a small volume.",
           list: ["Layout studies", "Materials and soft furnishings", "Joinery details", "Lighting", "Renders for owner approval", "Coordination with the shipyard"]
         },
         products: {
           name: "Product and industrial design",
-          text: "Furniture, lighting and objects, from the first sketch to a model ready for production. I design with the maker in mind, so the object can really be built.",
+          text: "Furniture, lighting and objects, from the first sketch to a model ready for production. We design with the maker in mind, so the object can really be built.",
           list: ["Concept sketches", "3D CAD models", "Prototypes and samples", "Production drawings", "Product renders"]
         },
         visualisation: {
           name: "3D visualisation and rendering",
-          text: "Photorealistic images of interiors, yachts and products, for my own projects and for architects, developers, shipyards and brands.",
+          text: "Photorealistic images of interiors, yachts and products, for our own projects and for architects, developers, shipyards and brands.",
           list: ["Interior renders", "Yacht and exterior renders", "Product images", "360° views", "Short animations"]
         },
         branding: {
           name: "Branding and graphic design",
-          text: "Identities, printed matter and signage, often for the same places I design. A café, a showroom or a boat can share one visual language, from the logo to the menu.",
+          text: "Identities, printed matter and signage, often for the same places we design. A café, a showroom or a boat can share one visual language, from the logo to the menu.",
           list: ["Logo and identity", "Typography and colour", "Print and stationery", "Signage", "Packaging"]
         }
       },
-      processTitle: "How I work",
+      processTitle: "How we work",
       processIntro: "The same five steps for a cabin, a kitchen or a lamp.",
       steps: [
-        { name: "Brief", text: "We meet in person or online. I listen to how you live, work or sail, and we agree on scope, timing and budget." },
+        { name: "Brief", text: "We meet in person or online. We listen to how you live, work or sail, and together we agree on scope, timing and budget." },
         { name: "Concept", text: "Mood boards, first sketches and a layout. One clear idea before any detail." },
         { name: "Design", text: "Materials, furniture, light and technical drawings. Everything decided, measured and specified." },
         { name: "Visualisation", text: "Photorealistic renders of the design, so you can see the space and adjust it while changes are still easy." },
@@ -145,7 +145,7 @@ window.WD_TEXT = {
 
     contact: {
       title: "Contact",
-      intro: "Write, call or send a WhatsApp message. Tell me what you are planning, where it is and roughly when.",
+      intro: "Write, call or send a WhatsApp message. Tell us what you are planning, where it is and roughly when.",
       email: "Email",
       phone: "Phone",
       whatsapp: "WhatsApp",
@@ -160,7 +160,7 @@ window.WD_TEXT = {
       send: "Write email",
       note: "The button opens your email app with the message ready to send. Nothing is stored on this website.",
       errName: "Add your name.",
-      errEmail: "Add a valid email address so I can reply.",
+      errEmail: "Add a valid email address so we can reply.",
       errMessage: "Write a few words about the project.",
       opened: "Your email app should now be open. If nothing happened, write directly to {email}.",
       subject: "Project enquiry"
@@ -194,7 +194,7 @@ window.WD_TEXT = {
       project: { title: "Progetto · abit. studio", description: "Un progetto di abit. studio." },
       services: { title: "Servizi · abit. studio", description: "Interior design, interni per yacht, design di prodotto, visualizzazione 3D e branding. Uno studio, un solo metodo." },
       about: { title: "Bartosz Witkowski e Amina Tilesheva · abit. studio", description: "abit. studio, guidato da Bartosz Witkowski e Amina Tilesheva, lavora tra Milano e la Polonia per clienti in tutta Europa." },
-      contact: { title: "Contatti · abit. studio", description: "Scrivi, chiama o manda un messaggio WhatsApp a abit. studio per il tuo interno, yacht o prodotto." },
+      contact: { title: "Contatti · abit. studio", description: "Scrivi, chiama o manda un messaggio WhatsApp ad abit. studio per il tuo interno, yacht o prodotto." },
       privacy: { title: "Privacy · abit. studio", description: "Informativa privacy di witkowskidesign.com. Nessun cookie di tracciamento, nessuna analisi." },
       notfound: { title: "Pagina non trovata · abit. studio", description: "Questa pagina non esiste." }
     },
@@ -210,11 +210,11 @@ window.WD_TEXT = {
       play: "Riprendi le immagini",
       title: "Spazi calmi,<br> a terra <em>e in mare.</em>",
       caption: "La Mare · cabina di yacht · visualizzazione 3D",
-      statement: "Sono Bartek e questo è abit. studio, il mio studio tra Milano e la Polonia. Progetto case, interni di yacht e oggetti, e ognuno viene disegnato, modellato e renderizzato prima di essere costruito, così vedi il risultato per primo.",
+      statement: "Siamo Bartek e Amina, e questo è abit. studio, il nostro studio tra Milano e la Polonia. Progettiamo case, interni di yacht e oggetti, e ognuno viene disegnato, modellato e renderizzato prima di essere costruito, così vedi il risultato per primo.",
       selected: "Progetti scelti",
       allWork: "Tutti i progetti",
       servicesTitle: "Cosa fa lo studio",
-      servicesLink: "Come lavoro",
+      servicesLink: "Come lavoriamo",
       services: {
         interiors: "Case e spazi per l'ospitalità, dalla pianta all'ultima maniglia.",
         yachts: "Cabine, saloni e refit dove ogni centimetro è pensato.",
@@ -226,8 +226,8 @@ window.WD_TEXT = {
       timbroText: "Una carta fedeltà digitale a timbri per i caffè. I clienti la aggiungono ad Apple Wallet o Google Wallet con un tocco: nessuna app da scaricare, nessuna tessera di carta da perdere.",
       timbroLink: "Scopri Timbro",
       timbroCard: "Carta caffè",
-      contactTitle: "Raccontami <em>il tuo spazio.</em>",
-      contactText: "Una casa, una cabina, un oggetto. Scrivi due righe e allega una foto o una pianta, se ce l'hai. Rispondo personalmente."
+      contactTitle: "Raccontaci <em>il tuo spazio.</em>",
+      contactText: "Una casa, una cabina, un oggetto. Scrivi due righe e allega una foto o una pianta, se ce l'hai. Rispondiamo personalmente."
     },
 
     work: {
@@ -261,34 +261,34 @@ window.WD_TEXT = {
       items: {
         interiors: {
           name: "Interior design",
-          text: "Case private, appartamenti e piccoli spazi per l'ospitalità. Disegno la pianta, scelgo i materiali e progetto arredi e falegnameria su misura, poi seguo i lavori in cantiere.",
+          text: "Case private, appartamenti e piccoli spazi per l'ospitalità. Disegniamo la pianta, scegliamo i materiali e progettiamo arredi e falegnameria su misura, poi seguiamo i lavori in cantiere.",
           list: ["Pianta e distribuzione degli spazi", "Materiali e finiture", "Arredi e falegnameria su misura", "Progetto illuminotecnico", "Disegni tecnici", "Direzione artistica in cantiere"]
         },
         yachts: {
           name: "Interni per yacht",
-          text: "Cabine, saloni e refit completi per yacht a motore e a vela. Nei limiti di pesi, curve e regolamenti, progetto interni che risultano calmi e generosi anche in un piccolo volume.",
+          text: "Cabine, saloni e refit completi per yacht a motore e a vela. Nei limiti di pesi, curve e regolamenti, progettiamo interni che risultano calmi e generosi anche in un piccolo volume.",
           list: ["Studi di layout", "Materiali e tessili", "Dettagli di falegnameria", "Illuminazione", "Rendering per l'approvazione dell'armatore", "Coordinamento con il cantiere"]
         },
         products: {
           name: "Design di prodotto e industriale",
-          text: "Arredi, lampade e oggetti, dal primo schizzo al modello pronto per la produzione. Progetto pensando a chi produce, perché l'oggetto si possa davvero realizzare.",
+          text: "Arredi, lampade e oggetti, dal primo schizzo al modello pronto per la produzione. Progettiamo pensando a chi produce, perché l'oggetto si possa davvero realizzare.",
           list: ["Schizzi di concept", "Modelli 3D CAD", "Prototipi e campioni", "Disegni esecutivi", "Rendering di prodotto"]
         },
         visualisation: {
           name: "Visualizzazione 3D e rendering",
-          text: "Immagini fotorealistiche di interni, yacht e prodotti, per i miei progetti e per architetti, sviluppatori immobiliari, cantieri e marchi.",
+          text: "Immagini fotorealistiche di interni, yacht e prodotti, per i nostri progetti e per architetti, sviluppatori immobiliari, cantieri e marchi.",
           list: ["Rendering d'interni", "Rendering di yacht ed esterni", "Immagini di prodotto", "Viste a 360°", "Brevi animazioni"]
         },
         branding: {
           name: "Branding e graphic design",
-          text: "Identità, stampati e segnaletica, spesso per gli stessi luoghi che progetto. Un caffè, uno showroom o una barca possono condividere un solo linguaggio visivo, dal logo al menu.",
+          text: "Identità, stampati e segnaletica, spesso per gli stessi luoghi che progettiamo. Un caffè, uno showroom o una barca possono condividere un solo linguaggio visivo, dal logo al menu.",
           list: ["Logo e identità", "Tipografia e colore", "Stampa e cancelleria", "Segnaletica", "Packaging"]
         }
       },
-      processTitle: "Come lavoro",
+      processTitle: "Come lavoriamo",
       processIntro: "Le stesse cinque fasi per una cabina, una cucina o una lampada.",
       steps: [
-        { name: "Brief", text: "Ci incontriamo di persona oppure online. Ascolto come vivi, lavori o navighi, e definiamo insieme ambito, tempi e budget." },
+        { name: "Brief", text: "Ci incontriamo di persona oppure online. Ascoltiamo come vivi, lavori o navighi, e definiamo insieme ambito, tempi e budget." },
         { name: "Concept", text: "Moodboard, primi schizzi e una pianta. Un'idea chiara prima di ogni dettaglio." },
         { name: "Progetto", text: "Materiali, arredi, luce e disegni tecnici. Tutto deciso, misurato e specificato." },
         { name: "Visualizzazione", text: "Rendering fotorealistici del progetto, per vedere lo spazio e modificarlo quando cambiare è ancora semplice." },
@@ -321,7 +321,7 @@ window.WD_TEXT = {
 
     contact: {
       title: "Contatti",
-      intro: "Scrivi, chiama o manda un messaggio WhatsApp. Raccontami cosa hai in mente, dove si trova e più o meno quando.",
+      intro: "Scrivi, chiama o manda un messaggio WhatsApp. Raccontaci cosa hai in mente, dove si trova e più o meno quando.",
       email: "Email",
       phone: "Telefono",
       whatsapp: "WhatsApp",
@@ -348,7 +348,7 @@ window.WD_TEXT = {
       sections: [
         { title: "Cosa raccoglie questo sito", text: "Nulla, di per sé. Nessun cookie, nessuna analisi, nessun tracker di terze parti. Font e immagini sono serviti da questo sito, quindi nessun'altra azienda vede la tua visita." },
         { title: "Hosting", text: "Il sito è ospitato su GitHub Pages da GitHub, Inc. Come ogni server web, può registrare dati tecnici come l'indirizzo IP per motivi di sicurezza. Vedi l'<a href=\"https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement\" rel=\"noopener\">informativa privacy di GitHub</a>." },
-        { title: "Quando mi contatti", text: "Se scrivi un'email, chiami o mandi un messaggio WhatsApp, i tuoi dati servono solo per risponderti e, se lavoriamo insieme, per gestire il progetto. Non vengono condivisi né usati per marketing. Il modulo di contatto non invia nulla a questo sito: apre soltanto il tuo programma di posta." },
+        { title: "Quando ci contatti", text: "Se scrivi un'email, chiami o mandi un messaggio WhatsApp, i tuoi dati servono solo per risponderti e, se lavoriamo insieme, per gestire il progetto. Non vengono condivisi né usati per marketing. Il modulo di contatto non invia nulla a questo sito: apre soltanto il tuo programma di posta." },
         { title: "I tuoi diritti", text: "In base al GDPR puoi chiedere di vedere, correggere o cancellare i dati personali che ti riguardano, e puoi presentare reclamo all'autorità per la protezione dei dati. Per una richiesta, scrivi all'indirizzo email qui sotto." }
       ],
       controllerTitle: "Titolare del trattamento",
@@ -380,17 +380,17 @@ window.WD_TEXT = {
 
     home: {
       eyebrow: "Wnętrza · Jachty · Produkty",
-      intro: "abit. studio projektuje wnętrza i produkty między Mediolanem a Polską. Domy, wnętrza jachtów i przedmioty, każdy narysowany, wymodelowany i wyrenderowany, zanim powstanie.",
+      intro: "abit. studio projektuje wnętrza i produkty między Mediolanem a Polską. Domy, wnętrza jachtów i przedmioty, wszystkie narysowane, wymodelowane i wyrenderowane, zanim powstaną.",
       studioLink: "O studiu",
       pause: "Zatrzymaj pokaz zdjęć",
       play: "Wznów pokaz zdjęć",
       title: "Spokojne wnętrza,<br> na lądzie <em>i na morzu.</em>",
       caption: "La Mare · kabina jachtu · wizualizacja 3D",
-      statement: "Nazywam się Bartek, a abit. studio to moja pracownia między Mediolanem a Polską. Projektuję domy, wnętrza jachtów i przedmioty. Każdy projekt rysuję, modeluję i renderuję, zanim powstanie, więc widzisz efekt jako pierwszy.",
+      statement: "Jesteśmy Bartek i Amina, a abit. studio to nasza pracownia między Mediolanem a Polską. Projektujemy domy, wnętrza jachtów i przedmioty. Każdy projekt rysujemy, modelujemy i renderujemy, zanim powstanie, więc widzisz efekt jako pierwszy.",
       selected: "Wybrane projekty",
       allWork: "Wszystkie projekty",
       servicesTitle: "Czym zajmuje się studio",
-      servicesLink: "Jak pracuję",
+      servicesLink: "Jak pracujemy",
       services: {
         interiors: "Domy i wnętrza gościnne, od układu funkcjonalnego po ostatnią klamkę.",
         yachts: "Kabiny, salony i refity, w których każdy centymetr jest przemyślany.",
@@ -402,8 +402,8 @@ window.WD_TEXT = {
       timbroText: "Cyfrowa karta lojalnościowa z pieczątkami dla kawiarni. Goście dodają ją do Apple Wallet lub Google Wallet jednym dotknięciem: bez aplikacji do pobrania i bez papierowej karty do zgubienia.",
       timbroLink: "Poznaj Timbro",
       timbroCard: "Karta kawowa",
-      contactTitle: "Opowiedz mi <em>o swoim wnętrzu.</em>",
-      contactText: "Dom, kabina, przedmiot. Napisz kilka zdań i dołącz zdjęcie lub rzut, jeśli je masz. Odpowiadam osobiście."
+      contactTitle: "Opowiedz nam <em>o swoim wnętrzu.</em>",
+      contactText: "Dom, kabina, przedmiot. Napisz kilka zdań i dołącz zdjęcie lub rzut, jeśli je masz. Odpowiadamy osobiście."
     },
 
     work: {
@@ -437,34 +437,34 @@ window.WD_TEXT = {
       items: {
         interiors: {
           name: "Projektowanie wnętrz",
-          text: "Domy, mieszkania i niewielkie wnętrza gościnne. Planuję układ, dobieram materiały i projektuję meble oraz zabudowy na wymiar, a potem czuwam nad realizacją.",
+          text: "Domy, mieszkania i niewielkie wnętrza gościnne. Planujemy układ, dobieramy materiały i projektujemy meble oraz zabudowy na wymiar, a potem czuwamy nad realizacją.",
           list: ["Układ funkcjonalny", "Materiały i wykończenia", "Zabudowy i meble na wymiar", "Projekt oświetlenia", "Rysunki techniczne", "Nadzór autorski"]
         },
         yachts: {
           name: "Projektowanie wnętrz jachtów",
-          text: "Kabiny, salony i pełne refity jachtów motorowych i żaglowych. W granicach wagi, krzywizn i przepisów klasyfikacyjnych projektuję wnętrza, które są spokojne i przestronne nawet w małej kubaturze.",
+          text: "Kabiny, salony i pełne refity jachtów motorowych i żaglowych. W granicach wagi, krzywizn i przepisów klasyfikacyjnych projektujemy wnętrza, które są spokojne i przestronne nawet w małej kubaturze.",
           list: ["Studia układu", "Materiały i tkaniny", "Detale stolarskie", "Oświetlenie", "Wizualizacje do akceptacji armatora", "Koordynacja ze stocznią"]
         },
         products: {
           name: "Wzornictwo i projektowanie produktu",
-          text: "Meble, oświetlenie i przedmioty, od pierwszego szkicu do modelu gotowego do produkcji. Projektuję z myślą o wykonawcy, tak aby przedmiot dało się naprawdę zrobić.",
+          text: "Meble, oświetlenie i przedmioty, od pierwszego szkicu do modelu gotowego do produkcji. Projektujemy z myślą o wykonawcy, tak aby przedmiot dało się naprawdę zrobić.",
           list: ["Szkice koncepcyjne", "Modele 3D CAD", "Prototypy i próbki", "Rysunki wykonawcze", "Wizualizacje produktu"]
         },
         visualisation: {
           name: "Wizualizacje i rendering 3D",
-          text: "Fotorealistyczne obrazy wnętrz, jachtów i produktów, dla moich projektów oraz dla architektów, deweloperów, stoczni i marek.",
+          text: "Fotorealistyczne obrazy wnętrz, jachtów i produktów, dla naszych projektów oraz dla architektów, deweloperów, stoczni i marek.",
           list: ["Wizualizacje wnętrz", "Wizualizacje jachtów i budynków", "Zdjęcia produktowe", "Widoki 360°", "Krótkie animacje"]
         },
         branding: {
           name: "Branding i projektowanie graficzne",
-          text: "Identyfikacje, druki i oznakowanie, często dla tych samych miejsc, które projektuję. Kawiarnia, showroom czy jacht mogą mówić jednym językiem wizualnym, od logo po menu.",
+          text: "Identyfikacje, druki i oznakowanie, często dla tych samych miejsc, które projektujemy. Kawiarnia, showroom czy jacht mogą mówić jednym językiem wizualnym, od logo po menu.",
           list: ["Logo i identyfikacja", "Typografia i kolor", "Druki i materiały firmowe", "Oznakowanie", "Opakowania"]
         }
       },
-      processTitle: "Jak pracuję",
+      processTitle: "Jak pracujemy",
       processIntro: "Te same pięć etapów dla kabiny, kuchni czy lampy.",
       steps: [
-        { name: "Brief", text: "Spotykamy się osobiście lub online. Słucham, jak mieszkasz, pracujesz lub żeglujesz, i ustalamy zakres, terminy oraz budżet." },
+        { name: "Brief", text: "Spotykamy się osobiście lub online. Słuchamy, jak mieszkasz, pracujesz lub żeglujesz, i ustalamy zakres, terminy oraz budżet." },
         { name: "Koncepcja", text: "Moodboardy, pierwsze szkice i układ. Jedna jasna idea, zanim pojawią się detale." },
         { name: "Projekt", text: "Materiały, meble, światło i rysunki techniczne. Wszystko ustalone, zwymiarowane i opisane." },
         { name: "Wizualizacja", text: "Fotorealistyczne wizualizacje projektu: widzisz wnętrze i możesz je zmienić, póki zmiany są jeszcze łatwe." },
@@ -512,7 +512,7 @@ window.WD_TEXT = {
       send: "Napisz e-mail",
       note: "Przycisk otwiera Twój program pocztowy z gotową wiadomością. Ta strona niczego nie zapisuje.",
       errName: "Podaj swoje imię.",
-      errEmail: "Podaj poprawny adres e-mail, abym mógł odpowiedzieć.",
+      errEmail: "Podaj poprawny adres e-mail, abyśmy mogli odpowiedzieć.",
       errMessage: "Napisz kilka słów o projekcie.",
       opened: "Twój program pocztowy powinien się otworzyć. Jeśli nic się nie stało, napisz bezpośrednio na {email}.",
       subject: "Zapytanie o projekt"
@@ -524,7 +524,7 @@ window.WD_TEXT = {
       sections: [
         { title: "Co zbiera ta strona", text: "Sama z siebie nic. Nie ma plików cookie, analityki ani zewnętrznych narzędzi śledzących. Czcionki i obrazy są serwowane z tej strony, więc żadna inna firma nie widzi Twojej wizyty." },
         { title: "Hosting", text: "Strona jest hostowana w GitHub Pages przez GitHub, Inc. Jak każdy serwer, może zapisywać dane techniczne, na przykład adres IP, ze względów bezpieczeństwa. Zobacz <a href=\"https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement\" rel=\"noopener\">oświadczenie o prywatności GitHub</a>." },
-        { title: "Gdy się ze mną kontaktujesz", text: "Jeśli piszesz e-mail, dzwonisz lub wysyłasz wiadomość na WhatsAppie, Twoje dane służą wyłącznie do odpowiedzi, a jeśli zaczniemy współpracę, do prowadzenia projektu. Nie są nikomu przekazywane ani używane do marketingu. Formularz kontaktowy niczego nie wysyła do tej strony: otwiera tylko Twój program pocztowy." },
+        { title: "Gdy się z nami kontaktujesz", text: "Jeśli piszesz e-mail, dzwonisz lub wysyłasz wiadomość na WhatsAppie, Twoje dane służą wyłącznie do odpowiedzi, a jeśli zaczniemy współpracę, do prowadzenia projektu. Nie są nikomu przekazywane ani używane do marketingu. Formularz kontaktowy niczego nie wysyła do tej strony: otwiera tylko Twój program pocztowy." },
         { title: "Twoje prawa", text: "Zgodnie z RODO możesz poprosić o wgląd, poprawienie lub usunięcie swoich danych osobowych oraz złożyć skargę do organu ochrony danych (w Polsce: Prezes UODO). Aby złożyć wniosek, napisz na adres e-mail poniżej." }
       ],
       controllerTitle: "Administrator danych",
