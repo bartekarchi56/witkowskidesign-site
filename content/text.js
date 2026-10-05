@@ -17,7 +17,7 @@ window.WD_TEXT = {
       work: { title: "Projects · abit. studio", description: "Selected interiors, yacht interiors, products, visualisations and identities by abit. studio." },
       project: { title: "Project · abit. studio", description: "A project by abit. studio." },
       services: { title: "Services · abit. studio", description: "Interior design, yacht interior design, product design, 3D visualisation and branding. One studio, one way of working." },
-      about: { title: "Bartek Witkowski · abit. studio", description: "abit. studio is led by Bartek Witkowski and works between Milan and Poland for clients across Europe." },
+      about: { title: "Bartosz Witkowski and Amina Tilesheva · abit. studio", description: "abit. studio, led by Bartosz Witkowski and Amina Tilesheva, works between Milan and Poland for clients across Europe." },
       contact: { title: "Contact · abit. studio", description: "Write, call or send a WhatsApp message to abit. studio about your interior, yacht or product." },
       privacy: { title: "Privacy · abit. studio", description: "Privacy note for witkowskidesign.com. No tracking cookies, no analytics." },
       notfound: { title: "Page not found · abit. studio", description: "This page does not exist." }
@@ -123,7 +123,7 @@ window.WD_TEXT = {
 
     about: {
       title: "Studio",
-      lead: "abit. studio is led by Bartosz Witkowski.",
+      lead: "abit. studio is led by Bartosz Witkowski and Amina Tilesheva.",
       photoNote: "Portrait coming soon",
       bio: [
         "The studio works between Milan and Poland, for clients across Europe and beyond. It designs homes, yacht interiors and objects, and creates the images and identities that go with them.",
@@ -193,7 +193,7 @@ window.WD_TEXT = {
       work: { title: "Progetti · abit. studio", description: "Una selezione di interni, yacht, prodotti, visualizzazioni e identità di abit. studio." },
       project: { title: "Progetto · abit. studio", description: "Un progetto di abit. studio." },
       services: { title: "Servizi · abit. studio", description: "Interior design, interni per yacht, design di prodotto, visualizzazione 3D e branding. Uno studio, un solo metodo." },
-      about: { title: "Bartek Witkowski · abit. studio", description: "abit. studio, guidato da Bartek Witkowski, lavora tra Milano e la Polonia per clienti in tutta Europa." },
+      about: { title: "Bartosz Witkowski e Amina Tilesheva · abit. studio", description: "abit. studio, guidato da Bartosz Witkowski e Amina Tilesheva, lavora tra Milano e la Polonia per clienti in tutta Europa." },
       contact: { title: "Contatti · abit. studio", description: "Scrivi, chiama o manda un messaggio WhatsApp a abit. studio per il tuo interno, yacht o prodotto." },
       privacy: { title: "Privacy · abit. studio", description: "Informativa privacy di witkowskidesign.com. Nessun cookie di tracciamento, nessuna analisi." },
       notfound: { title: "Pagina non trovata · abit. studio", description: "Questa pagina non esiste." }
@@ -299,7 +299,7 @@ window.WD_TEXT = {
 
     about: {
       title: "Studio",
-      lead: "abit. studio è guidato da Bartosz Witkowski.",
+      lead: "abit. studio è guidato da Bartosz Witkowski e Amina Tilesheva.",
       photoNote: "Ritratto in arrivo",
       bio: [
         "Lo studio lavora tra Milano e la Polonia, per clienti in Europa e oltre. Progetta case, interni di yacht e oggetti, e crea le immagini e le identità che li accompagnano.",
@@ -369,7 +369,7 @@ window.WD_TEXT = {
       work: { title: "Projekty · abit. studio", description: "Wybrane wnętrza, jachty, produkty, wizualizacje i identyfikacje abit. studio." },
       project: { title: "Projekt · abit. studio", description: "Projekt abit. studio." },
       services: { title: "Usługi · abit. studio", description: "Projektowanie wnętrz, wnętrz jachtów, produktów, wizualizacje 3D i branding. Jedno studio, jeden sposób pracy." },
-      about: { title: "Bartek Witkowski · abit. studio", description: "abit. studio prowadzi Bartek Witkowski. Pracownia działa między Mediolanem a Polską dla klientów z całej Europy." },
+      about: { title: "Bartosz Witkowski i Amina Tilesheva · abit. studio", description: "abit. studio prowadzą Bartosz Witkowski i Amina Tilesheva. Pracownia działa między Mediolanem a Polską dla klientów z całej Europy." },
       contact: { title: "Kontakt · abit. studio", description: "Napisz, zadzwoń lub wyślij wiadomość na WhatsAppie do abit. studio w sprawie wnętrza, jachtu lub produktu." },
       privacy: { title: "Prywatność · abit. studio", description: "Informacja o prywatności witkowskidesign.com. Bez śledzących ciasteczek i analityki." },
       notfound: { title: "Nie znaleziono strony · abit. studio", description: "Ta strona nie istnieje." }
@@ -475,7 +475,7 @@ window.WD_TEXT = {
 
     about: {
       title: "Studio",
-      lead: "abit. studio prowadzi Bartosz Witkowski.",
+      lead: "abit. studio prowadzą Bartosz Witkowski i Amina Tilesheva.",
       photoNote: "Portret wkrótce",
       bio: [
         "Studio działa między Mediolanem a Polską, dla klientów z Europy i spoza niej. Projektuje domy, wnętrza jachtów i przedmioty, a także tworzy obrazy i identyfikacje, które im towarzyszą.",
