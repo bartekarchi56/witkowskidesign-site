@@ -213,7 +213,17 @@ window.WD_PROJECTS = [
         pl: "Kuchnia z wyspą z białego kamienia, drewnianym stołem na szklanych nogach i dużą drucianą lampą, wizualizacja 3D"
       }
     },
-    images: []
+    images: [
+      {
+        file: "01.jpg",
+        wide: true,
+        alt: {
+          en: "View along the timber dining table on glass legs towards the stone island and tall curtained windows, with built-in ovens and a wine fridge on the right, 3D render",
+          it: "Vista lungo il tavolo in legno su gambe di vetro verso l'isola in pietra e le alte finestre con tende, con forni a incasso e cantinetta per il vino a destra, rendering 3D",
+          pl: "Widok wzdłuż drewnianego stołu na szklanych nogach w stronę kamiennej wyspy i wysokich okien z zasłonami, z piekarnikami w zabudowie i chłodziarką do wina po prawej, wizualizacja 3D"
+        }
+      }
+    ]
   },
 
   {
