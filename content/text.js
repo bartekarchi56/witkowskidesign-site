@@ -123,7 +123,7 @@ window.WD_TEXT = {
 
     about: {
       title: "Studio",
-      lead: "abit. studio is led by Bartosz Witkowski, Bartek to everyone who works with the studio.",
+      lead: "abit. studio is led by Bartosz Witkowski.",
       photoNote: "Portrait coming soon",
       bio: [
         "The studio works between Milan and Poland, for clients across Europe and beyond. It designs homes, yacht interiors and objects, and creates the images and identities that go with them.",
@@ -299,7 +299,7 @@ window.WD_TEXT = {
 
     about: {
       title: "Studio",
-      lead: "abit. studio è guidato da Bartosz Witkowski, Bartek per chiunque lavori con lo studio.",
+      lead: "abit. studio è guidato da Bartosz Witkowski.",
       photoNote: "Ritratto in arrivo",
       bio: [
         "Lo studio lavora tra Milano e la Polonia, per clienti in Europa e oltre. Progetta case, interni di yacht e oggetti, e crea le immagini e le identità che li accompagnano.",
@@ -475,7 +475,7 @@ window.WD_TEXT = {
 
     about: {
       title: "Studio",
-      lead: "abit. studio prowadzi Bartosz Witkowski, dla wszystkich współpracujących ze studiem po prostu Bartek.",
+      lead: "abit. studio prowadzi Bartosz Witkowski.",
       photoNote: "Portret wkrótce",
       bio: [
         "Studio działa między Mediolanem a Polską, dla klientów z Europy i spoza niej. Projektuje domy, wnętrza jachtów i przedmioty, a także tworzy obrazy i identyfikacje, które im towarzyszą.",
