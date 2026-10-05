@@ -117,16 +117,19 @@ window.WD_PROJECTS = [
       en: [
         "An apartment in a residential complex in Sokole Kuźnica.",
         "The kitchen is built around a veined stone island with waterfall sides under a cluster of glass pendants, with dark wood joinery, copper fittings and tall steel-framed windows onto the garden. It opens to a living area with a deep-seated cream sofa, all on a dark chevron floor.",
+        "The large central room has its own bar: a round-ended counter clad in green glazed tiles and topped with stone, on a white tiled floor dotted with black. Behind it, lit dark wood shelving frames an arched niche lined with wallpaper of birds and branches.",
         "The bedroom is quieter and darker: a channelled upholstered bed, a green marble lamp on a stone-topped side table, a desk topped in the same stone, and a steel-framed glass door that carries the line of the kitchen through the home."
       ],
       it: [
         "Un appartamento in un complesso residenziale a Sokole Kuźnica.",
         "La cucina ruota attorno a un'isola in pietra venata con fianchi a cascata, tra arredi in legno scuro e finiture in rame, sotto un grappolo di sospensioni in vetro, con alte finestre in acciaio sul giardino. Si apre su una zona giorno con un ampio divano color crema, il tutto su un parquet scuro a spina ungherese.",
+        "Il grande soggiorno centrale ha un proprio bar: un bancone arrotondato in piastrelle verdi smaltate con piano in pietra, su un pavimento bianco con tozzetti neri, davanti a scaffali in legno scuro e a una nicchia ad arco rivestita di carta da parati con uccelli e rami.",
         "La camera è più raccolta e scura: un letto con testiera imbottita a canne, una lampada in marmo verde su un comodino con piano in pietra, una scrivania nella stessa pietra e una porta vetrata con telaio in acciaio che riprende, come in tutta la casa, la linea della cucina."
       ],
       pl: [
         "Mieszkanie na osiedlu Sokole Kuźnica.",
         "Kuchnia powstała wokół wyspy z żyłkowanego kamienia z bokami w formie wodospadu, nad którą wisi lampa ze szklanych kul. Wnętrze dopełniają ciemna drewniana zabudowa, miedziane dodatki i wysokie okna w stalowych ramach z widokiem na ogród. Kuchnia otwiera się na strefę dzienną z głęboką kremową sofą, a całość łączy ciemna podłoga w jodełkę francuską.",
+        "Duży centralny salon ma własny bar: zaokrągloną ladę wyłożoną zielonymi glazurowanymi płytkami, z kamiennym blatem, ustawioną na białej posadzce z drobnymi czarnymi wstawkami. Tło tworzą regały z ciemnego drewna i łukowa wnęka wyklejona tapetą w ptaki i gałęzie.",
         "Sypialnia jest spokojniejsza i ciemniejsza: łóżko z pikowanym zagłówkiem, lampa z zielonego marmuru, stolik nocny i biurko z kamiennymi blatami oraz przeszklone drzwi w stalowej ramie, które przenoszą motyw z kuchni na całe mieszkanie."
       ]
     },
@@ -139,6 +142,15 @@ window.WD_PROJECTS = [
       }
     },
     images: [
+      {
+        file: "plan.jpg",
+        wide: true,
+        alt: {
+          en: "Overhead view of the furnished floor plan in its garden: a large central living room with the bar, the kitchen with its island, bedrooms and bathrooms, 3D render",
+          it: "Vista dall'alto della pianta arredata, circondata dal giardino: un ampio soggiorno centrale con il bar, la cucina con l'isola, le camere e i bagni, rendering 3D",
+          pl: "Widok z góry na umeblowane mieszkanie otoczone ogrodem: duży centralny salon z barem, kuchnia z wyspą, sypialnie i łazienki, wizualizacja 3D"
+        }
+      },
       {
         file: "01.jpg",
         alt: {
@@ -153,6 +165,15 @@ window.WD_PROJECTS = [
           en: "View from above the kitchen to the living area: the stone island, a copper sink, a cream sofa and a glass bubble pendant over a dark chevron floor, 3D render",
           it: "Vista dall'alto dalla cucina alla zona giorno: l'isola in pietra, il lavello in rame, un divano color crema e una sospensione a bolle di vetro sopra il parquet scuro a spina ungherese, rendering 3D",
           pl: "Widok z góry od strony kuchni na strefę dzienną: kamienna wyspa, miedziany zlew, kremowa sofa, lampa ze szklanych kul i ciemna podłoga w jodełkę francuską, wizualizacja 3D"
+        }
+      },
+      {
+        file: "bar.jpg",
+        wide: true,
+        alt: {
+          en: "Home bar with a round-ended counter in green glazed tiles and a stone top, green upholstered stools, globe pendants and a wallpapered arched niche with shelves between lit dark wood shelving, 3D render",
+          it: "Angolo bar con bancone arrotondato in piastrelle verdi smaltate e piano in pietra, sgabelli imbottiti verdi, sospensioni a globo e una nicchia ad arco con carta da parati e mensole tra scaffali illuminati in legno scuro, rendering 3D",
+          pl: "Domowy bar z zaokrągloną ladą wyłożoną zielonymi glazurowanymi płytkami, z kamiennym blatem, zielonymi tapicerowanymi hokerami i kulistymi lampami wiszącymi, na tle łukowej wnęki z tapetą i półkami między podświetlonymi regałami z ciemnego drewna, wizualizacja 3D"
         }
       },
       {
