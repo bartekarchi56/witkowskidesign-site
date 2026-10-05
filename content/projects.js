@@ -301,7 +301,42 @@ window.WD_PROJECTS = [
         pl: "Okrągły bar pod miedzianym baldachimem z blatem z czerwonego kamienia, zielonymi płytkami i aksamitnymi hokerami na perskich dywanach, wizualizacja 3D"
       }
     },
-    images: []
+    images: [
+      {
+        file: "01.jpg",
+        wide: true,
+        alt: {
+          en: "Entrance with a curved reception desk with a horsebit detail, red light washing the walls and a glimpse of the bar through the curtains, 3D render",
+          it: "Ingresso con banco reception curvo con dettaglio a morsetto, luce rossa sulle pareti e uno scorcio del bar tra le tende, rendering 3D",
+          pl: "Wejście z zaokrągloną ladą recepcji z detalem w kształcie wędzidła, czerwonym światłem na ścianach i widokiem na bar między zasłonami, wizualizacja 3D"
+        }
+      },
+      {
+        file: "02.jpg",
+        alt: {
+          en: "View from the entrance past the bar stools and a Persian rug to the lounge, with red velvet armchairs, arched floral booths and hexagonal ceiling lights, 3D render",
+          it: "Vista dall'ingresso oltre gli sgabelli e il tappeto persiano verso il lounge, con poltrone in velluto rosso, nicchie ad arco con tessuti floreali e luci esagonali a soffitto, rendering 3D",
+          pl: "Widok od wejścia, obok hokerów i perskiego dywanu, w stronę strefy lounge z czerwonymi aksamitnymi fotelami, łukowymi lożami w kwiatowych tkaninach i sześciokątnymi światłami na suficie, wizualizacja 3D"
+        }
+      },
+      {
+        file: "03.jpg",
+        alt: {
+          en: "Red velvet curtains open onto the lounge: round marble tables, red velvet armchairs and the glowing bar beyond, 3D render",
+          it: "Tende di velluto rosso aperte sul lounge: tavolini rotondi in marmo, poltrone in velluto rosso e il bancone illuminato sullo sfondo, rendering 3D",
+          pl: "Czerwone aksamitne zasłony odsłaniają strefę lounge: okrągłe marmurowe stoliki, czerwone aksamitne fotele i podświetlony bar w głębi, wizualizacja 3D"
+        }
+      },
+      {
+        file: "04.jpg",
+        wide: true,
+        alt: {
+          en: "Dining room with set marble tables and red velvet armchairs facing the curved bar, framed by lit wine shelves under a hexagonal ceiling, 3D render",
+          it: "Sala da pranzo con tavoli in marmo apparecchiati e poltrone in velluto rosso davanti al bancone curvo, tra scaffali illuminati per il vino sotto un soffitto a esagoni, rendering 3D",
+          pl: "Sala jadalna z nakrytymi marmurowymi stołami i czerwonymi aksamitnymi fotelami przed łukowym barem, między podświetlonymi regałami na wino pod sześciokątnym sufitem, wizualizacja 3D"
+        }
+      }
+    ]
   },
 
   {
