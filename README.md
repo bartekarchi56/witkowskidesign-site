@@ -115,7 +115,7 @@ All in `content/site.js`, in one place. The email is used everywhere on the site
 contact form. Fill in `address`, `vat` and `country` under `legal` and they appear on the Privacy page;
 until then they are highlighted there as "to be completed".
 
-**Logo.** The "Witkoś" logo is built into the site as a drawing, so it can be white over photos and
+**Logo.** The "abit." logo is built into the site as a drawing, so it can be white over photos and
 black on white pages. To use your own logo files instead, upload a dark and a white version to
 `assets/img/` and set `logo` and `logoLight` in `content/site.js`.
 

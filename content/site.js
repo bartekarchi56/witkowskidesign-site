@@ -27,7 +27,7 @@ window.WD_SITE = {
     linkedin: ""
   },
 
-  // Logo in the menu. Leave both "" to use the built-in "Witkoś" logo (it turns white over photos).
+  // Logo in the menu. Leave both "" to use the built-in "abit." logo (it turns white over photos).
   // To use your own file instead, upload it to assets/img/ and write the paths here:
   // logo = dark version for white pages, logoLight = white version for use over photos.
   logo: "",
