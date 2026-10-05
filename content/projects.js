@@ -100,7 +100,7 @@ window.WD_PROJECTS = [
   },
 
   {
-    slug: "kitchen-sokole-kuznica",
+    slug: "apartment-sokole-kuznica",
     title: { en: "Kitchen, Sokole Kuźnica", it: "Cucina, Sokole Kuźnica", pl: "Kuchnia, Sokole Kuźnica" },
     categories: ["interiors", "visualisation"],
     featured: true,
