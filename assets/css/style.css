@@ -36,9 +36,8 @@ body {
   font-size: 1rem;
   line-height: 1.75;
   font-weight: 300;
-  /* Poppins is set tight; a little extra space between letters and words keeps text from looking squeezed */
-  letter-spacing: .015em;
-  word-spacing: .06em;
+  /* a little extra space between words keeps text airy; letters keep Poppins' own spacing so pairs like "oo" stay together */
+  word-spacing: .08em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -122,7 +121,7 @@ body:not(.has-hero) #main { padding-top: var(--header-h); }
 
 .nav { display: flex; gap: clamp(1.25rem, 2.2vw, 2.4rem); justify-self: start; }
 .nav a, .langs a {
-  text-decoration: none; font-size: .7rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase;
+  text-decoration: none; font-size: .74rem; font-weight: 400; letter-spacing: .16em; text-transform: uppercase;
   padding: .5rem 0; border-bottom: 1px solid transparent; transition: border-color .4s, opacity .4s;
 }
 .nav a:hover, .langs a:hover { border-bottom-color: currentColor; }
