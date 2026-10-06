@@ -122,6 +122,11 @@ black on white pages. To use your own logo files instead, upload a dark and a wh
 To show your portrait on the Studio page, upload a photo to `assets/img/` (for example
 `assets/img/portrait.jpg`, portrait format) and set `portrait: "/assets/img/portrait.jpg"`.
 
+**Timbro banner.** The Timbro band on the Studio page sits on `assets/img/timbro-banner.jpg`
+(computers, keep the middle free for the text) and `assets/img/timbro-banner-tall.jpg` (phones).
+They show Timbro's own stamp cards, drawn with the Timbro site's code. To use other pictures,
+replace those two files and keep the names; the site darkens them so the text stays readable.
+
 ---
 
 ## How it works (for developers)
