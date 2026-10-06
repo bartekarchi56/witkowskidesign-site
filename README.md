@@ -134,5 +134,6 @@ To show your portrait on the Studio page, upload a photo to `assets/img/` (for e
 - If a project has no generated page yet, `404.html` still shows it from the data.
 - Languages: English at `/`, Italian at `/it/`, Polish at `/pl/`, linked with `hreflang`.
 - Preview on your computer: `npx serve .` in this folder, then open the address it prints.
-- The typeface is Cormorant, self-hosted from `assets/fonts/` (SIL Open Font License).
+- The typeface is Poppins (Light, Regular, Medium and Light Italic), self-hosted from `assets/fonts/`
+  (SIL Open Font License). The logo is drawn from Poppins SemiBold.
   No requests go to Google or any other third party.

@@ -74,7 +74,8 @@ function head(lang, page, slug, opts = {}) {
   <meta name="theme-color" content="#fcfcfb">
   <link rel="icon" href="${A("/assets/img/favicon.svg")}" type="image/svg+xml">
   <link rel="apple-touch-icon" href="${A("/assets/img/apple-touch-icon.png")}">
-  <link rel="preload" href="${A("/assets/fonts/cormorant-latin-wght-normal.woff2")}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="${A("/assets/fonts/poppins-latin-300-normal.woff2")}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="${A("/assets/fonts/poppins-latin-500-normal.woff2")}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="${A("/assets/css/style.css")}">
   <script>document.documentElement.classList.add("js")</script>
   ${BASE ? `<script>window.WD_ROOT = ${JSON.stringify(BASE + "/")}</script>\n  ` : ""}<script src="${A("/content/site.js")}" defer></script>
