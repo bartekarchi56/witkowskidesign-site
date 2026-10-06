@@ -98,8 +98,10 @@ a:hover .arrow { transform: translateX(4px); }
 .tag--light { color: #fff; }
 
 /* ------------------------------------------------------------ header */
+/* The header and the menu are as wide as the whole window (100vw includes the scrollbar), so the
+   logo sits in exactly the same place on pages with and without a scrollbar. */
 .site-header {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 50; height: var(--header-h);
+  position: fixed; top: 0; left: 0; width: 100vw; z-index: 50; height: var(--header-h);
   display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 2rem;
   padding: 0 var(--gutter);
   background: var(--white); color: var(--ink);
@@ -139,7 +141,7 @@ body:not(.has-hero) #main { padding-top: var(--header-h); }
 .burger span:nth-child(2) { top: 1.6rem; }
 
 .menu {
-  position: fixed; inset: 0; z-index: 60; background: var(--white); color: var(--ink);
+  position: fixed; top: 0; bottom: 0; left: 0; width: 100vw; z-index: 60; background: var(--white); color: var(--ink);
   display: flex; flex-direction: column; padding: 0 var(--gutter) 2.5rem;
   opacity: 0; visibility: hidden; transition: opacity .5s var(--ease), visibility .5s;
 }
