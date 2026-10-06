@@ -36,13 +36,16 @@ body {
   font-size: 1rem;
   line-height: 1.75;
   font-weight: 300;
+  /* Poppins is set tight; a little extra space between letters and words keeps text from looking squeezed */
+  letter-spacing: .015em;
+  word-spacing: .06em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
-button, input, select, textarea { font: inherit; color: inherit; }
-p { margin: 0 0 1em; text-wrap: pretty; }
+button, input, select, textarea { font: inherit; color: inherit; letter-spacing: inherit; word-spacing: inherit; }
+p { margin: 0 0 1.2em; text-wrap: pretty; }
 h1, h2, h3 { margin: 0; font-weight: inherit; }
 figure { margin: 0; }
 ul, ol { margin: 0; padding: 0; list-style: none; }
@@ -71,7 +74,7 @@ dl, dd { margin: 0; }
   font-size: .68rem; line-height: 1.5; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--grey);
 }
 .statement {
-  font-size: clamp(1.4rem, 2.3vw, 2rem); line-height: 1.38; font-weight: 300; letter-spacing: -.01em;
+  font-size: clamp(1.4rem, 2.3vw, 2rem); line-height: 1.38; font-weight: 300; letter-spacing: 0;
   max-width: 30ch; margin: 0 auto 2rem;
 }
 .statement em { font-style: italic; font-weight: 300; }
@@ -314,7 +317,7 @@ body.is-home { overflow: hidden; }
   display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 1.5rem clamp(1rem, 2.4vw, 2.5rem);
   padding: clamp(3rem, 6vw, 5rem) 0; border-top: 1px solid var(--line); scroll-margin-top: var(--header-h);
 }
-.service__name { grid-column: 1 / span 5; font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 300; line-height: 1.25; letter-spacing: -.01em; }
+.service__name { grid-column: 1 / span 5; font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 300; line-height: 1.25; letter-spacing: 0; }
 .service__body { grid-column: 7 / span 6; }
 .service__body > p:first-child { font-size: 1rem; line-height: 1.8; max-width: 36em; }
 .service__list { color: var(--grey); font-size: .9rem; line-height: 1.8; }
@@ -391,7 +394,7 @@ body.is-home { overflow: hidden; }
 }
 .foot p { margin: 0; }
 .foot nav { display: flex; flex-wrap: wrap; gap: .5rem 1.75rem; }
-.foot a { text-decoration: none; text-transform: none; letter-spacing: .01em; font-size: .8rem; font-weight: 400; color: var(--ink); }
+.foot a { text-decoration: none; text-transform: none; letter-spacing: .02em; font-size: .8rem; font-weight: 400; color: var(--ink); }
 .foot a:hover { text-decoration: underline; text-underline-offset: .25em; text-decoration-thickness: 1px; }
 
 .nf { min-height: 70vh; }
