@@ -493,7 +493,7 @@
       var im = slides[i].querySelector("img");
       if (im && im.loading === "lazy") im.loading = "eager";
     }
-    function start() { stop(); timer = setInterval(function () { show(i + 1); }, 6500); }
+    function start() { stop(); timer = setInterval(function () { show(i + 1); }, 4500); }
     function stop() { if (timer) clearInterval(timer); timer = null; }
     function sync() {
       btn.classList.toggle("is-paused", !playing);
