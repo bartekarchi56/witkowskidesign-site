@@ -41,7 +41,11 @@ window.WD_SITE = {
   kawka: {
     url: "https://waitlist.kawka.coffee",
     instagram: "https://www.instagram.com/kawka.app/",
-    handle: "@kawka.app"
+    handle: "@kawka.app",
+    // The reel that plays behind the kawka. section (a silent MP4) and the still shown before it plays.
+    video: "/assets/video/kawka-reel.mp4",
+    poster: "/assets/img/kawka-reel-poster.jpg",
+    posterTime: 6.5   // the moment of the reel the still is taken from: playback starts there, so nothing jumps
   },
   timbro: {
     url: "https://timbro.witkowskidesign.com"

@@ -124,7 +124,9 @@ To show your portrait on the Studio page, upload a photo to `assets/img/` (for e
 
 **kawka. and Timbro.** The Studio page shows the studio's own products in two bands. Their links
 (the kawka. waitlist and Instagram, the Timbro site) are set under `kawka` and `timbro` in
-`content/site.js`, and their texts under `home` in `content/text.js`.
+`content/site.js`, and their texts under `home` in `content/text.js`. The reel behind kawka. is
+`assets/video/kawka-reel.mp4` (silent MP4) with its still `assets/img/kawka-reel-poster.jpg`; to change
+it, replace both files and set `posterTime` in `content/site.js` to the second the still is taken from.
 
 **Timbro banner.** The Timbro band on the Studio page sits on `assets/img/timbro-banner.jpg`
 (computers, keep the middle free for the text) and `assets/img/timbro-banner-tall.jpg` (phones).

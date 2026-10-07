@@ -260,6 +260,45 @@ body.is-home { overflow: hidden; }
 .kawka__stamp small { display: block; margin-top: .4em; font-size: .7em; font-weight: 500; letter-spacing: .14em; }
 .kawka p.narrow { color: #d8cabd; margin-bottom: 2.25rem; }
 .product-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 2.5rem; }
+
+/* With the reel behind it, the section takes the reel's own background colour so the video melts into it,
+   and the text never covers the phone: on phones and tablets the phone plays below the text,
+   on wide screens to the right of it. The phone fills the middle of the reel (14% to 80% of its height). */
+.kawka--video { background: #0b0605; padding-bottom: calc(min(105vw, 42rem) * .82 + 6.5rem); }
+.kawka--video .kawka__stamp { box-shadow: inset 0 0 0 3px #0b0605, inset 0 0 0 4.5px currentColor; }
+.kawka__inner { position: relative; z-index: 1; }
+.kawka__video {
+  position: absolute; z-index: 0; left: 50%; bottom: calc(min(105vw, 42rem) * -.249 + 4.5rem);
+  width: min(105vw, 42rem); height: auto; aspect-ratio: 1080 / 1344; object-fit: cover;
+  transform: translateX(-50%); pointer-events: none; background: #0b0605;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent), linear-gradient(to bottom, transparent, #000 10%, #000 84%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent), linear-gradient(to bottom, transparent, #000 10%, #000 84%, transparent);
+  mask-composite: intersect;
+}
+.kawka__pause {
+  position: absolute; z-index: 2; right: var(--gutter); bottom: clamp(1rem, 2vw, 1.75rem);
+  width: 2.75rem; height: 2.75rem; border: 1px solid rgba(236, 227, 219, .45); border-radius: 50%;
+  background: transparent; color: #ece3db; cursor: pointer;
+}
+.kawka__pause span { position: absolute; inset: 0; }
+.kawka__pause span::before, .kawka__pause span::after { content: ""; position: absolute; top: 50%; width: 1.5px; height: .8rem; margin-top: -.4rem; background: currentColor; }
+.kawka__pause span::before { left: calc(50% - 3.5px); }
+.kawka__pause span::after { left: calc(50% + 2px); }
+.kawka__pause.is-paused span::before {
+  left: calc(50% - 3px); width: 0; height: 0; margin-top: -.42rem; background: none;
+  border-left: .62rem solid currentColor; border-top: .42rem solid transparent; border-bottom: .42rem solid transparent;
+}
+.kawka__pause.is-paused span::after { display: none; }
+@media (min-width: 1180px) {
+  .kawka--video { padding-bottom: var(--space); }
+  .kawka--video .kawka__inner { max-width: 31rem; margin: 0 0 0 max(var(--gutter), calc(50% - 33rem)); padding: 0; text-align: left; }
+  .kawka--video p.narrow { margin-left: 0; margin-right: 0; }
+  .kawka--video .product-links { justify-content: flex-start; }
+  .kawka__video {
+    left: calc(50% + 17rem); top: 50%; bottom: auto; width: auto; height: 128%; transform: translate(-50%, -50%);
+  }
+}
 /* the two product bands sit together, with only a thin white line between them */
 .kawka + .timbro { margin-top: clamp(.5rem, 1vw, 1rem); }
 

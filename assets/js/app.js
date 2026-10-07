@@ -193,7 +193,14 @@
 
   function kawkaBlock(lang) {
     var H = TEXT[lang].home, K = SITE.kawka;
-    return '<section class="kawka" id="kawka" aria-labelledby="kawka-title"><div class="wrap center reveal">' +
+    // The reel plays behind the section (silent, looping); it only starts loading once the section is on screen.
+    var video = K.video
+      ? '<video class="kawka__video" muted loop playsinline preload="none" poster="' + asset(K.poster) + '" data-start="' + (K.posterTime || 0) + '" aria-hidden="true" tabindex="-1">' +
+        '<source src="' + asset(K.video) + '" type="video/mp4"></video>' +
+        '<button class="kawka__pause" type="button" data-pause="' + esc(H.kawkaPause) + '" data-play="' + esc(H.kawkaPlay) + '" aria-label="' + esc(H.kawkaPause) + '"><span aria-hidden="true"></span></button>'
+      : "";
+    return '<section class="kawka' + (K.video ? " kawka--video" : "") + '" id="kawka" aria-labelledby="kawka-title">' + video +
+      '<div class="wrap center kawka__inner reveal">' +
       '<p class="eyebrow">' + H.productEyebrow + "</p>" +
       '<div class="kawka__title"><h2 class="kawka__name" id="kawka-title">kawka.</h2>' +
       '<p class="kawka__stamp">' + H.kawkaStamp + "<small>Milano</small></p></div>" +
@@ -476,6 +483,42 @@
     sync();
   }
 
+  // kawka. reel: plays only while the section is on screen, never for people who asked for less motion
+  // or to save data, and can be paused with its button.
+  function bindKawkaVideo() {
+    var video = document.querySelector(".kawka__video");
+    if (!video) return;
+    var btn = document.querySelector(".kawka__pause");
+    var saveData = navigator.connection && navigator.connection.saveData;
+    var wanted = !reduce && !saveData, visible = !("IntersectionObserver" in window), started = false;
+    video.muted = true;
+    function sync() {
+      if (wanted && visible) {
+        // the first time, carry on from the moment shown in the still instead of the reel's dark opening
+        if (!started) {
+          started = true;
+          var at = parseFloat(video.getAttribute("data-start")) || 0;
+          if (video.readyState > 0) video.currentTime = at;
+          else video.addEventListener("loadedmetadata", function () { video.currentTime = at; }, { once: true });
+        }
+        var p = video.play();
+        if (p && p.catch) p.catch(function () { /* autoplay refused: the poster stays */ });
+      } else {
+        video.pause();
+      }
+      btn.classList.toggle("is-paused", !wanted);
+      btn.setAttribute("aria-label", btn.getAttribute(wanted ? "data-pause" : "data-play"));
+    }
+    btn.addEventListener("click", function () { wanted = !wanted; sync(); });
+    if (!visible) {
+      new IntersectionObserver(function (entries) {
+        visible = entries[0].isIntersecting;
+        sync();
+      }, { rootMargin: "200px 0px" }).observe(video.parentNode);
+    }
+    sync();
+  }
+
   function bindReveal() {
     var els = document.querySelectorAll(".reveal");
     if (reduce || !("IntersectionObserver" in window)) {
@@ -571,6 +614,7 @@
     if (ctx.page === "project" || document.body.getAttribute("data-page") === "notfound") setMeta(ctx);
     bindHeader();
     bindSlideshow();
+    bindKawkaVideo();
     bindReveal();
     bindWork(ctx);
     bindForm(ctx);
