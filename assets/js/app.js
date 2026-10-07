@@ -321,7 +321,7 @@
     return pageTop(A.title) +
       '<section class="wrap about">' +
       (SITE.portrait
-        ? '<figure class="portrait reveal">' + imgTag(asset(SITE.portrait), SITE.legal.owner || SITE.contact.name, 4 / 5) + "</figure>"
+        ? '<figure class="portrait reveal">' + imgTag(asset(SITE.portrait), SITE.portraitAlt || SITE.legal.owner || SITE.contact.name, 4 / 5) + "</figure>"
         : '<div class="portrait portrait--empty reveal" role="img" aria-label="' + A.photoNote + '"><span>' + A.photoNote + "</span></div>") +
       '<div class="about__text reveal"><p class="statement statement--left">' + A.lead + "</p>" + A.bio.map(function (b) { return "<p>" + b + "</p>"; }).join("") + "</div>" +
       "</section>" +
