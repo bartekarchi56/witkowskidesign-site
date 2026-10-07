@@ -21,6 +21,45 @@
 */
 window.WD_PROJECTS = [
   {
+    slug: "metaphysical-vessel",
+    title: "Metaphysical Vessel",
+    categories: ["yachts", "visualisation"],
+    featured: true,
+    year: "",
+    client: "",
+    place: { en: "70 m yacht", it: "Yacht di 70 m", pl: "Jacht 70 m" },
+    scope: { en: "Yacht interior design, 3D visualisation", it: "Interni per yacht, visualizzazione 3D", pl: "Projekt wnętrz jachtu, wizualizacja 3D" },
+    summary: {
+      en: "Interior concept and 3D visualisation for a 70 metre yacht.",
+      it: "Concept degli interni e visualizzazione 3D per uno yacht di 70 metri.",
+      pl: "Koncepcja wnętrz i wizualizacja 3D jachtu o długości 70 metrów."
+    },
+    text: {
+      en: [
+        "Interior concept for a 70 metre yacht.",
+        "The main saloon runs the full beam between walls of glass: a long stone dining table at the centre, lounges on either side, and a sculpted spiral stair rising through an oval opening in the timber ceiling. Mirror-polished columns reflect the sea back into the room."
+      ],
+      it: [
+        "Concept degli interni per uno yacht di 70 metri.",
+        "Il salone principale occupa tutto il baglio tra pareti di vetro: un lungo tavolo da pranzo in pietra al centro, salotti ai lati e una scala elicoidale scultorea che sale attraverso un'apertura ovale nel soffitto in legno. Colonne a specchio riflettono il mare all'interno."
+      ],
+      pl: [
+        "Koncepcja wnętrz jachtu o długości 70 metrów.",
+        "Główny salon zajmuje całą szerokość jachtu między szklanymi ścianami: długi kamienny stół w centrum, strefy wypoczynku po obu stronach i rzeźbiarskie schody spiralne wznoszące się przez owalny otwór w drewnianym suficie. Lustrzane kolumny odbijają morze z powrotem do wnętrza."
+      ]
+    },
+    cover: {
+      file: "cover.jpg",
+      alt: {
+        en: "Main saloon of a 70 metre yacht with a long dining table, lounges, a spiral staircase and glass walls onto the sea, 3D render",
+        it: "Salone principale di uno yacht di 70 metri con lungo tavolo da pranzo, salotti, scala elicoidale e pareti di vetro sul mare, rendering 3D",
+        pl: "Główny salon jachtu 70 m z długim stołem, strefami wypoczynku, schodami spiralnymi i szklanymi ścianami z widokiem na morze, wizualizacja 3D"
+      }
+    },
+    images: []
+  },
+
+  {
     slug: "lamare-pola-negri",
     title: "Lamare Pola Negri",
     categories: ["interiors", "yachts"],
@@ -193,45 +232,6 @@ window.WD_PROJECTS = [
         }
       }
     ]
-  },
-
-  {
-    slug: "metaphysical-vessel",
-    title: "Metaphysical Vessel",
-    categories: ["yachts", "visualisation"],
-    featured: true,
-    year: "",
-    client: "",
-    place: { en: "70 m yacht", it: "Yacht di 70 m", pl: "Jacht 70 m" },
-    scope: { en: "Yacht interior design, 3D visualisation", it: "Interni per yacht, visualizzazione 3D", pl: "Projekt wnętrz jachtu, wizualizacja 3D" },
-    summary: {
-      en: "Interior concept and 3D visualisation for a 70 metre yacht.",
-      it: "Concept degli interni e visualizzazione 3D per uno yacht di 70 metri.",
-      pl: "Koncepcja wnętrz i wizualizacja 3D jachtu o długości 70 metrów."
-    },
-    text: {
-      en: [
-        "Interior concept for a 70 metre yacht.",
-        "The main saloon runs the full beam between walls of glass: a long stone dining table at the centre, lounges on either side, and a sculpted spiral stair rising through an oval opening in the timber ceiling. Mirror-polished columns reflect the sea back into the room."
-      ],
-      it: [
-        "Concept degli interni per uno yacht di 70 metri.",
-        "Il salone principale occupa tutto il baglio tra pareti di vetro: un lungo tavolo da pranzo in pietra al centro, salotti ai lati e una scala elicoidale scultorea che sale attraverso un'apertura ovale nel soffitto in legno. Colonne a specchio riflettono il mare all'interno."
-      ],
-      pl: [
-        "Koncepcja wnętrz jachtu o długości 70 metrów.",
-        "Główny salon zajmuje całą szerokość jachtu między szklanymi ścianami: długi kamienny stół w centrum, strefy wypoczynku po obu stronach i rzeźbiarskie schody spiralne wznoszące się przez owalny otwór w drewnianym suficie. Lustrzane kolumny odbijają morze z powrotem do wnętrza."
-      ]
-    },
-    cover: {
-      file: "cover.jpg",
-      alt: {
-        en: "Main saloon of a 70 metre yacht with a long dining table, lounges, a spiral staircase and glass walls onto the sea, 3D render",
-        it: "Salone principale di uno yacht di 70 metri con lungo tavolo da pranzo, salotti, scala elicoidale e pareti di vetro sul mare, rendering 3D",
-        pl: "Główny salon jachtu 70 m z długim stołem, strefami wypoczynku, schodami spiralnymi i szklanymi ścianami z widokiem na morze, wizualizacja 3D"
-      }
-    },
-    images: []
   },
 
   {
