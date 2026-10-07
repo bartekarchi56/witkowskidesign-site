@@ -124,6 +124,7 @@
     return '<footer class="site-footer"><div class="wrap foot">' +
       "<p>© " + year + " " + esc(SITE.studio) + " · " + esc(c.cities) + "</p>" +
       '<nav aria-label="' + T.nav.contact + '"><a href="mailto:' + c.email + '">' + c.email + '</a><a href="' + telLink() + '">' + esc(c.phone) + '</a><a href="' + waLink() + '" rel="noopener">WhatsApp</a>' + social +
+      '<a href="' + SITE.kawka.url + '" rel="noopener">kawka.</a>' +
       '<a href="' + SITE.timbro.url + '" rel="noopener">Timbro</a>' +
       '<a href="' + url(lang, "privacy") + '">' + T.footer.privacy + "</a></nav>" +
       "</div></footer>";
@@ -190,10 +191,21 @@
       "</div></section>";
   };
 
+  function kawkaBlock(lang) {
+    var H = TEXT[lang].home, K = SITE.kawka;
+    return '<section class="kawka" id="kawka" aria-labelledby="kawka-title"><div class="wrap center reveal">' +
+      '<p class="eyebrow">' + H.productEyebrow + "</p>" +
+      '<div class="kawka__title"><h2 class="kawka__name" id="kawka-title">kawka.</h2>' +
+      '<p class="kawka__stamp">' + H.kawkaStamp + "<small>Milano</small></p></div>" +
+      '<p class="narrow">' + H.kawkaText + "</p>" +
+      '<p class="product-links"><a class="text-link" href="' + K.url + '" rel="noopener">' + H.kawkaLink + " " + arrow() + "</a>" +
+      '<a class="text-link" href="' + K.instagram + '" rel="noopener">' + esc(K.handle) + "</a></p></div></section>";
+  }
+
   function timbroBlock(lang) {
     var H = TEXT[lang].home;
     return '<section class="timbro" id="timbro" aria-labelledby="timbro-title"><div class="wrap center reveal">' +
-      '<p class="eyebrow">' + H.timbroEyebrow + '</p><h2 class="timbro__name" id="timbro-title">Timbro</h2>' +
+      '<p class="eyebrow">' + H.productEyebrow + '</p><h2 class="timbro__name" id="timbro-title">Timbro</h2>' +
       '<p class="narrow">' + H.timbroText + "</p>" +
       '<p><a class="text-link" href="' + SITE.timbro.url + '" rel="noopener">' + H.timbroLink + " " + arrow() + "</a></p></div></section>";
   }
@@ -283,6 +295,7 @@
       '<ul class="principles reveal">' + A.principles.map(function (p) { return "<li><h3>" + p.name + "</h3><p>" + p.text + "</p></li>"; }).join("") + "</ul></section>" +
       '<section class="wrap principles-wrap" aria-labelledby="bases-title"><h2 class="eyebrow center" id="bases-title">' + A.basesTitle + "</h2>" +
       '<ul class="principles principles--two reveal">' + A.bases.map(function (p) { return "<li><h3>" + p.name + "</h3><p>" + p.text + "</p></li>"; }).join("") + "</ul></section>" +
+      kawkaBlock(lang) +
       timbroBlock(lang) +
       contactBlock(lang);
   };

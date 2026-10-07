@@ -37,6 +37,12 @@ window.WD_SITE = {
   // to assets/img/ and write its path here, e.g. "/assets/img/portrait.jpg". Leave "" for the placeholder.
   portrait: "",
 
+  // Our own products, shown on the Studio page and in the footer.
+  kawka: {
+    url: "https://waitlist.kawka.coffee",
+    instagram: "https://www.instagram.com/kawka.app/",
+    handle: "@kawka.app"
+  },
   timbro: {
     url: "https://timbro.witkowskidesign.com"
   },

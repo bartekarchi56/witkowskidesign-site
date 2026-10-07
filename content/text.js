@@ -47,7 +47,10 @@ window.WD_TEXT = {
         visualisation: "Photorealistic renders that let you walk through a space before it exists.",
         branding: "Identities, print and signage that belong to the places they serve."
       },
-      timbroEyebrow: "A product by abit. studio",
+      productEyebrow: "A product by abit. studio",
+      kawkaText: "Milan's best cafés, picked by hand. A calm map, a page for every café, and a coffee passport that collects a stamp at every one you visit.",
+      kawkaLink: "Join the waitlist",
+      kawkaStamp: "Coming soon",
       timbroText: "A digital loyalty stamp card for cafés. Guests add it to Apple Wallet or Google Wallet in one tap: no app to download, no paper card to lose.",
       timbroLink: "Visit Timbro",
       timbroCard: "Coffee card",
@@ -129,7 +132,7 @@ window.WD_TEXT = {
       bio: [
         "Say the name out loud and you will hear “a bit”. We do a bit of interiors, a bit of yachts, a bit of furniture and lighting, and every bit of it properly. We work between Milan and Poland, for clients across Europe and beyond, and create the images and identities that go with what we design.",
         "Keeping the interior, the furniture, the renders and the brand under one roof means fewer handovers and one idea carried from the first sketch to the finished room.",
-        "Alongside client work the studio builds its own products. The first one is Timbro, a digital loyalty card for cafés."
+        "Alongside client work we build our own products: kawka., a guide to Milan's best cafés picked by hand, and Timbro, a digital loyalty card for cafés."
       ],
       approachTitle: "Approach",
       principles: [
@@ -224,7 +227,10 @@ window.WD_TEXT = {
         visualisation: "Rendering fotorealistici per attraversare uno spazio prima che esista.",
         branding: "Identità, stampa e segnaletica che appartengono ai luoghi per cui nascono."
       },
-      timbroEyebrow: "Un prodotto di abit. studio",
+      productEyebrow: "Un prodotto di abit. studio",
+      kawkaText: "I migliori caffè di Milano, scelti uno per uno. Una mappa essenziale, una pagina per ogni locale e un passaporto del caffè dove raccogli un timbro in ogni posto che visiti.",
+      kawkaLink: "Iscriviti alla lista d'attesa",
+      kawkaStamp: "In arrivo",
       timbroText: "Una carta fedeltà digitale a timbri per i caffè. I clienti la aggiungono ad Apple Wallet o Google Wallet con un tocco: nessuna app da scaricare, nessuna tessera di carta da perdere.",
       timbroLink: "Scopri Timbro",
       timbroCard: "Carta caffè",
@@ -306,7 +312,7 @@ window.WD_TEXT = {
       bio: [
         "Letto all'inglese, abit. è «a bit»: facciamo un po' di tutto, ma niente a metà. Letto all'italiana, è l'inizio di «abitare». Lavoriamo tra Milano e la Polonia, per clienti in Europa e oltre: progettiamo case, interni di yacht, arredi e oggetti, e creiamo le immagini e le identità che li accompagnano.",
         "Tenere insieme interno, arredi, rendering e marchio significa meno passaggi di mano e una sola idea, dal primo schizzo alla stanza finita.",
-        "Accanto ai progetti per i clienti, lo studio sviluppa prodotti propri. Il primo è Timbro, una carta fedeltà digitale per i caffè."
+        "Accanto ai progetti per i clienti sviluppiamo i nostri prodotti: kawka., una guida ai migliori caffè di Milano scelti uno per uno, e Timbro, una carta fedeltà digitale per i caffè."
       ],
       approachTitle: "Approccio",
       principles: [
@@ -401,7 +407,10 @@ window.WD_TEXT = {
         visualisation: "Fotorealistyczne wizualizacje, dzięki którym przejdziesz przez wnętrze, zanim powstanie.",
         branding: "Identyfikacje, druki i oznakowanie, które pasują do miejsc, dla których powstają."
       },
-      timbroEyebrow: "Produkt abit. studio",
+      productEyebrow: "Produkt abit. studio",
+      kawkaText: "Najlepsze kawiarnie Mediolanu, starannie wybrane. Spokojna mapa, osobna strona dla każdej kawiarni i kawowy paszport, w którym zbierasz pieczątkę w każdym odwiedzonym miejscu.",
+      kawkaLink: "Zapisz się na listę oczekujących",
+      kawkaStamp: "Już wkrótce",
       timbroText: "Cyfrowa karta lojalnościowa z pieczątkami dla kawiarni. Goście dodają ją do Apple Wallet lub Google Wallet jednym dotknięciem: bez aplikacji do pobrania i bez papierowej karty do zgubienia.",
       timbroLink: "Poznaj Timbro",
       timbroCard: "Karta kawowa",
@@ -483,7 +492,7 @@ window.WD_TEXT = {
       bio: [
         "Nazwa abit. brzmi jak angielskie „a bit”, czyli „trochę”. Robimy trochę wnętrz na lądzie, trochę na jachtach, trochę mebli i przedmiotów, do tego wizualizacje i identyfikacje, a każdy kawałek dopracowujemy do końca. Pracujemy między Mediolanem a Polską, dla klientów z Europy i spoza niej.",
         "Wnętrze, meble, wizualizacje i marka w jednych rękach to mniej przekazywania pracy dalej i jedna idea prowadzona od pierwszego szkicu do gotowego wnętrza.",
-        "Obok projektów dla klientów studio tworzy własne produkty. Pierwszym jest Timbro, cyfrowa karta lojalnościowa dla kawiarni."
+        "Obok projektów dla klientów tworzymy własne produkty: kawka., przewodnik po starannie wybranych kawiarniach Mediolanu, oraz Timbro, cyfrową kartę lojalnościową dla kawiarni."
       ],
       approachTitle: "Podejście",
       principles: [
