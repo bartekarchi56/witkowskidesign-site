@@ -128,10 +128,9 @@ To show your portrait on the Studio page, upload a photo to `assets/img/` (for e
 `assets/video/kawka-reel.mp4` (silent MP4) with its still `assets/img/kawka-reel-poster.jpg`; to change
 it, replace both files and set `posterTime` in `content/site.js` to the second the still is taken from.
 
-**Timbro banner.** The Timbro band on the Studio page sits on `assets/img/timbro-banner.jpg`
-(computers, keep the middle free for the text) and `assets/img/timbro-banner-tall.jpg` (phones).
-They show Timbro's own stamp cards, drawn with the Timbro site's code. To use other pictures,
-replace those two files and keep the names; the site darkens them so the text stays readable.
+**Timbro banner.** The Timbro band is built from Timbro's own stamp cards and rubber stamp
+(`assets/img/timbro/`, drawn with the Timbro site's code). Where each one sits is set in `TIMBRO_ART`
+in `assets/js/app.js`: the cards float gently and the stamps turn, except for people who prefer less motion.
 
 ---
 

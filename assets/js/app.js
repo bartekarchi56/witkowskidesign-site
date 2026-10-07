@@ -209,9 +209,36 @@
       '<a class="text-link" href="' + K.instagram + '" rel="noopener">' + esc(K.handle) + "</a></p></div></section>";
   }
 
+  /* Timbro's banner, built from separate pieces so the cards can float and the stamps can turn.
+     Positions are in px on a fixed canvas (wide: computers, tall: phones) that is scaled to cover the section.
+     Cards: [image, centre x, top y, rotation, card height]; stamps: [x, y, size, rotation]. */
+  var TIMBRO_ART = {
+    wide: { w: 1820, h: 700,
+      cards: [["gelato", 40, 340, -15, 284.4], ["bottega", 235, 120, -10, 254.1], ["navigli", 465, 55, -3, 263.6], ["brera", 395, 375, 7, 253],
+              ["kyoto", 1355, 85, 4, 231.8], ["pane", 1585, 60, 12, 284.4], ["salone", 1450, 385, -8, 231.8], ["minimal", 1775, 380, 14, 231.8]],
+      stamps: [[-10, 560, 190, -12], [655, 505, 150, 14], [1615, 545, 170, 10], [1680, -60, 160, -8]] },
+    tall: { w: 600, h: 780,
+      cards: [["brera", 150, -185, 10, 253], ["navigli", 470, -150, -8, 263.6], ["kyoto", 140, 630, -6, 231.8], ["bottega", 465, 655, 9, 254.1]],
+      stamps: [[-60, 140, 150, -10], [495, 560, 140, 12]] }
+  };
+  function timbroArt(kind) {
+    var A = TIMBRO_ART[kind], html = "";
+    A.stamps.forEach(function (s, i) {
+      html += '<img class="timbro__stamp" src="' + asset("/assets/img/timbro/stamp.webp") + '" alt="" loading="lazy" decoding="async" style="left:' + (s[0] - s[2] * 0.02) + "px;top:" + (s[1] - s[2] * 0.02) +
+        "px;width:" + s[2] * 1.04 + "px;--r:" + s[3] + "deg;animation-direction:" + (i % 2 ? "reverse" : "normal") + '">';
+    });
+    A.cards.forEach(function (c, i) {
+      // each picture has 40px of room around the card (90px below, for its shadow); the card turns around a point below its middle
+      var oy = ((40 + 1.2 * c[4]) / (c[4] + 130) * 100).toFixed(1);
+      html += '<span class="timbro__card" style="left:' + (c[1] - 165) + "px;top:" + (c[2] - 40) + "px;--t:" + (4.6 + (i * 0.7) % 2.2).toFixed(1) + "s;--d:-" + (i * 1.3 % 4).toFixed(1) + 's">' +
+        '<img src="' + asset("/assets/img/timbro/card-" + c[0] + ".webp") + '" alt="" loading="lazy" decoding="async" style="transform:rotate(' + c[3] + "deg);transform-origin:50% " + oy + '%"></span>';
+    });
+    return '<div class="timbro__art timbro__art--' + kind + '" aria-hidden="true"><div class="timbro__canvas" style="width:' + A.w + "px;height:" + A.h + 'px">' + html + "</div></div>";
+  }
+
   function timbroBlock(lang) {
     var H = TEXT[lang].home;
-    return '<section class="timbro" id="timbro" aria-labelledby="timbro-title"><div class="wrap center reveal">' +
+    return '<section class="timbro" id="timbro" aria-labelledby="timbro-title">' + timbroArt("wide") + timbroArt("tall") + '<div class="wrap center reveal">' +
       '<p class="eyebrow">' + H.productEyebrow + '</p><h2 class="timbro__name" id="timbro-title">Timbro</h2>' +
       '<p class="narrow">' + H.timbroText + "</p>" +
       '<p><a class="text-link" href="' + SITE.timbro.url + '" rel="noopener">' + H.timbroLink + " " + arrow() + "</a></p></div></section>";
@@ -519,6 +546,22 @@
     sync();
   }
 
+  // scale the Timbro banner canvas so it covers the section, like a background image would
+  function bindTimbroArt() {
+    var sec = document.querySelector(".timbro");
+    if (!sec) return;
+    var arts = sec.querySelectorAll(".timbro__art");
+    function fit() {
+      arts.forEach(function (a) {
+        var c = a.firstChild, s = Math.max(sec.offsetWidth / c.offsetWidth, sec.offsetHeight / c.offsetHeight);
+        if (isFinite(s) && s > 0) c.style.setProperty("--s", s.toFixed(4));
+      });
+    }
+    fit();
+    if ("ResizeObserver" in window) new ResizeObserver(fit).observe(sec);
+    else window.addEventListener("resize", fit);
+  }
+
   function bindReveal() {
     var els = document.querySelectorAll(".reveal");
     if (reduce || !("IntersectionObserver" in window)) {
@@ -615,6 +658,7 @@
     bindHeader();
     bindSlideshow();
     bindKawkaVideo();
+    bindTimbroArt();
     bindReveal();
     bindWork(ctx);
     bindForm(ctx);

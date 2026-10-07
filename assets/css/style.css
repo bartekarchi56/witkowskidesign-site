@@ -303,10 +303,10 @@ body.is-home { overflow: hidden; }
 .kawka + .timbro { margin-top: clamp(.5rem, 1vw, 1rem); }
 
 /* Timbro sits on a banner of its own stamp cards, darkened (most of all in the middle) so the white text reads clearly.
-   Phones get a taller version of the banner with the cards at the top and bottom. */
+   Phones get a taller arrangement with the cards at the top and bottom. */
 .timbro {
   position: relative; z-index: 0; color: #fff;
-  background: #2b32ff url(../img/timbro-banner.jpg) center / cover no-repeat;
+  background: #2b32ff; overflow: hidden;
   padding: var(--space) 0; margin-top: var(--space); scroll-margin-top: var(--header-h);
 }
 .timbro::before {
@@ -316,7 +316,17 @@ body.is-home { overflow: hidden; }
 .timbro .eyebrow { color: rgba(255, 255, 255, .75); }
 .timbro__name { font-weight: 300; font-size: clamp(2.75rem, 6.5vw, 5rem); line-height: 1; letter-spacing: -.02em; margin: 0 0 1.75rem; }
 .timbro p.narrow { margin-bottom: 2.25rem; }
-@media (max-width: 480px) { .timbro { background-image: url(../img/timbro-banner-tall.jpg); } }
+.timbro__art { position: absolute; inset: 0; z-index: -2; pointer-events: none; }
+.timbro__canvas { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(var(--s, 1)); }
+.timbro__art--tall { display: none; }
+@media (max-width: 480px) { .timbro__art--wide { display: none; } .timbro__art--tall { display: block; } }
+/* the cards float gently up and down, each at its own pace; the stamps turn slowly */
+.timbro__card { position: absolute; width: 330px; animation: timbro-float var(--t) ease-in-out var(--d) infinite alternate; }
+.timbro__card img { display: block; width: 100%; height: auto; }
+@keyframes timbro-float { from { transform: translateY(-8px); } to { transform: translateY(8px); } }
+.timbro__stamp { position: absolute; height: auto; transform: rotate(var(--r)); animation: timbro-spin 48s linear infinite; }
+@keyframes timbro-spin { from { transform: rotate(var(--r)); } to { transform: rotate(calc(var(--r) + 360deg)); } }
+@media (prefers-reduced-motion: reduce) { .timbro__card, .timbro__stamp { animation: none !important; } }
 
 .contact-band { padding: var(--space) 0; }
 .contact-band .statement { margin-bottom: 1.25rem; }
