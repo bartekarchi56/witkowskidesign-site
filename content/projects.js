@@ -552,7 +552,7 @@ window.WD_PROJECTS = [
     slug: "timbro",
     title: "Timbro",
     categories: ["branding"],
-    year: "2025",
+    year: "2026",
     client: { en: "abit. studio, own product", it: "abit. studio, prodotto proprio", pl: "abit. studio, własny produkt" },
     place: { en: "Milan, Italy", it: "Milano, Italia", pl: "Mediolan, Włochy" },
     scope: { en: "Name, identity, stamp cards", it: "Naming, identità, carte timbro", pl: "Nazwa, identyfikacja, karty z pieczątkami" },
@@ -580,31 +580,6 @@ window.WD_PROJECTS = [
     images: [
       { file: "01.jpg", wide: true, alt: { en: "Four Timbro stamp cards: a café, a bakery, a Japanese café and a cocktail bar", it: "Quattro carte Timbro: un caffè, un forno, un caffè giapponese e un cocktail bar", pl: "Cztery karty Timbro: kawiarnia, piekarnia, japońska kawiarnia i bar koktajlowy" } },
       { file: "02.jpg", wide: true, alt: { en: "Four more Timbro cards, each with its own colours and stamp", it: "Altre quattro carte Timbro, ognuna con i suoi colori e il suo timbro", pl: "Kolejne cztery karty Timbro, każda z własnymi kolorami i pieczątką" } }
-    ]
-  },
-  {
-    slug: "cafe-identity",
-    placeholder: true,
-    title: { en: "Café identity", it: "Identità per un caffè", pl: "Identyfikacja kawiarni" },
-    categories: ["branding"],
-    year: "2025",
-    client: { en: "[Placeholder] Specialty café", it: "[Segnaposto] Caffetteria specialty", pl: "[Przykład] Kawiarnia specialty" },
-    place: { en: "Warsaw, Poland", it: "Varsavia, Polonia", pl: "Warszawa, Polska" },
-    scope: { en: "Name, logo, packaging, signage", it: "Naming, logo, packaging, insegne", pl: "Nazwa, logo, opakowania, szyldy" },
-    summary: {
-      en: "[Placeholder text] A small identity that works on a cup, a sign and a phone.",
-      it: "[Testo segnaposto] Una piccola identità che funziona su una tazza, un'insegna e un telefono.",
-      pl: "[Tekst przykładowy] Niewielka identyfikacja, która działa na kubku, szyldzie i w telefonie."
-    },
-    text: {
-      en: ["[Placeholder text] Replace this with a short description of the project."],
-      it: ["[Testo segnaposto] Sostituisci questo testo con una breve descrizione del progetto."],
-      pl: ["[Tekst przykładowy] Zastąp ten tekst krótkim opisem projektu."]
-    },
-    cover: { file: "cover.jpg", alt: { en: "Placeholder image: stationery and cards on a table", it: "Immagine segnaposto: cancelleria e biglietti su un tavolo", pl: "Obraz przykładowy: materiały firmowe i wizytówki na stole" } },
-    images: [
-      { file: "01.jpg", alt: { en: "Placeholder image: cup with logo", it: "Immagine segnaposto: tazza con logo", pl: "Obraz przykładowy: kubek z logo" } },
-      { file: "02.jpg", alt: { en: "Placeholder image: business cards", it: "Immagine segnaposto: biglietti da visita", pl: "Obraz przykładowy: wizytówki" } }
     ]
   }
 ];
