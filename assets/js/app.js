@@ -180,7 +180,7 @@
     if (!featured.length) featured = PROJECTS.slice(0, 1);
     var slides = featured.map(function (p, i) {
       return '<figure class="slide' + (i === 0 ? " is-active" : "") + '"' + (i ? ' aria-hidden="true"' : "") + ">" +
-        picTag(p, p.cover, lang, { eager: i === 0 }) + "</figure>";
+        picTag(p, p.slide || p.cover, lang, { eager: i === 0 }) + "</figure>";
     }).join("");
     var caps = featured.map(function (p, i) {
       return '<a class="hero__cap' + (i === 0 ? " is-active" : "") + '" href="' + url(lang, "project", p.slug) + '"' + (i ? ' tabindex="-1" aria-hidden="true"' : "") + ">" +

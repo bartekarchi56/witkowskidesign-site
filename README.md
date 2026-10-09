@@ -88,6 +88,9 @@ images: [
 cover: { file: "cover.jpg", focus: "50% 70%" }        // which part stays visible when cropped (left/right, top/bottom)
 ```
 
+To show a different photo in the home page slideshow than in the Projects list, add
+`slide: "other.jpg"` (the list and the project page keep using `cover`).
+
 `alt` is a short description of the photo for blind visitors and for Google; without it the
 project title is used.
 
