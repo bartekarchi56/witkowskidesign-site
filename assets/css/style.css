@@ -522,7 +522,7 @@ body.is-home { overflow: hidden; }
   /* home page: a light page, the photo framed under the logo, then a short intro */
   .hero--home { height: auto; min-height: 0; padding-top: calc(var(--header-h) + 2.6rem); background: var(--white); color: var(--ink); }
   .hero--home::after { display: none; }
-  .hero--home .hero__slides { position: relative; margin: 0 var(--gutter); aspect-ratio: 4 / 3; background: var(--stone); }
+  .hero--home .hero__slides { position: relative; margin: 0 var(--gutter); aspect-ratio: 16 / 9; background: var(--stone); }
   .hero--home .hero__tagline { top: calc(var(--header-h) - .1rem); color: var(--grey); text-shadow: none; }
   .hero--home .hero__bar { position: static; padding: 1.1rem var(--gutter) 0; }
   .hero--home .hero__cap { color: var(--ink); text-shadow: none; }
