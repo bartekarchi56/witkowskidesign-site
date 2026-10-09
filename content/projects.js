@@ -130,12 +130,16 @@ window.WD_PROJECTS = [
     cover: {
       file: "cover.jpg",
       alt: {
-        en: "Compact house with vertical timber cladding, a black steel frame and a deck with outdoor dining and lounge at sunset, 3D render",
-        it: "Casa compatta con rivestimento verticale in legno, telaio in acciaio nero e terrazza con pranzo e salotto all'aperto al tramonto, rendering 3D",
-        pl: "Kompaktowy dom z pionową drewnianą okładziną, czarną stalową ramą i tarasem z jadalnią i strefą wypoczynku o zachodzie słońca, wizualizacja 3D"
+        en: "The main room in the evening: dark timber walls, a warm light line, herringbone floor and the kitchen island",
+        it: "La stanza principale di sera: pareti in legno scuro, una linea di luce calda, parquet a spina di pesce e l'isola della cucina",
+        pl: "Główne pomieszczenie wieczorem: ciemne drewniane ściany, ciepła linia światła, podłoga w jodełkę i wyspa kuchenna"
       }
     },
     images: [
+      { file: "exterior.jpg", wide: true, alt: {
+        en: "The house on the water: a white frame with a black organic pattern on the side, a glazed front opening onto the deck and a roof terrace",
+        it: "La casa sull'acqua: telaio bianco con un motivo organico nero sul fianco, facciata vetrata aperta sul deck e terrazza sul tetto",
+        pl: "Dom na wodzie: biała rama z czarnym organicznym wzorem na boku, przeszklony front otwarty na taras i taras na dachu" } },
       { file: "01.jpg", wide: true, alt: {
         en: "View through the full-height window of the finished house, across the river to red brick granaries and moored pedal boats",
         it: "Vista dalla vetrata a tutta altezza della casa finita, oltre il fiume verso i granai in mattoni rossi e i pedalò ormeggiati",
@@ -148,14 +152,14 @@ window.WD_PROJECTS = [
         en: "Sunlight through the corner glazing casting window shadows across the floor, with the helm by the door",
         it: "Il sole attraverso la vetrata d'angolo disegna l'ombra dei serramenti sul pavimento, con il timone accanto alla porta",
         pl: "Słońce przez narożne przeszklenie rysuje cienie ram na podłodze, obok drzwi stoi ster" } },
-      { file: "04.jpg", wide: true, alt: {
-        en: "The main room in the evening: dark timber walls, a warm light line, herringbone floor and the kitchen island",
-        it: "La stanza principale di sera: pareti in legno scuro, una linea di luce calda, parquet a spina di pesce e l'isola della cucina",
-        pl: "Główne pomieszczenie wieczorem: ciemne drewniane ściany, ciepła linia światła, podłoga w jodełkę i wyspa kuchenna" } },
       { file: "05.jpg", alt: {
         en: "Kitchen detail: dark wood cabinets with under-cabinet light, marble-look worktop and induction hob",
         it: "Dettaglio della cucina: mobili in legno scuro con luce sottopensile, piano effetto marmo e piano a induzione",
-        pl: "Detal kuchni: ciemne drewniane szafki z podświetleniem, blat imitujący marmur i płyta indukcyjna" } }
+        pl: "Detal kuchni: ciemne drewniane szafki z podświetleniem, blat imitujący marmur i płyta indukcyjna" } },
+      { file: "render.jpg", wide: true, alt: {
+        en: "3D render of the house with vertical timber cladding, a black steel frame and a deck at sunset",
+        it: "Rendering 3D della casa con rivestimento verticale in legno, telaio in acciaio nero e terrazza al tramonto",
+        pl: "Wizualizacja 3D domu z pionową drewnianą okładziną, czarną stalową ramą i tarasem o zachodzie słońca" } }
     ]
   },
 
