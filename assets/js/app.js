@@ -11,7 +11,7 @@
   var LANGS = ["en", "it", "pl"];
   var PREFIX = { en: "", it: "/it", pl: "/pl" };
   var PATHS = { home: "/", work: "/work/", services: "/services/", about: "/about/", contact: "/contact/", privacy: "/privacy/", notfound: "/404.html" };
-  var CATS = ["interiors", "yachts", "products", "visualisation", "branding"];
+  var CATS = ["architecture", "interiors", "yachts", "products", "visualisation", "branding"];
   var NAV = ["work", "services", "about", "contact"];
   var ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
   // Pages that open on a full-screen photo: the menu sits on top of the image.

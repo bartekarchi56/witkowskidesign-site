@@ -23,7 +23,7 @@ window.WD_TEXT = {
       notfound: { title: "Page not found · abit. studio", description: "This page does not exist." }
     },
     nav: { home: "Home", work: "Projects", services: "Services", about: "Studio", contact: "Contact", menu: "Menu", close: "Close", skip: "Skip to content", language: "Language", main: "Main" },
-    cats: { all: "All", interiors: "Interiors", yachts: "Yachts", products: "Products", visualisation: "Visualisation", branding: "Branding" },
+    cats: { all: "All", architecture: "Architecture", interiors: "Interiors", yachts: "Yachts", products: "Products", visualisation: "Visualisation", branding: "Branding" },
     common: { placeholder: "Placeholder", viewProject: "View project", todo: "to be completed" },
 
     home: {
@@ -62,7 +62,7 @@ window.WD_TEXT = {
 
     work: {
       title: "Projects",
-      intro: "Interiors, yachts, products, visualisations and identities. Everything at once, or a bit at a time: choose a category to narrow the list.",
+      intro: "Architecture, interiors, yachts, products, visualisations and identities. Everything at once, or a bit at a time: choose a category to narrow the list.",
       filterLabel: "Filter projects by category",
       showing: "{n} projects",
       showingOne: "1 project",
@@ -86,9 +86,14 @@ window.WD_TEXT = {
 
     services: {
       title: "Services",
-      intro: "Five disciplines, one way of working. Every project follows the same five steps, so you always know what comes next.",
+      intro: "Six disciplines, one way of working. Every project follows the same five steps, so you always know what comes next.",
       deliverables: "What you receive",
       items: {
+        architecture: {
+          name: "Architecture",
+          text: "Houses and small buildings, including floating homes. We shape the volume, the plan and the facades together with the interior, so the building and the rooms inside it are one design.",
+          list: ["Concept and massing", "Plans, sections and elevations", "Facades and materials", "Documentation for permits", "3D visualisation", "Coordination with engineers and builders"]
+        },
         interiors: {
           name: "Interior design",
           text: "Private homes, apartments and small hospitality spaces. We plan the layout, choose the materials and draw the custom furniture and joinery, then follow the work on site.",
@@ -205,7 +210,7 @@ window.WD_TEXT = {
       notfound: { title: "Pagina non trovata · abit. studio", description: "Questa pagina non esiste." }
     },
     nav: { home: "Home", work: "Progetti", services: "Servizi", about: "Studio", contact: "Contatti", menu: "Menu", close: "Chiudi", skip: "Vai al contenuto", language: "Lingua", main: "Principale" },
-    cats: { all: "Tutti", interiors: "Interni", yachts: "Yacht", products: "Prodotti", visualisation: "Visualizzazione", branding: "Branding" },
+    cats: { all: "Tutti", architecture: "Architettura", interiors: "Interni", yachts: "Yacht", products: "Prodotti", visualisation: "Visualizzazione", branding: "Branding" },
     common: { placeholder: "Segnaposto", viewProject: "Vedi il progetto", todo: "da completare" },
 
     home: {
@@ -268,9 +273,14 @@ window.WD_TEXT = {
 
     services: {
       title: "Servizi",
-      intro: "Cinque discipline, un solo metodo. Ogni progetto segue le stesse cinque fasi, così sai sempre cosa viene dopo.",
+      intro: "Sei discipline, un solo metodo. Ogni progetto segue le stesse cinque fasi, così sai sempre cosa viene dopo.",
       deliverables: "Cosa ricevi",
       items: {
+        architecture: {
+          name: "Architettura",
+          text: "Case e piccoli edifici, anche abitazioni galleggianti. Progettiamo volume, pianta e facciate insieme agli interni, così l'edificio e le stanze al suo interno sono un unico progetto.",
+          list: ["Concept e volumetria", "Piante, sezioni e prospetti", "Facciate e materiali", "Documentazione per i permessi", "Visualizzazioni 3D", "Coordinamento con ingegneri e imprese"]
+        },
         interiors: {
           name: "Interior design",
           text: "Case private, appartamenti e piccoli spazi per l'ospitalità. Disegniamo la pianta, scegliamo i materiali e progettiamo arredi e falegnameria su misura, poi seguiamo i lavori in cantiere.",
@@ -387,7 +397,7 @@ window.WD_TEXT = {
       notfound: { title: "Nie znaleziono strony · abit. studio", description: "Ta strona nie istnieje." }
     },
     nav: { home: "Start", work: "Projekty", services: "Usługi", about: "Studio", contact: "Kontakt", menu: "Menu", close: "Zamknij", skip: "Przejdź do treści", language: "Język", main: "Główna" },
-    cats: { all: "Wszystkie", interiors: "Wnętrza", yachts: "Jachty", products: "Produkty", visualisation: "Wizualizacje", branding: "Branding" },
+    cats: { all: "Wszystkie", architecture: "Architektura", interiors: "Wnętrza", yachts: "Jachty", products: "Produkty", visualisation: "Wizualizacje", branding: "Branding" },
     common: { placeholder: "Przykład", viewProject: "Zobacz projekt", todo: "do uzupełnienia" },
 
     home: {
@@ -426,7 +436,7 @@ window.WD_TEXT = {
 
     work: {
       title: "Projekty",
-      intro: "Wnętrza, jachty, produkty, wizualizacje i identyfikacje. Wszystko naraz albo po kawałku: wybierz kategorię, aby zawęzić listę.",
+      intro: "Architektura, wnętrza, jachty, produkty, wizualizacje i identyfikacje. Wszystko naraz albo po kawałku: wybierz kategorię, aby zawęzić listę.",
       filterLabel: "Filtruj projekty według kategorii",
       showing: "Projekty: {n}",
       showingOne: "Projekty: 1",
@@ -450,9 +460,14 @@ window.WD_TEXT = {
 
     services: {
       title: "Usługi",
-      intro: "Pięć dziedzin, jeden sposób pracy. Każdy projekt przechodzi przez te same pięć etapów, więc zawsze wiesz, co będzie dalej.",
+      intro: "Sześć dziedzin, jeden sposób pracy. Każdy projekt przechodzi przez te same pięć etapów, więc zawsze wiesz, co będzie dalej.",
       deliverables: "Co otrzymujesz",
       items: {
+        architecture: {
+          name: "Architektura",
+          text: "Domy i niewielkie budynki, także domy na wodzie. Projektujemy bryłę, rzuty i elewacje razem z wnętrzem, tak aby budynek i pomieszczenia w nim tworzyły jeden projekt.",
+          list: ["Koncepcja i bryła", "Rzuty, przekroje i elewacje", "Elewacje i materiały", "Dokumentacja do pozwoleń", "Wizualizacje 3D", "Koordynacja z konstruktorami i wykonawcami"]
+        },
         interiors: {
           name: "Projektowanie wnętrz",
           text: "Domy, mieszkania i niewielkie wnętrza gościnne. Planujemy układ, dobieramy materiały i projektujemy meble oraz zabudowy na wymiar, a potem czuwamy nad realizacją.",

@@ -174,7 +174,7 @@ window.WD_PROJECTS = [
   {
     slug: "modern-house-35-lamare",
     title: "Modern House 35, Lamare",
-    categories: ["products", "interiors", "visualisation"],
+    categories: ["architecture", "interiors", "visualisation"],
     featured: true,
     year: "",
     client: "Lamare",

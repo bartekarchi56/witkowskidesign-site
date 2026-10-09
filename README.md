@@ -57,7 +57,7 @@ where you want the project to appear (the order in the file is the order on the 
 {
   slug: "villa-garda",                          // the folder name from step 2
   title: "Villa on Lake Garda",                 // one text for all languages...
-  categories: ["interiors", "visualisation"],   // interiors, yachts, products, visualisation, branding
+  categories: ["interiors", "visualisation"],   // architecture, interiors, yachts, products, visualisation, branding
   featured: true,                               // also show it in the home page slideshow
   year: "2026",
   client: "Private",
