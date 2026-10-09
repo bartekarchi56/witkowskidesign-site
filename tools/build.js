@@ -29,6 +29,8 @@ const BASE = (process.env.SITE_BASE || "").replace(/\/$/, "");           // "" o
 const DOMAIN = (process.env.SITE_ORIGIN || SITE.domain).replace(/\/$/, ""); // https://witkowskidesign.com
 ctx.WD_ROOT = BASE + "/";
 const A = (p) => BASE + p; // asset path
+// CSS and scripts get a short fingerprint of their content, so phones never mix an old cached file with a new page
+const V = (p) => A(p) + "?v=" + require("crypto").createHash("md5").update(require("fs").readFileSync(require("path").join(__dirname, "..", p))).digest("hex").slice(0, 8);
 const PAGES = ["home", "work", "services", "about", "contact", "privacy"];
 const LOCALE = { en: "en_GB", it: "it_IT", pl: "pl_PL" };
 
@@ -76,12 +78,12 @@ function head(lang, page, slug, opts = {}) {
   <link rel="apple-touch-icon" href="${A("/assets/img/apple-touch-icon.png")}">
   <link rel="preload" href="${A("/assets/fonts/poppins-latin-300-normal.woff2")}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="${A("/assets/fonts/poppins-latin-500-normal.woff2")}" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="${A("/assets/css/style.css")}">
+  <link rel="stylesheet" href="${V("/assets/css/style.css")}">
   <script>document.documentElement.classList.add("js")</script>
-  ${BASE ? `<script>window.WD_ROOT = ${JSON.stringify(BASE + "/")}</script>\n  ` : ""}<script src="${A("/content/site.js")}" defer></script>
-  <script src="${A("/content/text.js")}" defer></script>
-  <script src="${A("/content/projects.js")}" defer></script>
-  <script src="${A("/assets/js/app.js")}" defer></script>${ld}
+  ${BASE ? `<script>window.WD_ROOT = ${JSON.stringify(BASE + "/")}</script>\n  ` : ""}<script src="${V("/content/site.js")}" defer></script>
+  <script src="${V("/content/text.js")}" defer></script>
+  <script src="${V("/content/projects.js")}" defer></script>
+  <script src="${V("/assets/js/app.js")}" defer></script>${ld}
 </head>`;
 }
 
