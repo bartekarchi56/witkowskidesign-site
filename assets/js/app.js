@@ -57,7 +57,7 @@
     var size = ratio ? ' width="1600" height="' + Math.round(1600 / ratio) + '"' : "";
     return '<img src="' + esc(src) + '" alt="' + esc(alt) + '"' + size +
       (opts.eager ? ' fetchpriority="high"' : ' loading="lazy"') +
-      (opts.focus ? ' style="object-position:' + esc(opts.focus) + '"' : "") + ' decoding="async">';
+      (opts.focus || ratio ? ' style="' + (ratio ? "aspect-ratio:" + ratio + ";" : "") + (opts.focus ? "object-position:" + esc(opts.focus) : "") + '"' : "") + ' decoding="async">';
   }
   // A project image can be written as just a file name ("01.jpg") or as { file, alt, wide, focus, ratio }.
   function pic(p, v, lang) {
