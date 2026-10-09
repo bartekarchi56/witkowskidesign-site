@@ -35,7 +35,7 @@ window.WD_SITE = {
 
   // Portrait on the About page. Upload a photo (portrait format, about 1200 x 1500 px)
   // to assets/img/ and write its path here, e.g. "/assets/img/portrait.jpg". Leave "" for the placeholder.
-  portrait: "/assets/img/portrait.jpg",
+  portrait: "",   // the photo is kept at /assets/img/portrait.jpg; write that path here to show it again
   portraitAlt: "Amina Tilesheva and Bartosz Witkowski",
 
   // Our own products, shown on the Studio page and in the footer.
