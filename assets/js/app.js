@@ -284,7 +284,7 @@
       return '<figure class="reveal' + (pic(p, im, lang).wide ? " wide" : "") + '">' + picTag(p, im, lang) + "</figure>";
     }).join("");
     return '<section class="hero hero--project">' +
-      '<div class="hero__slides"><figure class="slide is-active">' + picTag(p, p.hero || p.cover, lang, { eager: true }) + "</figure></div>" +
+      '<div class="hero__slides"><figure class="slide is-active">' + picTag(p, p.cover, lang, { eager: true }) + "</figure></div>" +
       '<div class="hero__bar"><div class="hero__caps"><div class="hero__cap is-active">' +
       '<h1 class="hero__title">' + ttl(p, lang) + "</h1>" +
       '<span class="hero__meta">' + esc(loc(p.place, lang)) + "</span>" +
