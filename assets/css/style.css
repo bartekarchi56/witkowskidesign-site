@@ -511,7 +511,15 @@ body.is-home { overflow: hidden; }
 @media (max-width: 700px) {
   body { font-size: .95rem; }
   .work-grid { grid-template-columns: 1fr; }
-  .work-grid .card__img { aspect-ratio: 4 / 5; }
+  /* on phones every photo is shown whole, in its own shape, never cropped */
+  .work-grid .card__img { aspect-ratio: auto; }
+  .work-grid .card__img img { height: auto; }
+  .gallery img { aspect-ratio: auto !important; }
+  .hero--project { height: auto; min-height: 0; padding-top: var(--header-h); background: #1b1b1a; }
+  .hero--project::after { display: none; }
+  .hero--project .hero__slides, .hero--project .slide { position: static; }
+  .hero--project .slide img { height: auto; }
+  .hero--project .hero__bar { position: static; padding-top: 1.5rem; }
   .gallery { grid-template-columns: 1fr; }
   .form__row { grid-template-columns: 1fr; }
   .facts--legal div { grid-template-columns: 1fr; gap: .1rem; }
