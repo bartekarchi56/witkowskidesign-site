@@ -60,6 +60,54 @@ window.WD_PROJECTS = [
   },
 
   {
+    slug: "unos-lounge-chair",
+    title: "UNOS lounge chair",
+    categories: ["products", "visualisation"],
+    year: "2025",
+    client: { en: "Concept for Cappellini", it: "Concept per Cappellini", pl: "Koncepcja dla Cappellini" },
+    place: { en: "Concept lounge chair", it: "Chaise longue concept", pl: "Koncepcyjny leżak" },
+    scope: { en: "Product design, 3D visualisation", it: "Design di prodotto, visualizzazione 3D", pl: "Projekt produktu, wizualizacja 3D" },
+    summary: {
+      en: "UNOS, a concept lounge chair for Cappellini that seems to float above a steel base.",
+      it: "UNOS, una chaise longue concept per Cappellini che sembra fluttuare sopra una base in acciaio.",
+      pl: "UNOS, koncepcyjny leżak dla Cappellini, który zdaje się unosić nad stalową podstawą."
+    },
+    text: {
+      en: [
+        "UNOS, a concept lounge chair for Cappellini, part of Dusha, a collection of calm, sculptural pieces for a spa.",
+        "Unos is a Polish word for a moment of gentle rising, a small escape from everyday gravity. The chair is made to feel like that: one fluid curve of frosted acrylic with fabric cushions, held above a round base of brushed steel so that it seems to float. The base is shaped like a drop landing on water.",
+        "It comes in four colours, Still Shadow, Soft Rise, Lift Red and Drift Blue, and measures 1830 by 620 mm, 1050 mm high."
+      ],
+      it: [
+        "UNOS, una chaise longue concept per Cappellini, parte di Dusha, una collezione di pezzi calmi e scultorei pensata per una spa.",
+        "Unos è una parola polacca che indica un momento di lieve sollevamento, una piccola fuga dalla gravità di ogni giorno. La seduta nasce per dare questa sensazione: un'unica curva fluida in acrilico satinato con cuscini in tessuto, sospesa sopra una base rotonda in acciaio spazzolato, così da sembrare sospesa nell'aria. La base ricorda una goccia che cade sull'acqua.",
+        "È disponibile in quattro colori, Still Shadow, Soft Rise, Lift Red e Drift Blue, e misura 1830 per 620 mm, con un'altezza di 1050 mm."
+      ],
+      pl: [
+        "UNOS, koncepcyjny leżak dla Cappellini, część Dusha, kolekcji spokojnych, rzeźbiarskich mebli do spa.",
+        "Unos to chwila łagodnego uniesienia, małe oderwanie od codziennej grawitacji. Taki ma być ten leżak: jedna płynna krzywizna z matowego akrylu z tapicerowanymi poduszkami, uniesiona nad okrągłą podstawą ze szczotkowanej stali, tak że zdaje się unosić w powietrzu. Podstawa przypomina kroplę spadającą na wodę.",
+        "Powstał w czterech kolorach, Still Shadow, Soft Rise, Lift Red i Drift Blue, i ma wymiary 1830 na 620 mm przy wysokości 1050 mm."
+      ]
+    },
+    cover: {
+      file: "cover.jpg",
+      alt: {
+        en: "UNOS lounge chair with dark fabric cushions on a curved frosted acrylic body above a round brushed steel base, 3D render",
+        it: "Chaise longue UNOS con cuscini in tessuto scuro su un corpo curvo in acrilico satinato sopra una base rotonda in acciaio spazzolato, rendering 3D",
+        pl: "Leżak UNOS z ciemnymi tapicerowanymi poduszkami na wygiętym korpusie z matowego akrylu nad okrągłą podstawą ze szczotkowanej stali, wizualizacja 3D"
+      }
+    },
+    images: [
+      { file: "01.jpg", wide: true, alt: { en: "Two people resting on UNOS chairs in a dark, round zero-gravity room with beams of light", it: "Due persone su chaise longue UNOS in una stanza rotonda e buia a gravità zero, attraversata da fasci di luce", pl: "Dwie osoby odpoczywają na leżakach UNOS w ciemnym, okrągłym pokoju zero grawitacji z promieniami światła" } },
+      { file: "02.jpg", wide: true, alt: { en: "Side view of a person lying back in UNOS, with hand-drawn arrows showing the chair lifting above its base", it: "Vista laterale di una persona distesa su UNOS, con frecce disegnate a mano che mostrano la seduta sollevarsi dalla base", pl: "Widok z boku osoby półleżącej na UNOS, z odręcznymi strzałkami pokazującymi unoszenie się leżaka nad podstawą" } },
+      { file: "03.jpg", wide: true, alt: { en: "Close-up of the acrylic body curving over the steel base with its water-drop ripples", it: "Dettaglio del corpo in acrilico che si curva sopra la base in acciaio con le increspature a goccia d'acqua", pl: "Zbliżenie akrylowego korpusu wygiętego nad stalową podstawą z falami jak od kropli wody" } },
+      { file: "04.jpg", wide: true, alt: { en: "The four colours of UNOS in a row: blue, red, white and black", it: "I quattro colori di UNOS in fila: blu, rosso, bianco e nero", pl: "Cztery kolory UNOS w rzędzie: niebieski, czerwony, biały i czarny" } },
+      { file: "drawing.jpg", wide: true, alt: { en: "Technical drawing of UNOS: side, front and top views with dimensions", it: "Disegno tecnico di UNOS: viste laterale, frontale e dall'alto con le misure", pl: "Rysunek techniczny UNOS: widok z boku, z przodu i z góry z wymiarami" } },
+      { file: "sketches.jpg", wide: true, alt: { en: "Concept sketches of UNOS and the water-drop effect on its steel base", it: "Schizzi di concept di UNOS e dell'effetto goccia d'acqua sulla base in acciaio", pl: "Szkice koncepcyjne UNOS i efektu kropli wody na stalowej podstawie" } }
+    ]
+  },
+
+  {
     slug: "lamare-pola-negri",
     title: "Lamare Pola Negri",
     categories: ["interiors", "yachts"],
