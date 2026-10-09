@@ -207,7 +207,12 @@ window.WD_PROJECTS = [
         pl: "Kompaktowy dom z pionową drewnianą okładziną, czarną stalową ramą i tarasem z jadalnią i strefą wypoczynku o zachodzie słońca, wizualizacja 3D"
       }
     },
-    images: []
+    images: [
+      { file: "01.jpg", wide: true, alt: { en: "Living room with a round dining table, a curved green sofa and a glossy black ceiling, opening onto the deck", it: "Soggiorno con tavolo rotondo, divano curvo verde e soffitto nero lucido, aperto sulla terrazza", pl: "Salon z okrągłym stołem, zaokrągloną zieloną sofą i czarnym błyszczącym sufitem, otwarty na taras" } },
+      { file: "02.jpg", alt: { en: "Bedroom with a timber bed, linen walls and a glass door to the deck", it: "Camera con letto in legno, pareti in lino e porta vetrata sulla terrazza", pl: "Sypialnia z drewnianym łóżkiem, lnianymi ścianami i szklanymi drzwiami na taras" } },
+      { file: "03.jpg", alt: { en: "The bedroom seen from the bed, towards the window and the curtain", it: "La camera vista dal letto, verso la finestra e la tenda", pl: "Sypialnia widziana od łóżka, w stronę okna i zasłony" } },
+      { file: "04.jpg", wide: true, alt: { en: "Second room with a black sofa bed, a brush painting and a glass door to the deck", it: "Seconda stanza con divano letto nero, un dipinto a pennello e porta vetrata sulla terrazza", pl: "Drugi pokój z czarną sofą rozkładaną, obrazem malowanym pędzlem i szklanymi drzwiami na taras" } }
+    ]
   },
 
   {
