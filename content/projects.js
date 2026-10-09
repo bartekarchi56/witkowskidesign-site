@@ -56,7 +56,13 @@ window.WD_PROJECTS = [
         pl: "Główny salon jachtu 70 m z długim stołem, strefami wypoczynku, schodami spiralnymi i szklanymi ścianami z widokiem na morze, wizualizacja 3D"
       }
     },
-    images: []
+    images: [
+      { file: "01.jpg", wide: true, alt: { en: "The helm: a pilot seat and a long curved screen on a timber console, with the sea all around", it: "La plancia: una poltrona di comando e un lungo schermo curvo su una consolle in legno, con il mare tutto intorno", pl: "Mostek: fotel sternika i długi zakrzywiony ekran na drewnianej konsoli, dookoła morze" } },
+      { file: "02.jpg", alt: { en: "Owner's cabin with a low dark bed, linen walls and a sculpted steel mirror", it: "Cabina armatoriale con letto basso scuro, pareti in lino e uno specchio scultoreo in acciaio", pl: "Kabina armatora z niskim ciemnym łóżkiem, lnianymi ścianami i rzeźbiarskim stalowym lustrem" } },
+      { file: "03.jpg", alt: { en: "The cabin's window seat open to the sea, with walnut frames and a soft upholstered niche", it: "La seduta sotto la finestra della cabina aperta sul mare, con cornici in noce e una nicchia imbottita", pl: "Siedzisko przy oknie kabiny otwartym na morze, z orzechowymi ramami i miękko tapicerowaną wnęką" } },
+      { file: "04.jpg", ratio: 0.75, alt: { en: "A stone basin with a bronze waterfall spout, beside a timber column and the sea", it: "Un lavabo in pietra con bocca a cascata in bronzo, accanto a una colonna in legno e al mare", pl: "Kamienna umywalka z brązową wylewką kaskadową, obok drewnianej kolumny i morza" } },
+      { file: "05.jpg", ratio: 0.75, alt: { en: "A dark timber corridor with marble door frames leading to a sculpted spiral stair", it: "Un corridoio in legno scuro con cornici in marmo che porta a una scala a spirale scultorea", pl: "Ciemny drewniany korytarz z marmurowymi ościeżnicami prowadzący do rzeźbiarskich kręconych schodów" } }
+    ]
   },
 
   {
