@@ -178,6 +178,44 @@ window.WD_PROJECTS = [
     cover: {
       file: "cover.jpg",
       alt: {
+        en: "Compact house with vertical timber cladding, a black steel frame and a deck with outdoor dining and lounge at sunset, 3D render",
+        it: "Casa compatta con rivestimento verticale in legno, telaio in acciaio nero e terrazza con pranzo e salotto all'aperto al tramonto, rendering 3D",
+        pl: "Kompaktowy dom z pionową drewnianą okładziną, czarną stalową ramą i tarasem z jadalnią i strefą wypoczynku o zachodzie słońca, wizualizacja 3D"
+      }
+    },
+    images: []
+  },
+
+  {
+    slug: "modern-16-club",
+    title: "Modern 16 Club",
+    categories: ["interiors"],
+    year: "",
+    client: "",
+    place: { en: "Houseboat", it: "Casa galleggiante", pl: "Dom na wodzie" },
+    scope: { en: "Interior design", it: "Interior design", pl: "Projekt wnętrza" },
+    summary: {
+      en: "Modern 16 Club, a houseboat with a double-height room of glass, dark timber and oak, open to the river.",
+      it: "Modern 16 Club, una casa galleggiante con una stanza a doppia altezza di vetro, legno scuro e rovere, aperta sul fiume.",
+      pl: "Modern 16 Club, dom na wodzie z pomieszczeniem o podwójnej wysokości ze szkła, ciemnego drewna i dębu, otwartym na rzekę."
+    },
+    text: {
+      en: [
+        "Modern 16 Club, a houseboat on the river.",
+        "Inside, one double-height room opens to the water through full-height glazing. Dark timber walls with a warm line of light, a herringbone oak floor and a kitchen with an island keep the interior calm, so the view and the moving light on the water take the lead."
+      ],
+      it: [
+        "Modern 16 Club, una casa galleggiante sul fiume.",
+        "All'interno, un'unica stanza a doppia altezza si apre sull'acqua con vetrate a tutta altezza. Pareti in legno scuro con una linea di luce calda, parquet in rovere a spina di pesce e una cucina con isola rendono l'interno calmo, lasciando il ruolo principale alla vista e ai riflessi dell'acqua."
+      ],
+      pl: [
+        "Modern 16 Club, dom na wodzie.",
+        "Wnętrze to jedno pomieszczenie o podwójnej wysokości, otwarte na wodę przeszkleniami od podłogi do sufitu. Ciemne drewniane ściany z ciepłą linią światła, dębowa podłoga w jodełkę i kuchnia z wyspą tworzą spokojne tło, a pierwsze skrzypce grają widok i odbicia światła na wodzie."
+      ]
+    },
+    cover: {
+      file: "cover.jpg",
+      alt: {
         en: "The main room in the evening: dark timber walls, a warm light line, herringbone floor and the kitchen island",
         it: "La stanza principale di sera: pareti in legno scuro, una linea di luce calda, parquet a spina di pesce e l'isola della cucina",
         pl: "Główne pomieszczenie wieczorem: ciemne drewniane ściany, ciepła linia światła, podłoga w jodełkę i wyspa kuchenna"
@@ -200,14 +238,10 @@ window.WD_PROJECTS = [
         en: "Sunlight through the corner glazing casting window shadows across the floor, with the helm by the door",
         it: "Il sole attraverso la vetrata d'angolo disegna l'ombra dei serramenti sul pavimento, con il timone accanto alla porta",
         pl: "Słońce przez narożne przeszklenie rysuje cienie ram na podłodze, obok drzwi stoi ster" } },
-      { file: "05.jpg", alt: {
+      { file: "04.jpg", alt: {
         en: "Kitchen detail: dark wood cabinets with under-cabinet light, marble-look worktop and induction hob",
         it: "Dettaglio della cucina: mobili in legno scuro con luce sottopensile, piano effetto marmo e piano a induzione",
-        pl: "Detal kuchni: ciemne drewniane szafki z podświetleniem, blat imitujący marmur i płyta indukcyjna" } },
-      { file: "render.jpg", wide: true, alt: {
-        en: "3D render of the house with vertical timber cladding, a black steel frame and a deck at sunset",
-        it: "Rendering 3D della casa con rivestimento verticale in legno, telaio in acciaio nero e terrazza al tramonto",
-        pl: "Wizualizacja 3D domu z pionową drewnianą okładziną, czarną stalową ramą i tarasem o zachodzie słońca" } }
+        pl: "Detal kuchni: ciemne drewniane szafki z podświetleniem, blat imitujący marmur i płyta indukcyjna" } }
     ]
   },
 
