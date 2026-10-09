@@ -525,3 +525,4 @@ body.is-home { overflow: hidden; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-delay: 0s !important; transition-duration: .001ms !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+.keep-case { text-transform: none; }

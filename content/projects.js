@@ -513,6 +513,76 @@ window.WD_PROJECTS = [
   },
 
   {
+    slug: "kawka",
+    title: "kawka.",
+    categories: ["branding"],
+    year: "2026",
+    client: { en: "abit. studio, own product", it: "abit. studio, prodotto proprio", pl: "abit. studio, własny produkt" },
+    place: { en: "Milan, Italy", it: "Milano, Italia", pl: "Mediolan, Włochy" },
+    scope: { en: "Name, identity, app design", it: "Naming, identità, design dell'app", pl: "Nazwa, identyfikacja, projekt aplikacji" },
+    summary: {
+      en: "kawka., our guide to Milan's best cafés: a name, a bold wordmark and an app in espresso tones.",
+      it: "kawka., la nostra guida ai migliori caffè di Milano: un nome, un logotipo deciso e un'app nei toni dell'espresso.",
+      pl: "kawka., nasz przewodnik po najlepszych kawiarniach Mediolanu: nazwa, wyrazisty logotyp i aplikacja w kolorach espresso."
+    },
+    text: {
+      en: [
+        "kawka. is our own product: a guide to Milan's best cafés, picked by hand. A calm map, a page for every café, and a coffee passport that collects a stamp at every one you visit.",
+        "We gave it a short, friendly name, a heavy rounded wordmark with a full stop, and a dark palette of espresso, cream and a warm red. The same language runs from the logo to every screen of the app."
+      ],
+      it: [
+        "kawka. è un nostro prodotto: una guida ai migliori caffè di Milano, scelti uno per uno. Una mappa essenziale, una pagina per ogni locale e un passaporto del caffè dove raccogli un timbro in ogni posto che visiti.",
+        "Le abbiamo dato un nome breve e amichevole, un logotipo pieno e arrotondato con il punto finale e una palette scura di espresso, crema e un rosso caldo. Lo stesso linguaggio va dal logo a ogni schermata dell'app."
+      ],
+      pl: [
+        "kawka. to nasz własny produkt: przewodnik po najlepszych kawiarniach Mediolanu, starannie wybranych. Spokojna mapa, osobna strona dla każdej kawiarni i kawowy paszport, w którym zbierasz pieczątkę w każdym odwiedzonym miejscu.",
+        "Nadaliśmy jej krótką, przyjazną nazwę, mocny, zaokrąglony logotyp z kropką i ciemną paletę espresso, kremu i ciepłej czerwieni. Ten sam język prowadzi od logo po każdy ekran aplikacji."
+      ]
+    },
+    link: { url: "https://waitlist.kawka.coffee", label: { en: "Join the waitlist", it: "Iscriviti alla lista d'attesa", pl: "Zapisz się na listę oczekujących" } },
+    cover: { file: "cover.jpg", alt: { en: "The kawka. wordmark with a coming soon stamp next to the app open on a foldable phone", it: "Il logotipo kawka. con il timbro in arrivo accanto all'app aperta su un telefono pieghevole", pl: "Logotyp kawka. z pieczątką już wkrótce obok aplikacji otwartej na składanym telefonie" } },
+    images: [
+      { file: "01.jpg", alt: { en: "kawka. on a phone: search, filters and the map of Milan", it: "kawka. sul telefono: ricerca, filtri e la mappa di Milano", pl: "kawka. na telefonie: wyszukiwarka, filtry i mapa Mediolanu" } },
+      { file: "02.jpg", alt: { en: "A café page in kawka., with photos, opening hours and directions", it: "La pagina di un caffè in kawka., con foto, orari e indicazioni", pl: "Strona kawiarni w kawka., ze zdjęciami, godzinami otwarcia i trasą" } },
+      { file: "03.jpg", alt: { en: "The coffee passport, with stamps collected at Milan cafés", it: "Il passaporto del caffè, con i timbri raccolti nei caffè di Milano", pl: "Kawowy paszport z pieczątkami zebranymi w kawiarniach Mediolanu" } },
+      { file: "04.jpg", alt: { en: "The coffee passport on a phone", it: "Il passaporto del caffè sul telefono", pl: "Kawowy paszport na telefonie" } }
+    ]
+  },
+  {
+    slug: "timbro",
+    title: "Timbro",
+    categories: ["branding"],
+    year: "2025",
+    client: { en: "abit. studio, own product", it: "abit. studio, prodotto proprio", pl: "abit. studio, własny produkt" },
+    place: { en: "Milan, Italy", it: "Milano, Italia", pl: "Mediolan, Włochy" },
+    scope: { en: "Name, identity, stamp cards", it: "Naming, identità, carte timbro", pl: "Nazwa, identyfikacja, karty z pieczątkami" },
+    summary: {
+      en: "Timbro, our digital loyalty stamp card for cafés: a name, a rubber stamp and a set of cards for every kind of place.",
+      it: "Timbro, la nostra carta fedeltà digitale per i caffè: un nome, un timbro e una serie di carte per ogni tipo di locale.",
+      pl: "Timbro, nasza cyfrowa karta lojalnościowa dla kawiarni: nazwa, pieczątka i zestaw kart dla każdego rodzaju lokalu."
+    },
+    text: {
+      en: [
+        "Timbro is our own product: a digital loyalty stamp card for cafés. Guests add it to Apple Wallet or Google Wallet in one tap: no app to download, no paper card to lose.",
+        "The identity starts from the old rubber stamp, \"timbro\" in Italian. Each place gets its own card, with its colours, its type and its own stamp, from a Milan bakery to a cocktail bar or a beauty salon."
+      ],
+      it: [
+        "Timbro è un nostro prodotto: una carta fedeltà digitale per i caffè. I clienti la aggiungono ad Apple Wallet o Google Wallet con un tocco: nessuna app da scaricare, nessuna carta di carta da perdere.",
+        "L'identità parte dal vecchio timbro di gomma. Ogni locale ha la sua carta, con i suoi colori, il suo carattere e il suo timbro, da un forno milanese a un cocktail bar o a un salone di bellezza."
+      ],
+      pl: [
+        "Timbro to nasz własny produkt: cyfrowa karta lojalnościowa z pieczątkami dla kawiarni. Goście dodają ją do Apple Wallet lub Google Wallet jednym dotknięciem: bez aplikacji do pobrania i bez papierowej karty do zgubienia.",
+        "Identyfikacja wychodzi od starej gumowej pieczątki, po włosku \"timbro\". Każde miejsce dostaje własną kartę, z własnymi kolorami, krojem i pieczątką, od mediolańskiej piekarni po bar koktajlowy czy salon urody."
+      ]
+    },
+    link: { url: "https://timbro.witkowskidesign.com", label: { en: "Visit Timbro", it: "Scopri Timbro", pl: "Poznaj Timbro" } },
+    cover: { file: "cover.jpg", alt: { en: "The Timbro name on blue among stamp cards and a rubber stamp", it: "Il nome Timbro su blu tra carte timbro e un timbro di gomma", pl: "Nazwa Timbro na niebieskim tle wśród kart z pieczątkami i gumowej pieczątki" } },
+    images: [
+      { file: "01.jpg", wide: true, alt: { en: "Four Timbro stamp cards: a café, a bakery, a Japanese café and a cocktail bar", it: "Quattro carte Timbro: un caffè, un forno, un caffè giapponese e un cocktail bar", pl: "Cztery karty Timbro: kawiarnia, piekarnia, japońska kawiarnia i bar koktajlowy" } },
+      { file: "02.jpg", wide: true, alt: { en: "Four more Timbro cards, each with its own colours and stamp", it: "Altre quattro carte Timbro, ognuna con i suoi colori e il suo timbro", pl: "Kolejne cztery karty Timbro, każda z własnymi kolorami i pieczątką" } }
+    ]
+  },
+  {
     slug: "cafe-identity",
     placeholder: true,
     title: { en: "Café identity", it: "Identità per un caffè", pl: "Identyfikacja kawiarni" },

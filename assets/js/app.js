@@ -59,6 +59,11 @@
       (opts.eager ? ' fetchpriority="high"' : ' loading="lazy"') +
       (opts.focus || ratio ? ' style="' + (ratio ? "aspect-ratio:" + ratio + ";" : "") + (opts.focus ? "object-position:" + esc(opts.focus) : "") + '"' : "") + ' decoding="async">';
   }
+  // A title written in lowercase (a brand like "kawka.") keeps its case where titles are set in capitals.
+  function ttl(p, lang) {
+    var t = loc(p.title, lang);
+    return /^[a-z]/.test(t) ? '<span class="keep-case">' + esc(t) + "</span>" : esc(t);
+  }
   // A project image can be written as just a file name ("01.jpg") or as { file, alt, wide, focus, ratio }.
   function pic(p, v, lang) {
     if (!v) v = "cover.jpg";
@@ -133,7 +138,7 @@
   /* ------------------------------------------------------------ shared blocks */
   function caption(p, lang, T) {
     var meta = catsLabel(p, T) + (p.year ? " · " + esc(p.year) : "");
-    return '<span class="cap"><span class="cap__title">' + esc(loc(p.title, lang)) + "</span>" +
+    return '<span class="cap"><span class="cap__title">' + ttl(p, lang) + "</span>" +
       '<span class="cap__meta">' + meta + "</span>" +
       (p.placeholder ? '<span class="tag">' + T.common.placeholder + "</span>" : "") + "</span>";
   }
@@ -146,7 +151,7 @@
   function row(p, lang) {
     var T = TEXT[lang];
     return '<a class="row reveal" href="' + url(lang, "project", p.slug) + '">' +
-      '<span class="row__title">' + esc(loc(p.title, lang)) + (p.placeholder ? ' <span class="tag">' + T.common.placeholder + "</span>" : "") + "</span>" +
+      '<span class="row__title">' + ttl(p, lang) + (p.placeholder ? ' <span class="tag">' + T.common.placeholder + "</span>" : "") + "</span>" +
       '<span class="row__meta">' + catsLabel(p, T) + "</span>" +
       '<span class="row__place">' + esc(loc(p.place, lang)) + "</span>" +
       '<span class="row__year">' + esc(p.year || "") + "</span></a>";
@@ -179,7 +184,7 @@
     }).join("");
     var caps = featured.map(function (p, i) {
       return '<a class="hero__cap' + (i === 0 ? " is-active" : "") + '" href="' + url(lang, "project", p.slug) + '"' + (i ? ' tabindex="-1" aria-hidden="true"' : "") + ">" +
-        '<span class="hero__title">' + esc(loc(p.title, lang)) + '</span><span class="hero__meta">' + esc(loc(p.place, lang)) + "</span></a>";
+        '<span class="hero__title">' + ttl(p, lang) + '</span><span class="hero__meta">' + esc(loc(p.place, lang)) + "</span></a>";
     }).join("");
     // The home page is one screen: the full-screen photographs and the menu, nothing to scroll.
     return '<section class="hero hero--home" aria-label="' + esc(H.selected) + '">' +
@@ -281,19 +286,20 @@
     return '<section class="hero hero--project">' +
       '<div class="hero__slides"><figure class="slide is-active">' + picTag(p, p.cover, lang, { eager: true }) + "</figure></div>" +
       '<div class="hero__bar"><div class="hero__caps"><div class="hero__cap is-active">' +
-      '<h1 class="hero__title">' + esc(loc(p.title, lang)) + "</h1>" +
+      '<h1 class="hero__title">' + ttl(p, lang) + "</h1>" +
       '<span class="hero__meta">' + esc(loc(p.place, lang)) + "</span>" +
       (p.placeholder ? '<span class="tag tag--light">' + T.common.placeholder + "</span>" : "") +
       "</div></div></div></section>" +
       '<section class="wrap project-info">' +
       '<p class="back-row"><a class="text-link" href="' + url(lang, "work") + '"><span aria-hidden="true">←</span> ' + P.back + "</a></p>" +
       '<dl class="facts">' + rows + "</dl>" +
-      '<div class="project-text">' + text.map(function (t) { return "<p>" + esc(t) + "</p>"; }).join("") + "</div>" +
+      '<div class="project-text">' + text.map(function (t) { return "<p>" + esc(t) + "</p>"; }).join("") +
+        (p.link ? '<p><a class="text-link" href="' + esc(p.link.url) + '" target="_blank" rel="noopener">' + esc(loc(p.link.label, lang)) + " " + arrow() + "</a></p>" : "") + "</div>" +
       "</section>" +
       (gallery ? '<section class="wrap gallery">' + gallery + "</section>" : "") +
       (next && next !== p ? '<a class="next" href="' + url(lang, "project", next.slug) + '">' +
         '<span class="next__img">' + picTag(next, next.cover, lang) + "</span>" +
-        '<span class="next__text"><span class="eyebrow">' + P.next + '</span><span class="next__title">' + esc(loc(next.title, lang)) + "</span></span></a>" : "") +
+        '<span class="next__text"><span class="eyebrow">' + P.next + '</span><span class="next__title">' + ttl(next, lang) + "</span></span></a>" : "") +
       contactBlock(lang);
   };
 
