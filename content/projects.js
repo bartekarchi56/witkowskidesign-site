@@ -211,6 +211,41 @@ window.WD_PROJECTS = [
   },
 
   {
+    slug: "duplex",
+    title: "Duplex",
+    categories: ["interiors", "visualisation"],
+    featured: true,
+    year: "2024",
+    place: { en: "Two-level home", it: "Casa su due livelli", pl: "Dom dwupoziomowy" },
+    scope: { en: "Interior design, 3D visualisation", it: "Progetto d'interni, visualizzazione 3D", pl: "Projekt wnętrza, wizualizacja 3D" },
+    summary: {
+      en: "Duplex: a double-height living room behind a wall of glass, a brass and amber screen along the stair, and warm wood below the mezzanine.",
+      it: "Duplex: un soggiorno a doppia altezza dietro una parete di vetro, uno schermo in ottone e ambra lungo la scala e legno caldo sotto il soppalco.",
+      pl: "Duplex: salon o podwójnej wysokości za szklaną ścianą, mosiężno-bursztynowy parawan wzdłuż schodów i ciepłe drewno pod antresolą."
+    },
+    text: {
+      en: [
+        "A two-level home built around one tall room. The living space rises the full height of the house behind a wall of glass, so the trees outside become part of the interior.",
+        "A screen of brass loops and amber glass follows the floating stair up to the mezzanine and catches the low sun. Under the mezzanine the mood changes: wood panelling, an orange banquette, a planter of tall grasses, the kitchen and a coffee corner, lit low and warm in the evening."
+      ],
+      it: [
+        "Una casa su due livelli costruita attorno a un'unica stanza alta. Il soggiorno sale per tutta l'altezza della casa dietro una parete di vetro, così gli alberi fuori diventano parte degli interni.",
+        "Uno schermo di anelli in ottone e vetro ambra accompagna la scala sospesa fino al soppalco e cattura il sole basso. Sotto il soppalco l'atmosfera cambia: boiserie in legno, una panca arancione, una fioriera di erbe alte, la cucina e un angolo caffè, con una luce bassa e calda la sera."
+      ],
+      pl: [
+        "Dwupoziomowy dom zbudowany wokół jednego wysokiego pomieszczenia. Salon sięga przez całą wysokość domu za szklaną ścianą, więc drzewa na zewnątrz stają się częścią wnętrza.",
+        "Parawan z mosiężnych pętli i bursztynowego szkła prowadzi wzdłuż wiszących schodów na antresolę i łapie niskie słońce. Pod antresolą nastrój się zmienia: drewniane panele, pomarańczowa ława, donica z wysokimi trawami, kuchnia i kącik kawowy, wieczorem w niskim, ciepłym świetle."
+      ]
+    },
+    cover: { file: "cover.jpg", alt: { en: "Double-height living room with a tan leather sofa, a glass wall onto the trees and a brass and amber screen by the stair", it: "Soggiorno a doppia altezza con divano in pelle color cuoio, una parete di vetro sugli alberi e uno schermo in ottone e ambra accanto alla scala", pl: "Salon o podwójnej wysokości z kanapą z jasnobrązowej skóry, szklaną ścianą na drzewa i mosiężno-bursztynowym parawanem przy schodach" } },
+    images: [
+      { file: "01.jpg", wide: true, alt: { en: "The living room at dusk, looking through the brass screen to the mezzanine and the lounge beyond", it: "Il soggiorno al tramonto, con vista attraverso lo schermo in ottone verso il soppalco e il salotto oltre", pl: "Salon o zmierzchu, widok przez mosiężny parawan na antresolę i strefę wypoczynku za nim" } },
+      { file: "02.jpg", alt: { en: "Kitchen and orange banquette under the mezzanine, with wood panelling and a planter of grasses", it: "Cucina e panca arancione sotto il soppalco, con boiserie in legno e una fioriera di erbe", pl: "Kuchnia i pomarańczowa ława pod antresolą, z drewnianymi panelami i donicą z trawami" } },
+      { file: "03.jpg", alt: { en: "Dining corner with an orange banquette, red cushions and a glass pendant light", it: "Angolo pranzo con panca arancione, cuscini rossi e una lampada a sospensione in vetro", pl: "Kącik jadalny z pomarańczową ławą, czerwonymi poduszkami i szklaną lampą wiszącą" } },
+      { file: "04.jpg", wide: true, alt: { en: "Brass loops and amber glass along the floating stair, with the coffee corner behind", it: "Anelli in ottone e vetro ambra lungo la scala sospesa, con l'angolo caffè dietro", pl: "Mosiężne pętle i bursztynowe szkło wzdłuż wiszących schodów, za nimi kącik kawowy" } }
+    ]
+  },
+  {
     slug: "apartment-sokole-kuznica",
     title: { en: "Apartment, Sokole Kuźnica", it: "Appartamento, Sokole Kuźnica", pl: "Mieszkanie, Sokole Kuźnica" },
     categories: ["interiors", "visualisation"],
