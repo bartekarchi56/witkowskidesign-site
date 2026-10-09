@@ -515,6 +515,12 @@ body.is-home { overflow: hidden; }
   .work-grid .card__img { aspect-ratio: auto; }
   .work-grid .card__img img { height: auto; }
   .gallery img { aspect-ratio: auto !important; }
+  /* home page slideshow: each picture shown whole in the middle of a dark screen */
+  .hero:not(.hero--project) { display: flex; flex-direction: column; justify-content: center; padding-top: calc(var(--header-h) + 1.5rem); background: #1b1b1a; }
+  .hero:not(.hero--project)::after { display: none; }
+  .hero:not(.hero--project) .hero__slides { position: relative; aspect-ratio: 16 / 9; }
+  .hero:not(.hero--project) .slide img { object-fit: contain; }
+  .hero:not(.hero--project) .hero__bar { position: static; padding-top: 1.25rem; }
   .hero--project { height: auto; min-height: 0; padding-top: var(--header-h); background: #1b1b1a; }
   .hero--project::after { display: none; }
   .hero--project .hero__slides, .hero--project .slide { position: static; }
