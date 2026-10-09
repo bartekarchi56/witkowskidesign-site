@@ -135,7 +135,28 @@ window.WD_PROJECTS = [
         pl: "Kompaktowy dom z pionową drewnianą okładziną, czarną stalową ramą i tarasem z jadalnią i strefą wypoczynku o zachodzie słońca, wizualizacja 3D"
       }
     },
-    images: []
+    images: [
+      { file: "01.jpg", wide: true, alt: {
+        en: "View through the full-height window of the finished house, across the river to red brick granaries and moored pedal boats",
+        it: "Vista dalla vetrata a tutta altezza della casa finita, oltre il fiume verso i granai in mattoni rossi e i pedalò ormeggiati",
+        pl: "Widok przez przeszkloną ścianę gotowego domu na rzekę, ceglane spichrze i zacumowane rowerki wodne" } },
+      { file: "02.jpg", alt: {
+        en: "Double-height living space with tall glazing over the water, herringbone oak floor and the kitchen wall behind",
+        it: "Soggiorno a doppia altezza con grandi vetrate sull'acqua, parquet a spina di pesce e la parete cucina sul fondo",
+        pl: "Salon o podwójnej wysokości z wysokimi przeszkleniami nad wodą, podłogą w jodełkę i ścianą kuchenną w głębi" } },
+      { file: "03.jpg", alt: {
+        en: "Sunlight through the corner glazing casting window shadows across the floor, with the helm by the door",
+        it: "Il sole attraverso la vetrata d'angolo disegna l'ombra dei serramenti sul pavimento, con il timone accanto alla porta",
+        pl: "Słońce przez narożne przeszklenie rysuje cienie ram na podłodze, obok drzwi stoi ster" } },
+      { file: "04.jpg", wide: true, alt: {
+        en: "The main room in the evening: dark timber walls, a warm light line, herringbone floor and the kitchen island",
+        it: "La stanza principale di sera: pareti in legno scuro, una linea di luce calda, parquet a spina di pesce e l'isola della cucina",
+        pl: "Główne pomieszczenie wieczorem: ciemne drewniane ściany, ciepła linia światła, podłoga w jodełkę i wyspa kuchenna" } },
+      { file: "05.jpg", alt: {
+        en: "Kitchen detail: dark wood cabinets with under-cabinet light, marble-look worktop and induction hob",
+        it: "Dettaglio della cucina: mobili in legno scuro con luce sottopensile, piano effetto marmo e piano a induzione",
+        pl: "Detal kuchni: ciemne drewniane szafki z podświetleniem, blat imitujący marmur i płyta indukcyjna" } }
+    ]
   },
 
   {
