@@ -219,6 +219,10 @@ a.hero__cap:hover .hero__title { text-decoration: underline; text-underline-offs
 .hero--project .hero__title { font-size: clamp(1.45rem, 3.3vw, 2.7rem); font-weight: 300; letter-spacing: .1em; line-height: 1.2; }
 .hero--project .hero__meta { font-size: clamp(.92rem, 1.15vw, 1.05rem); margin-top: .5rem; }
 .hero--project .tag { margin-top: .9rem; align-self: flex-start; }
+/* the short intro under the photo on the home page, shown on phones only */
+.home-intro { display: none; }
+.home-intro p { max-width: 34rem; margin: 1rem 0 1.75rem; }
+.home-intro .links { display: flex; gap: 2rem; flex-wrap: wrap; }
 
 /* ------------------------------------------------------------ reveal (only with JS) */
 .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 1.2s var(--ease), transform 1.2s var(--ease); }
@@ -515,12 +519,20 @@ body.is-home { overflow: hidden; }
   .work-grid .card__img { aspect-ratio: auto; }
   .work-grid .card__img img { height: auto; }
   .gallery img { aspect-ratio: auto !important; }
-  /* home page slideshow: each picture shown whole in the middle of a dark screen */
-  .hero:not(.hero--project) { display: flex; flex-direction: column; justify-content: center; padding-top: calc(var(--header-h) + 1.5rem); background: #1b1b1a; }
-  .hero:not(.hero--project)::after { display: none; }
-  .hero:not(.hero--project) .hero__slides { position: relative; aspect-ratio: 16 / 9; }
-  .hero:not(.hero--project) .slide img { object-fit: contain; }
-  .hero:not(.hero--project) .hero__bar { position: static; padding-top: 1.25rem; }
+  /* home page: a light page, the photo framed under the logo, then a short intro */
+  .hero--home { height: auto; min-height: 0; padding-top: calc(var(--header-h) + 2.6rem); background: var(--white); color: var(--ink); }
+  .hero--home::after { display: none; }
+  .hero--home .hero__slides { position: relative; margin: 0 var(--gutter); aspect-ratio: 4 / 3; background: var(--stone); }
+  .hero--home .hero__tagline { top: calc(var(--header-h) - .1rem); color: var(--grey); text-shadow: none; }
+  .hero--home .hero__bar { position: static; padding: 1.1rem var(--gutter) 0; }
+  .hero--home .hero__cap { color: var(--ink); text-shadow: none; }
+  .hero--home .hero__pause { color: var(--ink); border-color: var(--line); }
+  .home-intro { display: block; padding: 2.75rem var(--gutter) 3.5rem; }
+  body:has(.hero--home) .site-header.is-over { background: var(--white); color: var(--ink); }
+  body:has(.hero--home) .site-header.is-over::before { opacity: 0; }
+  body:has(.hero--home) .site-header.is-over .logo { filter: none; }
+  body:has(.hero--home) .site-header.is-over .brand img.logo--light { display: none; }
+  body:has(.hero--home) .site-header.is-over .brand img.logo--dark { display: block; }
   .hero--project { height: auto; min-height: 0; padding-top: var(--header-h); background: #1b1b1a; }
   .hero--project::after { display: none; }
   .hero--project .hero__slides, .hero--project .slide { position: static; }

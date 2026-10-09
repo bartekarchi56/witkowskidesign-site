@@ -193,7 +193,10 @@
       (H.tagline ? '<p class="hero__tagline">' + H.tagline + "</p>" : "") +
       '<div class="hero__bar">' + '<div class="hero__caps">' + caps + "</div>" +
       (featured.length > 1 ? '<button class="hero__pause" type="button" data-pause="' + esc(H.pause) + '" data-play="' + esc(H.play) + '" aria-label="' + esc(H.pause) + '"><span aria-hidden="true"></span></button>' : "") +
-      "</div></section>";
+      "</div></section>" +
+      // on phones the photo is framed on a light page, followed by this short intro
+      '<section class="home-intro"><p class="eyebrow">' + H.eyebrow + "</p><p>" + H.intro + "</p>" +
+      '<p class="links"><a class="text-link" href="' + url(lang, "work") + '">' + T.nav.work + " " + arrow() + '</a><a class="text-link" href="' + url(lang, "contact") + '">' + T.nav.contact + " " + arrow() + "</a></p></section>";
   };
 
   function kawkaBlock(lang) {
