@@ -117,9 +117,9 @@ window.WD_PROJECTS = [
     place: { en: "Houseboat, Lamare", it: "Houseboat, Lamare", pl: "Dom na wodzie, Lamare" },
     scope: { en: "Interior design", it: "Progetto d'interni", pl: "Projekt wnętrza" },
     summary: {
-      en: "A houseboat interior for LAMARE Houseboats at Lamare Pola Negri Club Club.",
-      it: "Un interno di houseboat per LAMARE Houseboats al Lamare Pola Negri Club Club.",
-      pl: "Wnętrze domu na wodzie dla LAMARE Houseboats w Lamare Pola Negri Club Club."
+      en: "A houseboat interior for LAMARE Houseboats at Lamare Pola Negri Club.",
+      it: "Un interno di houseboat per LAMARE Houseboats al Lamare Pola Negri Club.",
+      pl: "Wnętrze domu na wodzie dla LAMARE Houseboats w Lamare Pola Negri Club."
     },
     text: {
       en: [
