@@ -55,7 +55,7 @@ window.WD_SITE = {
   // Contact form. With a Web3Forms access key (free, from https://web3forms.com) messages are sent
   // straight to the inbox the key was made for. Leave "" and the form opens the visitor's email app instead.
   form: {
-    key: ""
+    key: "5f4b4417-9d17-49d8-83fa-b501d8ffd809"
   },
 
   // Shown on the Privacy page. Empty fields are flagged "to be completed".
