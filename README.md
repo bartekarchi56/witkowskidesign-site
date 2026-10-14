@@ -118,6 +118,10 @@ All in `content/site.js`, in one place. The email is used everywhere on the site
 contact form. Fill in `address`, `vat` and `country` under `legal` and they appear on the Privacy page;
 until then they are highlighted there as "to be completed".
 
+**Contact form.** To have messages sent straight to your inbox, create a free access key at
+https://web3forms.com (enter abit@witkowskidesign.com) and paste it as `key` under `form` in `content/site.js`.
+Without a key the form opens the visitor's email app instead.
+
 **Logo.** The "abit." logo is built into the site as a drawing, so it can be white over photos and
 black on white pages. To use your own logo files instead, upload a dark and a white version to
 `assets/img/` and set `logo` and `logoLight` in `content/site.js`.

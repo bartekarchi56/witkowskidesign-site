@@ -173,6 +173,10 @@ window.WD_TEXT = {
       errName: "Add your name.",
       errEmail: "Add a valid email address so we can reply.",
       errMessage: "Write a few words about the project.",
+      noteDirect: "The message is sent straight to the studio. Your details are used only to reply to you.",
+      sending: "Sending…",
+      sent: "Thank you, your message has been sent. We will reply soon.",
+      failed: "Sorry, the message could not be sent. Please write directly to {email}.",
       opened: "Your email app should now be open. If nothing happened, write directly to {email}.",
       subject: "Project enquiry"
     },
@@ -186,6 +190,7 @@ window.WD_TEXT = {
         { title: "When you get in touch", text: "If you write an email, call or send a WhatsApp message, your details are used only to answer you and, if we work together, to run the project. They are not shared or used for marketing. The contact form sends nothing to this website: it only opens your own email app." },
         { title: "Your rights", text: "Under the GDPR you can ask to see, correct or delete the personal data held about you, and you can complain to your data protection authority. To make a request, write to the email address below." }
       ],
+      formSection: { title: "Contact form", text: "Messages from the contact form are delivered by Web3Forms, which passes them on by email and does not keep them. Your name, email and message are used only to answer you." },
       controllerTitle: "Data controller",
       fields: { company: "Company", owner: "Owner", address: "Address", vat: "VAT / NIP", email: "Email", country: "Country" },
       updated: "Last updated: October 2026"
@@ -360,6 +365,10 @@ window.WD_TEXT = {
       errName: "Aggiungi il tuo nome.",
       errEmail: "Aggiungi un indirizzo email valido per ricevere la risposta.",
       errMessage: "Scrivi qualche parola sul progetto.",
+      noteDirect: "Il messaggio arriva direttamente allo studio. I tuoi dati servono solo per risponderti.",
+      sending: "Invio in corso…",
+      sent: "Grazie, il tuo messaggio è stato inviato. Ti risponderemo presto.",
+      failed: "Spiacenti, non è stato possibile inviare il messaggio. Scrivi direttamente a {email}.",
       opened: "Il tuo programma di posta dovrebbe essersi aperto. Se non è successo nulla, scrivi direttamente a {email}.",
       subject: "Richiesta di progetto"
     },
@@ -373,6 +382,7 @@ window.WD_TEXT = {
         { title: "Quando ci contatti", text: "Se scrivi un'email, chiami o mandi un messaggio WhatsApp, i tuoi dati servono solo per risponderti e, se lavoriamo insieme, per gestire il progetto. Non vengono condivisi né usati per marketing. Il modulo di contatto non invia nulla a questo sito: apre soltanto il tuo programma di posta." },
         { title: "I tuoi diritti", text: "In base al GDPR puoi chiedere di vedere, correggere o cancellare i dati personali che ti riguardano, e puoi presentare reclamo all'autorità per la protezione dei dati. Per una richiesta, scrivi all'indirizzo email qui sotto." }
       ],
+      formSection: { title: "Modulo di contatto", text: "I messaggi del modulo di contatto sono consegnati da Web3Forms, che li inoltra via email senza conservarli. Nome, email e messaggio servono solo per risponderti." },
       controllerTitle: "Titolare del trattamento",
       fields: { company: "Società", owner: "Titolare", address: "Indirizzo", vat: "Partita IVA / NIP", email: "Email", country: "Paese" },
       updated: "Ultimo aggiornamento: ottobre 2026"
@@ -547,6 +557,10 @@ window.WD_TEXT = {
       errName: "Podaj swoje imię.",
       errEmail: "Podaj poprawny adres e-mail, abyśmy mogli odpowiedzieć.",
       errMessage: "Napisz kilka słów o projekcie.",
+      noteDirect: "Wiadomość trafia bezpośrednio do studia. Twoje dane służą wyłącznie do odpowiedzi.",
+      sending: "Wysyłanie…",
+      sent: "Dziękujemy, wiadomość została wysłana. Odpowiemy wkrótce.",
+      failed: "Niestety nie udało się wysłać wiadomości. Napisz bezpośrednio na {email}.",
       opened: "Twój program pocztowy powinien się otworzyć. Jeśli nic się nie stało, napisz bezpośrednio na {email}.",
       subject: "Zapytanie o projekt"
     },
@@ -560,6 +574,7 @@ window.WD_TEXT = {
         { title: "Gdy się z nami kontaktujesz", text: "Jeśli piszesz e-mail, dzwonisz lub wysyłasz wiadomość na WhatsAppie, Twoje dane służą wyłącznie do odpowiedzi, a jeśli zaczniemy współpracę, do prowadzenia projektu. Nie są nikomu przekazywane ani używane do marketingu. Formularz kontaktowy niczego nie wysyła do tej strony: otwiera tylko Twój program pocztowy." },
         { title: "Twoje prawa", text: "Zgodnie z RODO możesz poprosić o wgląd, poprawienie lub usunięcie swoich danych osobowych oraz złożyć skargę do organu ochrony danych (w Polsce: Prezes UODO). Aby złożyć wniosek, napisz na adres e-mail poniżej." }
       ],
+      formSection: { title: "Formularz kontaktowy", text: "Wiadomości z formularza kontaktowego dostarcza Web3Forms, który przekazuje je e-mailem i ich nie przechowuje. Imię, e-mail i wiadomość służą wyłącznie do odpowiedzi." },
       controllerTitle: "Administrator danych",
       fields: { company: "Firma", owner: "Właściciel", address: "Adres", vat: "NIP / VAT", email: "E-mail", country: "Kraj" },
       updated: "Ostatnia aktualizacja: październik 2026"

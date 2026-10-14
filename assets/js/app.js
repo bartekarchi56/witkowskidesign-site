@@ -364,7 +364,8 @@
       '<div class="field"><label for="f-type">' + C.type + '</label><select id="f-type" name="type">' + opts + "</select></div>" +
       '<div class="field"><label for="f-msg">' + C.message + '</label><textarea id="f-msg" name="message" required aria-describedby="e-msg"></textarea><p class="err" id="e-msg"></p></div>' +
       '<p class="center"><button class="btn" type="submit">' + C.send + "</button></p>" +
-      '<p class="note center">' + C.note + '</p><p class="status center" role="status" aria-live="polite"></p>' +
+      '<input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+      '<p class="note center">' + (SITE.form && SITE.form.key ? C.noteDirect : C.note) + '</p><p class="status center" role="status" aria-live="polite"></p>' +
       "</form></section>";
   };
 
@@ -376,7 +377,7 @@
     }).join("");
     return pageTop(P.title, P.lead) +
       '<section class="wrap prose pad-bottom">' +
-      P.sections.map(function (s) { return "<h2>" + s.title + "</h2><p>" + s.text + "</p>"; }).join("") +
+      P.sections.concat(SITE.form && SITE.form.key && P.formSection ? [P.formSection] : []).map(function (s) { return "<h2>" + s.title + "</h2><p>" + s.text + "</p>"; }).join("") +
       "<h2>" + P.controllerTitle + '</h2><dl class="facts facts--legal">' + facts + "</dl>" +
       '<p class="muted small">' + P.updated + "</p></section>";
   };
@@ -651,8 +652,31 @@
       if (firstBad) { firstBad.focus(); return; }
       var subject = C.subject + " · " + type.value + " · " + name.value.trim();
       var body = msg.value.trim() + "\n\n" + name.value.trim() + "\n" + email.value.trim();
-      window.location.href = "mailto:" + to + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-      form.querySelector(".status").textContent = C.opened.replace("{email}", to);
+      var status = form.querySelector(".status"), key = SITE.form && SITE.form.key;
+      if (!key) {
+        window.location.href = "mailto:" + to + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        status.textContent = C.opened.replace("{email}", to);
+        return;
+      }
+      // sent straight to the studio's inbox through Web3Forms
+      var btn = form.querySelector("button[type=submit]");
+      btn.disabled = true;
+      status.textContent = C.sending;
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: key, subject: subject, from_name: name.value.trim() + " (witkowskidesign.com)",
+          replyto: email.value.trim(), name: name.value.trim(), email: email.value.trim(),
+          project: type.value, message: msg.value.trim(), botcheck: form.elements.botcheck.checked
+        })
+      }).then(function (r) { return r.json(); }).then(function (res) {
+        if (!res.success) throw new Error(res.message);
+        status.textContent = C.sent;
+        form.reset();
+      }).catch(function () {
+        status.textContent = C.failed.replace("{email}", to);
+      }).then(function () { btn.disabled = false; });
     });
   }
 

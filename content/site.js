@@ -52,6 +52,12 @@ window.WD_SITE = {
     url: "https://timbro.witkowskidesign.com"
   },
 
+  // Contact form. With a Web3Forms access key (free, from https://web3forms.com) messages are sent
+  // straight to the inbox the key was made for. Leave "" and the form opens the visitor's email app instead.
+  form: {
+    key: ""
+  },
+
   // Shown on the Privacy page. Empty fields are flagged "to be completed".
   legal: {
     company: "abit. studio",
