@@ -55,8 +55,8 @@ window.WD_SITE = {
   // Companies we work or have worked with: their logos scroll on the Studio page.
   // logo: a single-colour file in assets/img/clients/, w and h: its size in pixels, url: their website ("" = not clickable).
   clients: [
-    { name: "MATSU", logo: "/assets/img/clients/matsu.png", w: 630, h: 160, url: "" },
-    { name: "LaMare Houseboats", logo: "/assets/img/clients/lamare.png", w: 262, h: 86, url: "" }
+    { name: "MATSU", logo: "/assets/img/clients/matsu.png", w: 630, h: 160, url: "https://matsu-europe.com/" },
+    { name: "LaMare Houseboats", logo: "/assets/img/clients/lamare.png", w: 262, h: 86, url: "https://lamare.pl/" }
   ],
 
   // Contact form. With a Web3Forms access key (free, from https://web3forms.com) messages are sent
