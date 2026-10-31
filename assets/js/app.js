@@ -265,7 +265,8 @@
       '<div class="views" role="group" aria-label="' + W.view + '"><button type="button" data-view="grid" aria-pressed="true">' + W.viewImages + '</button><button type="button" data-view="list" aria-pressed="false">' + W.viewList + "</button></div>" +
       '<p class="sr-only work-count" aria-live="polite">' + countText(lang, PROJECTS.length) + "</p>" +
       "</div>" +
-      '<section class="wrap work"><div class="work-grid">' + PROJECTS.map(function (p) { return card(p, lang); }).join("") + "</div></section>";
+      '<section class="wrap work"><div class="work-grid">' + PROJECTS.map(function (p) { return card(p, lang); }).join("") + "</div></section>" +
+      clientsBlock(lang);
   };
   function countText(lang, n) {
     var W = TEXT[lang].work;
