@@ -224,6 +224,42 @@ window.WD_PROJECTS = [
   },
 
   {
+    slug: "cabin-lamare",
+    title: "Cabin LAMARE",
+    categories: ["architecture", "interiors", "visualisation"],
+    featured: true,
+    year: "2026",
+    client: "LaMare",
+    place: { en: "Camping chalet by a lake", it: "Chalet per campeggio sul lago", pl: "Domek kempingowy nad jeziorem" },
+    scope: { en: "Architecture, interior design, 3D visualisation", it: "Architettura, progetto d'interni, visualizzazione 3D", pl: "Architektura, projekt wnętrza, wizualizacja 3D" },
+    summary: {
+      en: "Cabin LAMARE: a 6.5 metre chalet in dark walnut with a black roof, glass up to the ridge and a covered terrace facing the water.",
+      it: "Cabin LAMARE: uno chalet di 6,5 metri in noce scuro con tetto nero, vetrate fino al colmo e una terrazza coperta verso l'acqua.",
+      pl: "Cabin LAMARE: domek o długości 6,5 metra z ciemnego orzecha, z czarnym dachem, przeszkleniami aż po kalenicę i zadaszonym tarasem od strony wody."
+    },
+    text: {
+      en: [
+        "A small chalet for a lakeside campsite, 6.50 by 3.45 metres, built on a steel frame so it can arrive by truck and be set down among the trees.",
+        "Narrow vertical slats of dark walnut wrap the body under a black standing-seam roof. Both gables are glazed up to the ridge, and the roof runs on 1.30 metres past the front to shelter a terrace with two lounge chairs. Inside it feels like a small boutique hotel room: walnut ceiling, taupe limewash, dark marble and bronze, a bed facing the lake and a compact kitchen with a bar."
+      ],
+      it: [
+        "Un piccolo chalet per un campeggio sul lago, 6,50 per 3,45 metri, costruito su un telaio in acciaio per arrivare in camion ed essere posato tra gli alberi.",
+        "Listelli verticali sottili in noce scuro avvolgono il volume sotto un tetto nero aggraffato. Entrambi i timpani sono vetrati fino al colmo e il tetto prosegue per 1,30 metri oltre la facciata, proteggendo una terrazza con due poltrone. Dentro sembra una piccola camera di boutique hotel: soffitto in noce, calce color tortora, marmo scuro e bronzo, il letto rivolto al lago e una cucina compatta con bancone."
+      ],
+      pl: [
+        "Niewielki domek dla kempingu nad jeziorem, 6,50 na 3,45 metra, zbudowany na stalowej ramie, tak aby przyjechał ciężarówką i stanął między drzewami.",
+        "Wąskie pionowe listwy z ciemnego orzecha otulają bryłę pod czarnym dachem na rąbek. Oba szczyty są przeszklone aż po kalenicę, a dach wysuwa się 1,30 metra przed fasadę i osłania taras z dwoma fotelami. W środku jak w małym pokoju butikowego hotelu: orzechowy sufit, wapienny tynk w kolorze taupe, ciemny marmur i brąz, łóżko zwrócone do jeziora i kompaktowa kuchnia z barem."
+      ]
+    },
+    cover: { file: "cover.jpg", alt: { en: "The cabin at dusk among birches and pines, its glass gable lit from within above the terrace", it: "Lo chalet al crepuscolo tra betulle e pini, il timpano vetrato illuminato sopra la terrazza", pl: "Domek o zmierzchu wśród brzóz i sosen, ze szklanym szczytem rozświetlonym nad tarasem" } },
+    images: [
+      { file: "01.jpg", wide: true, alt: { en: "The cabin by the lake, with the covered terrace and two lounge chairs under the glass gable", it: "Lo chalet sul lago, con la terrazza coperta e due poltrone sotto il timpano vetrato", pl: "Domek nad jeziorem, z zadaszonym tarasem i dwoma fotelami pod szklanym szczytem" } },
+      { file: "02.jpg", alt: { en: "The long side in walnut slats with the large bed window and the terrace", it: "Il lato lungo in listelli di noce con la grande finestra sul letto e la terrazza", pl: "Dłuższy bok z orzechowych listew, z dużym oknem przy łóżku i tarasem" } },
+      { file: "03.jpg", alt: { en: "The rear gable glazed up to the ridge above the bathroom, and the entrance door", it: "Il timpano posteriore vetrato fino al colmo sopra il bagno, e la porta d'ingresso", pl: "Tylny szczyt przeszklony po kalenicę nad łazienką oraz drzwi wejściowe" } },
+      { file: "04.jpg", wide: true, alt: { en: "Side elevation of the cabin among the trees, the lake seen through the bedroom", it: "Prospetto laterale dello chalet tra gli alberi, con il lago visto attraverso la camera", pl: "Elewacja boczna domku między drzewami, z jeziorem widocznym przez sypialnię" } }
+    ]
+  },
+  {
     slug: "duplex",
     title: "Duplex",
     categories: ["interiors", "visualisation"],
