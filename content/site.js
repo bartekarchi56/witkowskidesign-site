@@ -57,7 +57,8 @@ window.WD_SITE = {
   // scale (optional): makes one logo bigger or smaller so all of them look the same size.
   clients: [
     { name: "MATSU", logo: "/assets/img/clients/matsu.png", w: 630, h: 160, url: "https://matsu-europe.com/" },
-    { name: "LaMare Houseboats", logo: "/assets/img/clients/lamare.png", w: 262, h: 86, scale: 1.45, url: "https://lamare.pl/" }
+    { name: "LaMare Houseboats", logo: "/assets/img/clients/lamare.png", w: 262, h: 86, scale: 1.45, url: "https://lamare.pl/" },
+    { name: "Cappellini", logo: "/assets/img/clients/cappellini.png", w: 684, h: 160, scale: 1.1, url: "https://www.cappellini.com/" }
   ],
 
   // Contact form. With a Web3Forms access key (free, from https://web3forms.com) messages are sent
