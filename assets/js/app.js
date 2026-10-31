@@ -352,7 +352,8 @@
     if (!list.length) return "";
     var reps = Math.max(2, Math.ceil(12 / list.length));
     function item(c, copy) {
-      var img = '<img src="' + esc(asset(c.logo)) + '" alt="' + (copy ? "" : esc(c.name)) + '" width="' + c.w + '" height="' + c.h + '" decoding="async" draggable="false">';
+      var img = '<img src="' + esc(asset(c.logo)) + '" alt="' + (copy ? "" : esc(c.name)) + '" width="' + c.w + '" height="' + c.h + '"' +
+        (c.scale ? ' style="--scale:' + c.scale + '"' : "") + ' decoding="async" draggable="false">';
       var hide = copy ? ' aria-hidden="true" tabindex="-1"' : "";
       return c.url
         ? '<a class="clients__item" href="' + esc(c.url) + '" target="_blank" rel="noopener"' + hide + ">" + img + "</a>"

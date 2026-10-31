@@ -233,7 +233,7 @@ a.hero__cap:hover .hero__title { text-decoration: underline; text-underline-offs
 @keyframes clients-scroll { to { transform: translate3d(-50%, 0, 0); } }
 .clients__item { flex: none; display: block; padding: .5rem 0; margin-right: clamp(3.5rem, 8vw, 7rem); opacity: .72; transition: opacity .4s var(--ease); }
 a.clients__item:hover, a.clients__item:focus-visible { opacity: 1; }
-.clients__item img { display: block; height: clamp(2rem, 3.2vw, 2.75rem); width: auto; user-select: none; -webkit-user-drag: none; }
+.clients__item img { display: block; height: calc(clamp(2rem, 3.2vw, 2.75rem) * var(--scale, 1)); width: auto; user-select: none; -webkit-user-drag: none; }
 @media (prefers-reduced-motion: reduce) {
   .clients__band { -webkit-mask-image: none; mask-image: none; }
   .clients__track { animation: none !important; width: auto; flex-wrap: wrap; justify-content: center; padding: 0 var(--gutter); }
