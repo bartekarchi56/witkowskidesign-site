@@ -338,10 +338,31 @@
       '<ul class="principles reveal">' + A.principles.map(function (p) { return "<li><h3>" + p.name + "</h3><p>" + p.text + "</p></li>"; }).join("") + "</ul></section>" +
       '<section class="wrap principles-wrap" aria-labelledby="bases-title"><h2 class="eyebrow center" id="bases-title">' + A.basesTitle + "</h2>" +
       '<ul class="principles principles--two reveal">' + A.bases.map(function (p) { return "<li><h3>" + p.name + "</h3><p>" + p.text + "</p></li>"; }).join("") + "</ul></section>" +
+      clientsBlock(lang) +
       kawkaBlock(lang) +
       timbroBlock(lang) +
       contactBlock(lang);
   };
+
+  // The logos of the companies we work with, scrolling slowly from right to left.
+  // The set is repeated so the band is always full, then the whole run is doubled so the loop has no seam;
+  // only the first set can be reached by keyboard and screen readers, the copies are hidden from them.
+  function clientsBlock(lang) {
+    var list = SITE.clients || [];
+    if (!list.length) return "";
+    var reps = Math.max(2, Math.ceil(12 / list.length));
+    function item(c, copy) {
+      var img = '<img src="' + esc(asset(c.logo)) + '" alt="' + (copy ? "" : esc(c.name)) + '" width="' + c.w + '" height="' + c.h + '" decoding="async" draggable="false">';
+      var hide = copy ? ' aria-hidden="true" tabindex="-1"' : "";
+      return c.url
+        ? '<a class="clients__item" href="' + esc(c.url) + '" target="_blank" rel="noopener"' + hide + ">" + img + "</a>"
+        : '<span class="clients__item"' + (copy ? ' aria-hidden="true"' : "") + ">" + img + "</span>";
+    }
+    var run = "";
+    for (var r = 0; r < reps * 2; r++) run += list.map(function (c) { return item(c, r > 0); }).join("");
+    return '<section class="clients" aria-labelledby="clients-title"><h2 class="eyebrow center" id="clients-title">' + TEXT[lang].about.clientsTitle + "</h2>" +
+      '<div class="clients__band"><div class="clients__track" style="--n:' + list.length * reps + '">' + run + "</div></div></section>";
+  }
 
   pages.contact = function (lang) {
     var T = TEXT[lang], C = T.contact, c = SITE.contact;

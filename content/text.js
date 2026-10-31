@@ -133,6 +133,7 @@ window.WD_TEXT = {
     },
 
     about: {
+      clientsTitle: "Worked with",
       title: "Studio",
       lead: "abit. studio is led by Bartosz Witkowski and Amina Tilesheva.",
       photoNote: "Portrait coming soon",
@@ -325,6 +326,7 @@ window.WD_TEXT = {
     },
 
     about: {
+      clientsTitle: "Collaborazioni",
       title: "Studio",
       lead: "abit. studio è guidato da Bartosz Witkowski e Amina Tilesheva.",
       photoNote: "Ritratto in arrivo",
@@ -517,6 +519,7 @@ window.WD_TEXT = {
     },
 
     about: {
+      clientsTitle: "Współpracowaliśmy z",
       title: "Studio",
       lead: "abit. studio prowadzą Bartosz Witkowski i Amina Tilesheva.",
       photoNote: "Portret wkrótce",

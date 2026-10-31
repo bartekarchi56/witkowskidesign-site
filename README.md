@@ -118,6 +118,10 @@ All in `content/site.js`, in one place. The email is used everywhere on the site
 contact form. Fill in `address`, `vat` and `country` under `legal` and they appear on the Privacy page;
 until then they are highlighted there as "to be completed".
 
+**Clients.** The logos scrolling on the Studio page are listed under `clients` in `content/site.js`.
+Add a single-colour logo (dark on transparent, PNG or SVG) to `assets/img/clients/`, then add a line with its
+name, file, size in pixels and website.
+
 **Contact form.** To have messages sent straight to your inbox, create a free access key at
 https://web3forms.com (enter abit@witkowskidesign.com) and paste it as `key` under `form` in `content/site.js`.
 Without a key the form opens the visitor's email app instead.

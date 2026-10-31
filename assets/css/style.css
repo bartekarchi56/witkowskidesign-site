@@ -219,6 +219,28 @@ a.hero__cap:hover .hero__title { text-decoration: underline; text-underline-offs
 .hero--project .hero__title { font-size: clamp(1.45rem, 3.3vw, 2.7rem); font-weight: 300; letter-spacing: .1em; line-height: 1.2; }
 .hero--project .hero__meta { font-size: clamp(.92rem, 1.15vw, 1.05rem); margin-top: .5rem; }
 .hero--project .tag { margin-top: .9rem; align-self: flex-start; }
+/* ------------------------------------------------------------ clients: logos scrolling right to left */
+.clients { padding: var(--space) 0 calc(var(--space) * .6); }
+.clients .eyebrow { margin-bottom: clamp(2rem, 4vw, 3.25rem); }
+.clients__band {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+/* two identical halves: moving by exactly half the track brings the second half to where the first began */
+.clients__track { display: flex; align-items: center; width: max-content; animation: clients-scroll calc(var(--n) * 3.5s) linear infinite; }
+.clients__band:hover .clients__track, .clients__band:focus-within .clients__track { animation-play-state: paused; }
+@keyframes clients-scroll { to { transform: translate3d(-50%, 0, 0); } }
+.clients__item { flex: none; display: block; padding: .5rem 0; margin-right: clamp(3.5rem, 8vw, 7rem); opacity: .72; transition: opacity .4s var(--ease); }
+a.clients__item:hover, a.clients__item:focus-visible { opacity: 1; }
+.clients__item img { display: block; height: clamp(2rem, 3.2vw, 2.75rem); width: auto; user-select: none; -webkit-user-drag: none; }
+@media (prefers-reduced-motion: reduce) {
+  .clients__band { -webkit-mask-image: none; mask-image: none; }
+  .clients__track { animation: none !important; width: auto; flex-wrap: wrap; justify-content: center; padding: 0 var(--gutter); }
+  .clients__item[aria-hidden="true"] { display: none; }
+  .clients__item { margin: 0 2rem; }
+}
+
 /* the short intro under the photo on the home page, shown on phones only */
 .home-intro { display: none; }
 .home-intro p { max-width: 34rem; margin: 1rem 0 1.75rem; }

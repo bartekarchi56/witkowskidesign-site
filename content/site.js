@@ -52,6 +52,13 @@ window.WD_SITE = {
     url: "https://timbro.witkowskidesign.com"
   },
 
+  // Companies we work or have worked with: their logos scroll on the Studio page.
+  // logo: a single-colour file in assets/img/clients/, w and h: its size in pixels, url: their website ("" = not clickable).
+  clients: [
+    { name: "MATSU", logo: "/assets/img/clients/matsu.png", w: 630, h: 160, url: "" },
+    { name: "LaMare Houseboats", logo: "/assets/img/clients/lamare.png", w: 262, h: 86, url: "" }
+  ],
+
   // Contact form. With a Web3Forms access key (free, from https://web3forms.com) messages are sent
   // straight to the inbox the key was made for. Leave "" and the form opens the visitor's email app instead.
   form: {
